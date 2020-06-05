@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "StefaniniCore.Infra.DataStore.SQLServer/1.0.0": {
+        "runtime": {
+          "StefaniniCore.Infra.DataStore.SQLServer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StefaniniCore.Infra.DataStore.SQLServer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

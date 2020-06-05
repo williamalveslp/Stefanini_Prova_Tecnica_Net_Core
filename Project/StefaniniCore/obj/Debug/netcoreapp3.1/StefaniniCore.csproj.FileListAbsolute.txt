@@ -1,0 +1,9 @@
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore\obj\Debug\netcoreapp3.1\StefaniniCore.csprojAssemblyReference.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore\obj\Debug\netcoreapp3.1\StefaniniCore.AssemblyInfoInputs.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore\obj\Debug\netcoreapp3.1\StefaniniCore.AssemblyInfo.cs
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore\obj\Debug\netcoreapp3.1\StefaniniCore.csproj.CoreCompileInputs.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore\obj\Debug\netcoreapp3.1\StefaniniCore.MvcApplicationPartsAssemblyInfo.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore\obj\Debug\netcoreapp3.1\StefaniniCore.TagHelpers.input.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore\obj\Debug\netcoreapp3.1\StefaniniCore.TagHelpers.output.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore\obj\Debug\netcoreapp3.1\StefaniniCore.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore\obj\Debug\netcoreapp3.1\StefaniniCore.pdb

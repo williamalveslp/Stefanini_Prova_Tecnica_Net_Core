@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "StefaniniCore.Services/1.0.0": {
+        "dependencies": {
+          "StefaniniCore.Domain": "1.0.0"
+        },
+        "runtime": {
+          "StefaniniCore.Services.dll": {}
+        }
+      },
+      "StefaniniCore.Domain/1.0.0": {
+        "runtime": {
+          "StefaniniCore.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StefaniniCore.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StefaniniCore.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

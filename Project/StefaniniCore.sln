@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StefaniniCore", "StefaniniCore\StefaniniCore.csproj", "{AB6760ED-D08D-441E-89F3-C67070686689}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{59DA7FE6-5D1B-486A-8134-741E035C6F58}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{91FB8622-4A47-498A-8E81-6A94EE8A2C26}"
@@ -19,13 +17,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - CrossCutting", "4.1 -
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - DataStore", "4.2 - DataStore", "{0762EAA0-BE1B-4F06-A464-9B6A99D8FE9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StefaniniCore.Infra.DataStore.SQLServer", "StefaniniCore.Infra.DataStore.SQLServer\StefaniniCore.Infra.DataStore.SQLServer.csproj", "{6D61FB32-FCC1-418A-9FEB-48DF6194B490}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StefaniniCore.Infra.DataStore.SQLServer", "StefaniniCore.Infra.DataStore.SQLServer\StefaniniCore.Infra.DataStore.SQLServer.csproj", "{6D61FB32-FCC1-418A-9FEB-48DF6194B490}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StefaniniCore.Domain", "StefaniniCore.Domain\StefaniniCore.Domain.csproj", "{13CCE21A-399F-4305-882C-3527C9E0A382}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StefaniniCore.Domain", "StefaniniCore.Domain\StefaniniCore.Domain.csproj", "{13CCE21A-399F-4305-882C-3527C9E0A382}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StefaniniCore.Services", "StefaniniCore.Services\StefaniniCore.Services.csproj", "{312BA9B1-748D-429A-AF23-240C246F9E9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StefaniniCore.Services", "StefaniniCore.Services\StefaniniCore.Services.csproj", "{312BA9B1-748D-429A-AF23-240C246F9E9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StefaniniCore.Application", "StefaniniCore.Application\StefaniniCore.Application.csproj", "{931A56E6-AF3C-4D99-9DF4-3EFBD941E51B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StefaniniCore.Application", "StefaniniCore.Application\StefaniniCore.Application.csproj", "{931A56E6-AF3C-4D99-9DF4-3EFBD941E51B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StefaniniCore.UI", "StefaniniCore.UI\StefaniniCore.UI.csproj", "{AC1A2092-1F59-4EBB-A049-010FCD271320}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{0A9B9128-F960-41D2-8BC6-BC769C712C3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +35,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AB6760ED-D08D-441E-89F3-C67070686689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB6760ED-D08D-441E-89F3-C67070686689}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB6760ED-D08D-441E-89F3-C67070686689}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB6760ED-D08D-441E-89F3-C67070686689}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6D61FB32-FCC1-418A-9FEB-48DF6194B490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6D61FB32-FCC1-418A-9FEB-48DF6194B490}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D61FB32-FCC1-418A-9FEB-48DF6194B490}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,18 +51,22 @@ Global
 		{931A56E6-AF3C-4D99-9DF4-3EFBD941E51B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{931A56E6-AF3C-4D99-9DF4-3EFBD941E51B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{931A56E6-AF3C-4D99-9DF4-3EFBD941E51B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC1A2092-1F59-4EBB-A049-010FCD271320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC1A2092-1F59-4EBB-A049-010FCD271320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC1A2092-1F59-4EBB-A049-010FCD271320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC1A2092-1F59-4EBB-A049-010FCD271320}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{AB6760ED-D08D-441E-89F3-C67070686689} = {59DA7FE6-5D1B-486A-8134-741E035C6F58}
 		{8393B042-23D0-4D2F-BFDF-EF23D1A25C5B} = {27217AA1-60FA-43C5-8C9C-59B2AC964B27}
 		{0762EAA0-BE1B-4F06-A464-9B6A99D8FE9E} = {27217AA1-60FA-43C5-8C9C-59B2AC964B27}
 		{6D61FB32-FCC1-418A-9FEB-48DF6194B490} = {0762EAA0-BE1B-4F06-A464-9B6A99D8FE9E}
 		{13CCE21A-399F-4305-882C-3527C9E0A382} = {4C1FD93C-104A-431C-8DAA-26CAFB63D7B7}
 		{312BA9B1-748D-429A-AF23-240C246F9E9F} = {628466FD-0904-42B7-A6F1-60A8C5E99146}
 		{931A56E6-AF3C-4D99-9DF4-3EFBD941E51B} = {91FB8622-4A47-498A-8E81-6A94EE8A2C26}
+		{AC1A2092-1F59-4EBB-A049-010FCD271320} = {59DA7FE6-5D1B-486A-8134-741E035C6F58}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB479D63-2D78-4A64-8565-E91B0E3607CA}

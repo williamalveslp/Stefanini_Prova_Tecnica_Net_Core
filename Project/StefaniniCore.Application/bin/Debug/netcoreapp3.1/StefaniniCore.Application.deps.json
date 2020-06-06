@@ -7,14 +7,38 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "StefaniniCore.Application/1.0.0": {
+        "dependencies": {
+          "StefaniniCore.Domain": "1.0.0",
+          "StefaniniCore.Infra.CrossCutting": "1.0.0"
+        },
         "runtime": {
           "StefaniniCore.Application.dll": {}
+        }
+      },
+      "StefaniniCore.Domain/1.0.0": {
+        "runtime": {
+          "StefaniniCore.Domain.dll": {}
+        }
+      },
+      "StefaniniCore.Infra.CrossCutting/1.0.0": {
+        "runtime": {
+          "StefaniniCore.Infra.CrossCutting.dll": {}
         }
       }
     }
   },
   "libraries": {
     "StefaniniCore.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StefaniniCore.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StefaniniCore.Infra.CrossCutting/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

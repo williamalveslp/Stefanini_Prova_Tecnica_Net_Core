@@ -21,15 +21,25 @@ namespace StefaniniCore.Services.Services.Base
 
         public T Insert(T entity)
         {
+            if (entity == null)
+                throw new Exception("Data invalid to be saved.");
+
             return _repository.Insert(entity);
         }
 
         public T Update(T entity)
         {
+            if (entity == null)
+                throw new Exception("Data invalid to be updated.");
+
             return _repository.Update(entity);
         }
+
         public void DeleteById(int entityId)
         {
+            if (entityId <= 0)
+                throw new Exception("Entity not found to be deleted.");
+
             _repository.DeleteById(entityId);
         }
 

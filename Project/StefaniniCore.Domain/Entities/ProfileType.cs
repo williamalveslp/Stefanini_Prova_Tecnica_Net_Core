@@ -11,7 +11,7 @@ namespace StefaniniCore.Domain.Entities
         public virtual ICollection<ProfileTypeTask> ProfileTypeTask { get; set; }
         public virtual ICollection<UserSystem> UserSystem { get; set; }
 
-        public ProfileType() : base() { }
+        private ProfileType() : base() { }
 
         public ProfileType(string name) : base()
         {

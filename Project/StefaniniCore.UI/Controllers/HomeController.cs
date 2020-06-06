@@ -5,7 +5,7 @@ using StefaniniCore.UI.Models;
 
 namespace StefaniniCore.UI.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : MainController
     {
         private readonly ILogger<HomeController> _logger;
 
@@ -15,11 +15,6 @@ namespace StefaniniCore.UI.Controllers
         }
 
         public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
         {
             return View();
         }

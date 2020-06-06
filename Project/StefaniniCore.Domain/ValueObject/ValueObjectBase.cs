@@ -12,14 +12,14 @@ namespace StefaniniCore.Domain.ValueObject
 
         protected ValueObjectBase()
         {
-            var currentDateTime = new DateTime();
+            var currentDateTime = DateTime.Now;
             this.Date_Created = currentDateTime;
             this.Date_Updated = currentDateTime;
         }
 
         protected void RefreshDateUpdated()
         {
-            this.Date_Updated = new DateTime();
+            this.Date_Updated = DateTime.Now;
         }
     }
 }

@@ -11,7 +11,7 @@ namespace StefaniniCore.UI.Controllers
             return GeneralMessage(message, id, refreshPage, HttpStatusCode.OK);
         }
 
-        protected IActionResult ErrorMessage(string message, ILogger<TasksController> logger)
+        protected IActionResult ErrorMessage(string message, ILogger<object> logger)
         {
             logger.LogError("Error ocorreu.");
             return GeneralMessage(message, null, false, HttpStatusCode.BadRequest);

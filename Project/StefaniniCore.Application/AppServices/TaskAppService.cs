@@ -40,8 +40,7 @@ namespace StefaniniCore.Application.AppServices
 
             if (task == null)
                 throw new Exception("Funcionalidade não encontrada.");
-            //  throw CustomException.BadRequest("Funcionalidade não encontrada.");
-
+          
             TaskDetailViewModel viewModel = new TaskDetailViewModel();
             viewModel.Load(task.Id, task.Name, task.Description);
 
@@ -75,14 +74,6 @@ namespace StefaniniCore.Application.AppServices
 
             if (string.IsNullOrEmpty(inputModel.Name))
                 throw new Exception("Campo 'Nome' não foi preenchido.");
-
-            //throw CustomException.BadRequest("Campo 'Nome' não foi preenchido.");
-
-            // TODO: Check with pristiny data as well.
-            //if ((inputModel.Id <= 0) && (_taskService.Exists(inputModel.Name)))
-            //{
-            //    throw CustomException.BadRequest("Já existe Funcionalidade cadastrada com este 'Nome.");
-            //}
         }
         #endregion
     }

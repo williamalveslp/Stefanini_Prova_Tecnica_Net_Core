@@ -20,5 +20,13 @@ namespace StefaniniCore.Domain.Entities
             this.ProfileTypeId = profileTypeId;
             this.IsActive = true;
         }
+
+        public void Update(string userName, string password, int profileTypeId)
+        {
+            this.UserName = userName;
+            this.Password = password;
+            this.ProfileTypeId = profileTypeId;
+            RefreshDateUpdated();
+        }
     }
 }

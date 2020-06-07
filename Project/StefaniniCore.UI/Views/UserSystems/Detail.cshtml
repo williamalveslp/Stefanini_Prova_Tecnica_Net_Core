@@ -1,7 +1,63 @@
-﻿
-@{
-    ViewData["Title"] = "Detail";
+﻿@{
+    ViewData["Title"] = "Cadastro de Usuário";
 }
 
-<h1>Cadastro de Usuário</h1>
+@model StefaniniCore.Application.ViewModels.UserSystemDetailViewModel
 
+<ol class="breadcrumb">
+    <li><a href="/">Home</a> /</li>
+    <li class="active">Cadastro</li>
+</ol>
+
+<div>
+    <h2>Cadastro de Usuário</h2>
+    <label class="requiredFields">*</label> Campos obrigatórios.
+</div>
+
+<div>
+    <form id="formTaskGroup">
+        @Html.HiddenFor(f => f.Id, new { @id = "hddUserSystemId", @name = "hddUserSystemId" })
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Nome de Usuário<i class="requiredField">*</i>:</label>
+                    @Html.TextBoxFor(f => f.UserName, new { @id = "txtUserName", @name = "txtUserName", @class = "form-control", @type = "text", @maxlength = "30" })
+                </div>
+
+                <div class="form-group">
+                    <label>Senha <i class="requiredField">*</i>:</label>
+                    @Html.TextBoxFor(f => f.Password, new { @id = "txtPassword", @name = "txtPassword", @class = "form-control", @type = "password", @maxlength = "30" })
+                </div>
+
+                <div class="form-group">
+                    <label>Confirmar Senha:<i class="requiredField">*</i>:</label>
+                    @Html.TextBoxFor(f => f.Password, new { @id = "txtConfirmPassword", @name = "txtConfirmPassword", @class = "form-control", @type = "password", @maxlength = "30" })
+                </div>
+
+                <div class="form-group">
+                    <label>Perfil<i class="requiredField">*</i>:</label>
+                    <select id="ddProfileType" name="ddProfileType" class="form-control"
+                            asp-items="@(new SelectList(Model.ProfileTypes,"Id","Name"));">
+                        <option value="">- Selecione -</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center">
+                <button type="button" id="btnSave" name="btnSave" class="btn btn-primary">Salvar</button>
+                <button type="button" id="btnClear" name="btnClear" class="btn btn-default">Limpar</button>
+                <a href="@Url.Action("Index", "Home")" class=" btn btn-default">Tela Inicial</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section scripts {
+    <script>
+        var URL_SAVE_USER_SYSTEM = '@Url.Action("Save", "UserSystems")';
+    </script>
+
+    <script src="~/js/my-scripts/user-systems/detail.js"></script>
+}

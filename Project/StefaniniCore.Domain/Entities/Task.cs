@@ -20,8 +20,6 @@ namespace StefaniniCore.Domain.Entities
             this.Description = description;
             this.IsActive = true;
             this.ProfileTypeTask = new List<ProfileTypeTask>();
-
-         //   this.ProfileTypeTask = new HashSet<ProfileTypeTask>();
         }
 
         public void Update(string name, string description)

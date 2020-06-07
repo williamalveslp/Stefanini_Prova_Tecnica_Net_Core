@@ -10,7 +10,7 @@ namespace StefaniniCore.UI.Controllers
     public class TasksController : MainController
     {
         private readonly ILogger<TasksController> _logger;
-        private ITaskAppService _appService;
+        private readonly ITaskAppService _appService;
 
         public TasksController(ILogger<TasksController> logger, ITaskAppService appService)
         {

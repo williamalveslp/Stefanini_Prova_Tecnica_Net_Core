@@ -31,7 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StefaniniCore.Services.Tests", "StefaniniCore.Services.Tests\StefaniniCore.Services.Tests.csproj", "{9FFDCBF9-F28A-4681-BCCD-00FF75A5E9D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StefaniniCore.Infra.CrossCutting", "StefaniniCore.Infra.CrossCutting\StefaniniCore.Infra.CrossCutting.csproj", "{F2330D98-A537-4514-85F2-5136B8F79D53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StefaniniCore.Infra.CrossCutting", "StefaniniCore.Infra.CrossCutting\StefaniniCore.Infra.CrossCutting.csproj", "{F2330D98-A537-4514-85F2-5136B8F79D53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

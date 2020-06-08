@@ -11,6 +11,7 @@ ASPNET Core 3.1
   - xUnit
   - Ajax
   - Jquery
+  - Bootstrap
    
 
 ## Instruções

@@ -51,7 +51,7 @@ namespace StefaniniCore.UI.Controllers
         {
             foreach (var cookie in Request.Cookies.Keys)
             {
-                if (cookie == ConstCookies.AuthenticationCookieName)
+                if (cookie == ConstAuthentication.CookieName)
                     return RedirectToAction("List", "Tasks");
             }
 
@@ -79,6 +79,10 @@ namespace StefaniniCore.UI.Controllers
             try
             {
                 var userSystem = _appService.Save(inputModel);
+
+                if (IsAlreadyAuthenticated())
+                    return SuccessMessage("Salvo com sucesso!", userSystem.Id, false);
+
                 AddAuthentication(userSystem);
 
                 return SuccessMessage("Salvo com sucesso!", userSystem.Id, false, "/Tasks/List");
@@ -89,6 +93,7 @@ namespace StefaniniCore.UI.Controllers
             }
         }
 
+        [HttpPost]
         /// <summary>
         /// SignIn the UserSystem.
         /// </summary>
@@ -99,7 +104,7 @@ namespace StefaniniCore.UI.Controllers
             try
             {
                 var userSystem = _appService.GetSignIn(inputModel);
-
+                
                 AddAuthentication(userSystem);
                 return SuccessMessage("Salvo com sucesso!", userSystem.Id, false, "/Tasks/List");
             }
@@ -109,6 +114,7 @@ namespace StefaniniCore.UI.Controllers
             }
         }
 
+        #region .: PRIVATE METHODS :.
         private void AddAuthentication(UserSystem userSystem)
         {
             RemoveAuthentication();
@@ -130,7 +136,7 @@ namespace StefaniniCore.UI.Controllers
         {
             foreach (var cookie in Request.Cookies.Keys)
             {
-                if (cookie == ConstCookies.AuthenticationCookieName)
+                if (cookie == ConstAuthentication.CookieName)
                 {
                     Response.Cookies.Delete(cookie);
                 }
@@ -138,5 +144,16 @@ namespace StefaniniCore.UI.Controllers
 
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         }
+
+        private bool IsAlreadyAuthenticated()
+        {
+            foreach (var cookie in Request.Cookies.Keys)
+            {
+                if (cookie == ConstAuthentication.CookieName)                
+                    return true;                
+            }
+            return false;
+        }
+        #endregion
     }
 }

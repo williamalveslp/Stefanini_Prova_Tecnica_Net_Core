@@ -1,7 +1,7 @@
 ﻿using StefaniniCore.Domain.Entities;
 using System.Collections.Generic;
 
-namespace StefaniniCore.Application.ViewModels.ProfileTypes
+namespace StefaniniCore.Application.ViewModels
 {
     public class ProfileTypeListViewModel : ViewModelBase
     {

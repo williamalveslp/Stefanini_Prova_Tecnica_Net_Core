@@ -1,5 +1,5 @@
 ﻿using StefaniniCore.Application.InputModels.ProfileTypes;
-using StefaniniCore.Application.ViewModels.ProfileTypes;
+using StefaniniCore.Application.ViewModels;
 using StefaniniCore.Domain.Entities;
 
 namespace StefaniniCore.Application.AppInterfaces
@@ -9,6 +9,8 @@ namespace StefaniniCore.Application.AppInterfaces
         ProfileTypeDetailViewModel GetById(int id);
 
         ProfileTypeListViewModel GetAll();
+
+        ProfileTypeDetailViewModel GetListsPopulated();
 
         ProfileType Save(ProfileTypeInputModel inputModel);
 

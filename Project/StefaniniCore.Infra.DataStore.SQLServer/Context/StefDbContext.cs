@@ -23,6 +23,7 @@ namespace StefaniniCore.Infra.DataStore.SQLServer
         {
             if (!optionsBuilder.IsConfigured)
             {
+                // TODO: Move this connection string to configuration file.
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;Initial Catalog=StefDb;Integrated Security=True");
             }

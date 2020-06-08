@@ -1,7 +1,96 @@
-﻿
+﻿@model StefaniniCore.Application.ViewModels.ProfileTypeListViewModel
+
 @{
-    ViewData["Title"] = "List";
+    ViewData["Title"] = "Listagem de Perfis";
 }
 
-<h1>List</h1>
+<ol class="breadcrumb linkMapPage">
+    <li><a href="/">Home /</a></li>
+    <li class="active">Perfis</li>
+</ol>
+
+<h2 class="title">
+    <i class="glyphicon glyphicon-tag"></i> Listagem de Perfis
+
+    @if (Model.ProfileTypes != null)
+    {
+        <label style="font-weight:normal">(@Model.TotalRecords)</label>
+    }
+</h2>
+
+<div class="buttonPageList">
+    <a href="@Url.Action("Detail", "ProfileTypes")" class="btn btn-primary">
+        <span class="glyphicon glyphicon-plus"></span>
+        Novo Perfil
+    </a>
+</div>
+
+<div>
+    @if (Model.ProfileTypes == null)
+    {
+        <br />
+        <div class="alert alert-danger" role="alert">
+            Erro ao carregar os dados.
+        </div>
+    }
+    else if (!Model.ProfileTypes.Any())
+    {
+        <br />
+        <div class="alert alert-warning" role="alert">
+            Não há dados cadastrados.
+        </div>
+    }
+    else
+    {
+        <table class="table table-hover tableList" id="tableTask">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome do Perfil</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.ProfileTypes)
+                {
+                    <tr>
+                        <th scope="row">@item.Id</th>
+                        <td>@item.Name</td>
+                        <td>
+                            <a href="@Url.Action("Detail","ProfileTypes", new { profileTypeId = item.Id })">Editar <span class="glyphicon glyphicon-pencil"></span></a>
+                            <a href="#" onclick="showModalToConfirmDelete('@item.Id')">Excluir <span class="glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+<div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                Exclusão
+            </div>
+            <div class="modal-body">
+                Tem certeza que deseja excluir este item?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <a id="btnConfirmDelete" entityid onclick="deleteProfileType(this)" class="btn btn-danger btn-ok">Sim</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        var URL_DELETE_PROFILE_TYPE = '@Url.Action("Remove", "ProfileTypes")';
+    </script>
+
+    <script src="~/js/my-scripts/profile-types/list.js"></script>
+}
+
+
 

@@ -6,9 +6,9 @@ namespace StefaniniCore.UI.Controllers
 {
     public abstract class MainController : Controller
     {
-        protected IActionResult SuccessMessage(string message, int? id, bool refreshPage)
+        protected IActionResult SuccessMessage(string message, int? id, bool refreshPage, string urlToRedirect = null)
         {
-            return GeneralMessage(message, id, refreshPage, HttpStatusCode.OK);
+            return GeneralMessage(message, id, refreshPage, HttpStatusCode.OK, urlToRedirect);
         }
 
         protected IActionResult ErrorMessage(string message, ILogger<object> logger)
@@ -27,13 +27,8 @@ namespace StefaniniCore.UI.Controllers
             return GeneralMessage(message, null, false, HttpStatusCode.BadRequest);
         }
 
-        protected IActionResult ErrorGlobalMessage()
-        {
-            return GeneralMessage("Não foi possível completar esta operação. Tente mais tarde."
-                                 , null, false, HttpStatusCode.InternalServerError);
-        }
-
-        private IActionResult GeneralMessage(string message, int? id, bool refreshPage, HttpStatusCode statusCode)
+        private IActionResult GeneralMessage(string message, int? id, bool refreshPage, HttpStatusCode statusCode
+                                            , string urlToRedirect = null)
         {
             if (statusCode != HttpStatusCode.OK)
             {
@@ -42,7 +37,8 @@ namespace StefaniniCore.UI.Controllers
                     message,
                     id,
                     refreshPage,
-                    statusCode = (int)statusCode
+                    statusCode = (int)statusCode,
+                    urlToRedirect
                 });
             }
 
@@ -51,7 +47,8 @@ namespace StefaniniCore.UI.Controllers
                 message,
                 id,
                 refreshPage,
-                statusCode = (int)statusCode
+                statusCode = (int)statusCode,
+                urlToRedirect
             });
         }
     }

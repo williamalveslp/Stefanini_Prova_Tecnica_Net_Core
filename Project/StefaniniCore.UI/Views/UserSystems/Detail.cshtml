@@ -1,8 +1,8 @@
-﻿@{
+﻿@model StefaniniCore.Application.ViewModels.UserSystemDetailViewModel
+
+@{
     ViewData["Title"] = "Cadastro de Usuário";
 }
-
-@model StefaniniCore.Application.ViewModels.UserSystemDetailViewModel
 
 <ol class="breadcrumb">
     <li><a href="/">Home</a> /</li>
@@ -48,7 +48,7 @@
             <div class="text-center">
                 <button type="button" id="btnSave" name="btnSave" class="btn btn-primary">Salvar</button>
                 <button type="button" id="btnClear" name="btnClear" class="btn btn-default">Limpar</button>
-                <a href="@Url.Action("Index", "Home")" class=" btn btn-default">Tela Inicial</a>
+                <a href="@Url.Action("SignIn", "UserSystems")" class=" btn btn-default">Tela Inicial</a>
             </div>
         </div>
     </form>

@@ -12,6 +12,8 @@ namespace StefaniniCore.Application.AppInterfaces
 
         TaskListViewModel GetAll();
 
+        UserSystem GetSignIn(UserSystemSignInInputModel inputModel);
+
         UserSystem Save(UserSystemInputModel inputModel);
 
         void DeleteById(int id);

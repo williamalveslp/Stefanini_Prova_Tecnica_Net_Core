@@ -20,5 +20,11 @@ namespace StefaniniCore.Domain.Entities
             this.ProfileTypeTask = new List<ProfileTypeTask>();
             this.UserSystem = new List<UserSystem>();
         }
+
+        public void Update(string name)
+        {
+            this.Name = name;
+            RefreshDateUpdated();
+        }
     }
 }

@@ -55,6 +55,16 @@ namespace StefaniniCore.Application.AppServices
             return viewModel;
         }
 
+        public UserSystem GetSignIn(UserSystemSignInInputModel inputModel)
+        {
+            var userSystem = _userSystemService.GetSignIn(inputModel.UserName, inputModel.Password);
+
+            if (userSystem == null)
+                throw new Exception("Usuário não encontrado.");
+
+            return userSystem;
+        }
+
         public UserSystem Save(UserSystemInputModel inputModel)
         {
             ValidationsToSave(inputModel);

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StefaniniCore.Application.AppInterfaces;
 using StefaniniCore.Application.InputModels.Tasks;
@@ -22,6 +23,7 @@ namespace StefaniniCore.UI.Controllers
         /// List of Tasks.
         /// </summary>
         /// <returns></returns>
+        [Authorize]
         public IActionResult List()
         {
             try
@@ -40,6 +42,7 @@ namespace StefaniniCore.UI.Controllers
         /// </summary>
         /// <param name="taskId"></param>
         /// <returns></returns>
+        [Authorize]
         public IActionResult Detail(int? taskId)
         {
             try

@@ -1,8 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StefaniniCore.Application.AppInterfaces;
 using StefaniniCore.Application.InputModels.UserSystem;
+using StefaniniCore.Application.ViewModels;
+using StefaniniCore.Domain.Entities;
+using StefaniniCore.Infra.CrossCutting.Constants;
 using System;
+using System.Collections.Generic;
+using System.Security.Claims;
 
 namespace StefaniniCore.UI.Controllers
 {
@@ -37,12 +44,28 @@ namespace StefaniniCore.UI.Controllers
         }
 
         /// <summary>
-        /// SingIn/Login on application.
+        /// SingIn/Login from application.
         /// </summary>
         /// <returns></returns>
         public IActionResult SignIn()
         {
-            return View();
+            foreach (var cookie in Request.Cookies.Keys)
+            {
+                if (cookie == ConstCookies.AuthenticationCookieName)
+                    return RedirectToAction("List", "Tasks");
+            }
+
+            return View(new UserSystemSignInViewModel());
+        }
+
+        /// <summary>
+        /// SignOut from application.
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult SignOut()
+        {
+            RemoveAuthentication();
+            return RedirectToAction("SignIn", "UserSystems");
         }
 
         [HttpPost]
@@ -56,12 +79,64 @@ namespace StefaniniCore.UI.Controllers
             try
             {
                 var userSystem = _appService.Save(inputModel);
-                return SuccessMessage("Salvo com sucesso!", userSystem.Id, false);
+                AddAuthentication(userSystem);
+
+                return SuccessMessage("Salvo com sucesso!", userSystem.Id, false, "/Tasks/List");
             }
             catch (Exception ex)
             {
                 return ErrorMessage(ex.Message, _logger);
             }
+        }
+
+        /// <summary>
+        /// SignIn the UserSystem.
+        /// </summary>
+        /// <param name="inputModel"></param>
+        /// <returns></returns>
+        public IActionResult RegisterSignIn(UserSystemSignInInputModel inputModel)
+        {
+            try
+            {
+                var userSystem = _appService.GetSignIn(inputModel);
+
+                AddAuthentication(userSystem);
+                return SuccessMessage("Salvo com sucesso!", userSystem.Id, false, "/Tasks/List");
+            }
+            catch (Exception ex)
+            {
+                return ErrorMessage(ex.Message, _logger);
+            }
+        }
+
+        private void AddAuthentication(UserSystem userSystem)
+        {
+            RemoveAuthentication();
+
+            var grandmClaims = new List<Claim>()
+            {
+                new Claim(ClaimTypes.Name, userSystem.UserName),
+                // others claims
+            };
+
+            var grandmaIdentity = new ClaimsIdentity(grandmClaims, "User Identity");
+
+            var userPrincipal = new ClaimsPrincipal(new[] { grandmaIdentity });
+
+            HttpContext.SignInAsync(userPrincipal);
+        }
+
+        private void RemoveAuthentication()
+        {
+            foreach (var cookie in Request.Cookies.Keys)
+            {
+                if (cookie == ConstCookies.AuthenticationCookieName)
+                {
+                    Response.Cookies.Delete(cookie);
+                }
+            }
+
+            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         }
     }
 }

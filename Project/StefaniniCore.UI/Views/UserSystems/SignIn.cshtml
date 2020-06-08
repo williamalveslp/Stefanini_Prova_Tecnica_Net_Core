@@ -1,7 +1,46 @@
-﻿
+﻿@model StefaniniCore.Application.ViewModels.UserSystemSignInViewModel
+<link href="~/css/my-css/signin.css" rel="stylesheet" />
 @{
     ViewData["Title"] = "SignIn";
 }
 
-<h1>SignIn Usuário</h1>
+<link href="~/css/my-css/signin.css" rel="stylesheet" />
+
+<div class="alignContent">
+    <h1>Área de Acesso</h1>
+    <div>
+        <form id="formSignInGroup">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Nome de Usuário:</label>
+                        @Html.TextBoxFor(f => f.UserName, new { @id = "txtUserName", @name = "txtUserName", @class = "form-control", @type = "text", @maxlength = "30" })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Senha:</label>
+                        @Html.TextBoxFor(f => f.Password, new { @id = "txtPassword", @name = "txtPassword", @class = "form-control", @type = "password", @maxlength = "30" })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Se você ainda não tem cadastro, @Html.ActionLink("clique aqui.", "Detail", "UserSystems")</label>
+                    </div>
+
+                    <div class="text-center" style="">
+                        <button type="button" id="btnSignIn" name="btnSignIn" class="btn btn-primary widthSignInButton">Acessar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        var URL_SIGNIN_USER_SYSTEM = '@Url.Action("RegisterSignIn", "UserSystems")';
+    </script>
+
+    <script src="~/js/my-scripts/user-systems/signin.js"></script>
+}
+
 

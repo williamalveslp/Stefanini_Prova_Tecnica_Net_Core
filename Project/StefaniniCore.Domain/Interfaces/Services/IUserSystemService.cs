@@ -5,5 +5,6 @@ namespace StefaniniCore.Domain.Interfaces.Services
 {
     public interface IUserSystemService : IServiceBase<UserSystem>
     {
+        UserSystem GetSignIn(string userName, string password);
     }
 }

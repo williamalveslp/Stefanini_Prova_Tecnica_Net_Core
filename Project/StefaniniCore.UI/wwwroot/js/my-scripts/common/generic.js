@@ -17,6 +17,11 @@
             if (idElementToUpdate)
                 idElementToUpdate.val(data.id);
 
+            if (data.urlToRedirect) {
+                window.location = data.urlToRedirect;
+                return;
+            }
+
             alert(data.message);
 
             if (data.refreshPage) {
@@ -25,15 +30,12 @@
         },
         error: function (data) {
 
-            if (data && data.message) {
+            if (data && data.responseJSON.message) {
 
-                if (data.statusCode === 400) {        // Bad Request
-                    data.message = "Erro ocorreu no envio da requisição [400].";
-
-                } else if (data.statusCode === 403) { // Forbidden.
-                    data.message = "Erro ocorreu no envio da requisição [403].";
-                }
-                alert(data.message);
+                if (data.responseJSON.urlToRedirect)
+                    window.location = data.responseJSON.urlToRedirect;
+                else
+                    alert(data.responseJSON.message + " [" + data.status + "]");
 
             } else {
                 var message = "Erro ocorreu no envio da requisição. Tente mais tarde.";

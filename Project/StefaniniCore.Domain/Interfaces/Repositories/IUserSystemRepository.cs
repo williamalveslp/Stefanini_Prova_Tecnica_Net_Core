@@ -5,5 +5,6 @@ namespace StefaniniCore.Domain.Interfaces.Repositories
 {
     public interface IUserSystemRepository : IRepositoryBase<UserSystem>
     {
+        UserSystem GetSignIn(string userName, string password);
     }
 }

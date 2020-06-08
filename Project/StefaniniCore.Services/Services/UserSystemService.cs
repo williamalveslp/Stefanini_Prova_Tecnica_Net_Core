@@ -13,5 +13,16 @@ namespace StefaniniCore.Services.Services
         {
             this._repository = repository;
         }
+
+        public UserSystem GetSignIn(string userName, string password)
+        {
+            if (string.IsNullOrEmpty(userName))
+                throw new System.Exception("Campo 'Nome do Usuário' não informado.");
+
+            if (string.IsNullOrEmpty(password))
+                throw new System.Exception("Campo 'Senha' não informado.");
+
+            return _repository.GetSignIn(userName, password);
+        }
     }
 }

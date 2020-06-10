@@ -9,48 +9,21 @@ namespace StefaniniCore.Services.Services.Base
     {
         private readonly IRepositoryBase<T> _repository;
 
-        public ServiceBase(IRepositoryBase<T> repository)
+        protected ServiceBase(IRepositoryBase<T> repository)
         {
             _repository = repository;
         }
 
-        public T GetById(int entityId)
-        {
-            return _repository.GetById(entityId);
-        }
+        public T GetById(int entityId) => _repository.GetById(entityId);
 
-        public T Insert(T entity)
-        {
-            if (entity == null)
-                throw new Exception("Data invalid to be saved.");
+        public T Insert(T entity) => _repository.Insert(entity);
 
-            return _repository.Insert(entity);
-        }
+        public T Update(T entity) => _repository.Update(entity);
 
-        public T Update(T entity)
-        {
-            if (entity == null)
-                throw new Exception("Data invalid to be updated.");
+        public void DeleteById(int entityId) => _repository.DeleteById(entityId);
 
-            return _repository.Update(entity);
-        }
+        public void Dispose() => _repository.Dispose();
 
-        public void DeleteById(int entityId)
-        {
-            if (entityId <= 0)
-                throw new Exception("Entity not found to be deleted.");
-
-            _repository.DeleteById(entityId);
-        }
-
-        public void Dispose()
-        {
-            _repository.Dispose();
-        }
-
-        public IList<T> GetAll()
-        {
-            return _repository.GetAll();
-        }
+        public IList<T> GetAll() => _repository.GetAll();
     }
 }

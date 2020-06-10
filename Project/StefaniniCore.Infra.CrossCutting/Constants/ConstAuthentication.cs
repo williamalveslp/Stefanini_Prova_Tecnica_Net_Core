@@ -1,11 +1,11 @@
 ﻿namespace StefaniniCore.Infra.CrossCutting.Constants
 {
-    public class ConstAuthentication
+    public static class ConstAuthentication
     {
-        public static string CookieName = "Grandmas.Cookie";
+        public const string CookieName = "Grandmas.Cookie";
 
-        public static string SchemeName = "StefaniniCoreAuthentication";
+        public const string SchemeName = "StefaniniCoreAuthentication";
 
-        public static string RedirectionUrl = "/UserSystems/SignIn";
+        public const string RedirectionUrl = "/UserSystems/SignIn";
     }
 }

@@ -2,6 +2,8 @@
 using StefaniniCore.Domain.Interfaces.Repositories;
 using StefaniniCore.Domain.Interfaces.Services;
 using StefaniniCore.Services.Services.Base;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace StefaniniCore.Services.Services
 {
@@ -13,5 +15,8 @@ namespace StefaniniCore.Services.Services
         {
             this._repository = repository;
         }
+
+        public IList<ProfileType> GetOnlyActives() =>
+                 _repository.GetOnlyActives().OrderBy(f => f.Name).ToList();
     }
 }

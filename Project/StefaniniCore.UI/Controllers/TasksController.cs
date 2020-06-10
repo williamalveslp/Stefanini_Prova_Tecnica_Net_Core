@@ -58,6 +58,7 @@ namespace StefaniniCore.UI.Controllers
             }
         }
 
+        [Authorize]
         [HttpPost]
         /// <summary>
         /// Save the Task.
@@ -77,6 +78,7 @@ namespace StefaniniCore.UI.Controllers
             }
         }
 
+        [Authorize]
         [HttpDelete]
         /// <summary>
         /// Delete the Task.

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using StefaniniCore.Domain.Entities;
+using StefaniniCore.Infra.DataStore.SQLServer.TypeConfigs;
 
 namespace StefaniniCore.Infra.DataStore.SQLServer
 {
@@ -31,6 +32,8 @@ namespace StefaniniCore.Infra.DataStore.SQLServer
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // modelBuilder.ApplyConfiguration(new ProfileTypeProfileTypeConfig());
+
             modelBuilder.Entity<ProfileType>(entity =>
             {
                 entity.ToTable("Profile_Type");
@@ -51,6 +54,7 @@ namespace StefaniniCore.Infra.DataStore.SQLServer
                     .IsUnicode(false);
             });
 
+            // modelBuilder.ApplyConfiguration(new ProfileTypeTaskTypeConfig());
             modelBuilder.Entity<ProfileTypeTask>(entity =>
             {
                 entity.ToTable("Profile_Type_Task");
@@ -72,6 +76,7 @@ namespace StefaniniCore.Infra.DataStore.SQLServer
                     .HasConstraintName("Profile_Type_TaskFk");
             });
 
+            // modelBuilder.ApplyConfiguration(new TaskTypeConfig());
             modelBuilder.Entity<Task>(entity =>
             {
                 entity.Property(e => e.Date_Created)
@@ -94,6 +99,7 @@ namespace StefaniniCore.Infra.DataStore.SQLServer
                     .IsUnicode(false);
             });
 
+            //modelBuilder.ApplyConfiguration(new UserSystemTypeConfig());
             modelBuilder.Entity<UserSystem>(entity =>
             {
                 entity.ToTable("User_System");

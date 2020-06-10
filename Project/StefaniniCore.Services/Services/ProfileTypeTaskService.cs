@@ -2,6 +2,7 @@
 using StefaniniCore.Domain.Interfaces.Repositories;
 using StefaniniCore.Domain.Interfaces.Services;
 using StefaniniCore.Services.Services.Base;
+using System.Collections.Generic;
 
 namespace StefaniniCore.Services.Services
 {
@@ -13,5 +14,8 @@ namespace StefaniniCore.Services.Services
         {
             this._repository = repository;
         }
+
+        public IList<ProfileTypeTask> GetByProfileTypeId(int profileTypeId) =>
+             _repository.GetByProfileTypeId(profileTypeId);
     }
 }

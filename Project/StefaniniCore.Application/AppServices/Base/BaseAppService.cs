@@ -9,11 +9,6 @@ namespace StefaniniCore.Application.AppServices.Base
     {
         public ViewModelBase GetGlobalExceptionViewModel(ViewModelBase viewModel, Exception ex, HttpStatusCode? statusCode = null)
         {
-            //TODO: Add log error here.
-
-            viewModel.StackTrace = ex.StackTrace;
-            viewModel.MessageError = ex.Message;
-
             return viewModel;
         }
     }

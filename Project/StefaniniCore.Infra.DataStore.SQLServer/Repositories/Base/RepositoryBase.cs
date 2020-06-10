@@ -6,44 +6,39 @@ using System.Linq;
 
 namespace StefaniniCore.Infra.DataStore.SQLServer.Repositories.Base
 {
-    public abstract class RepositoryBase<T> : IDisposable, IRepositoryBase<T> where T : class
+    public class RepositoryBase<T> : IDisposable, IRepositoryBase<T> where T : class
     {
-        protected StefDbContext databaseContext = new StefDbContext();
+        protected readonly StefDbContext ctx = new StefDbContext();
 
         public T Insert(T entity)
         {
-            databaseContext.Set<T>().Add(entity);
-            databaseContext.SaveChanges();
+            ctx.Set<T>().Add(entity);
+            ctx.SaveChanges();
             return entity;
         }
 
         public T Update(T entity)
         {
-            databaseContext.Entry(entity).State = EntityState.Modified;
-            databaseContext.SaveChanges();
+            ctx.Entry(entity).State = EntityState.Modified;
+            ctx.SaveChanges();
             return entity;
         }
 
-        public IList<T> GetAll()
-        {
-            return databaseContext.Set<T>().ToList();
-        }
+        public IList<T> GetAll() => ctx.Set<T>().ToList();
 
-        public T GetById(int entityId)
-        {
-            return databaseContext.Set<T>().Find(entityId);
-        }
+        public T GetById(int entityId) => ctx.Set<T>().Find(entityId);
 
         public void DeleteById(int entityId)
         {
             var entity = GetById(entityId);
-            databaseContext.Set<T>().Remove(entity);
-            databaseContext.SaveChanges();
+            ctx.Set<T>().Remove(entity);
+            ctx.SaveChanges();
         }
 
         public void Dispose()
         {
-            databaseContext.Dispose();
+            ctx.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }

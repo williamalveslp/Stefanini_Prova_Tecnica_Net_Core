@@ -5,7 +5,6 @@ using StefaniniCore.Application.ViewModels;
 using StefaniniCore.Domain.Entities;
 using StefaniniCore.Domain.Interfaces.Services;
 using System;
-using System.Linq;
 
 namespace StefaniniCore.Application.AppServices
 {
@@ -25,8 +24,7 @@ namespace StefaniniCore.Application.AppServices
 
         public TaskListViewModel GetAll()
         {
-            var tasks = _taskService.GetAll().Where(f => f.IsActive)
-                                    .OrderBy(f => f.Name).ToList();
+            var tasks = _taskService.GetOnlyActives();
 
             TaskListViewModel viewModel = new TaskListViewModel();
             viewModel.Load(tasks);

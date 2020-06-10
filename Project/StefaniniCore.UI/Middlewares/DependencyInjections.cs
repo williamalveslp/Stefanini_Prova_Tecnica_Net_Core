@@ -8,7 +8,7 @@ using StefaniniCore.Services.Services;
 
 namespace StefaniniCore.UI.Middlewares
 {
-    public static class DependecyInjections
+    public static class DependencyInjections
     {
         public static void AddDependencyInjections(this IServiceCollection services)
         {
@@ -38,8 +38,7 @@ namespace StefaniniCore.UI.Middlewares
         {
             _ = services.AddScoped<ITaskAppService, TaskAppService>();
             _ = services.AddScoped<IUserSystemAppService, UserSystemAppService>();
-            _ = services.AddScoped<IProfileTypeAppService, ProfileTypeAppService>();
-            
+            _ = services.AddScoped<IProfileTypeAppService, ProfileTypeAppService>();            
         }
         #endregion
     }

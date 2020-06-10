@@ -18,8 +18,4 @@
     <ProjectReference Include="..\StefaniniCore.Domain\StefaniniCore.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="IoC\" />
-  </ItemGroup>
-
 </Project>

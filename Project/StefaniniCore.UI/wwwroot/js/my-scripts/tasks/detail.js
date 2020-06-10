@@ -6,6 +6,7 @@ function save() {
 
     var taskId = $('#hddTaskId').val();
     var name = $('#txtName').val();
+    var description = $('#txtDescription').val();
 
     if (name === null || name === "") {
         alert('Campos "Nome" não informado.');
@@ -14,7 +15,9 @@ function save() {
 
     var data = {
         'Id': taskId,
-        'Name': name
+        'Name': name,
+        'Description': description
+
     };
 
     AjaxPostGenerics(data, URL_SAVE_TASK, $('#hddTaskId'), 'POST');

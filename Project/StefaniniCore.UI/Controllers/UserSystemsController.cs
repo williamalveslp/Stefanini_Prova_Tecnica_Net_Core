@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StefaniniCore.Application.AppInterfaces;
@@ -68,6 +69,7 @@ namespace StefaniniCore.UI.Controllers
             return RedirectToAction("SignIn", "UserSystems");
         }
 
+        [Authorize]
         [HttpPost]
         /// <summary>
         /// Save the UserSystem.

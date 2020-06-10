@@ -56,6 +56,7 @@ namespace StefaniniCore.UI.Controllers
             }
         }
 
+        [Authorize]
         [HttpPost]
         /// <summary>
         /// Save the ProfileType.
@@ -75,6 +76,7 @@ namespace StefaniniCore.UI.Controllers
             }
         }
 
+        [Authorize]
         [HttpDelete]
         /// <summary>
         /// Delete the ProfileType.

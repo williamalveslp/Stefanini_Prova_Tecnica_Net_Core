@@ -17,39 +17,28 @@ namespace StefaniniCore.UI.Controllers
             return GeneralMessage(message, null, false, HttpStatusCode.BadRequest);
         }
 
-        protected IActionResult ConflictMessage(string message)
-        {
-            return GeneralMessage(message, null, false, HttpStatusCode.InternalServerError);
-        }
-
-        protected IActionResult RequiredFieldsMessage(string message)
-        {
-            return GeneralMessage(message, null, false, HttpStatusCode.BadRequest);
-        }
-
         private IActionResult GeneralMessage(string message, int? id, bool refreshPage, HttpStatusCode statusCode
                                             , string urlToRedirect = null)
         {
-            if (statusCode != HttpStatusCode.OK)
-            {
-                return BadRequest(new
-                {
-                    message,
-                    id,
-                    refreshPage,
-                    statusCode = (int)statusCode,
-                    urlToRedirect
-                });
-            }
+            var objectToUI = ObjectToUI(message, id, refreshPage, statusCode, urlToRedirect);
 
-            return Ok(new
+            if (statusCode != HttpStatusCode.OK)
+                return BadRequest(objectToUI);
+            
+            return Ok(objectToUI);
+        }
+
+        private object ObjectToUI(string message, int? id, bool refreshPage, HttpStatusCode statusCode
+                                            , string urlToRedirect = null)
+        {
+            return new
             {
                 message,
                 id,
                 refreshPage,
                 statusCode = (int)statusCode,
                 urlToRedirect
-            });
+            };
         }
     }
 }

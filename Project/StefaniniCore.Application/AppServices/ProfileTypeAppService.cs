@@ -28,14 +28,12 @@ namespace StefaniniCore.Application.AppServices
 
         public void DeleteById(int id)
         {
-            // TODO: Move this query to Repository layer.
-            var userSystemsList = _userSystemService.GetAll().Where(f => f.ProfileTypeId == id).ToList();
+            var userSystemsList = _userSystemService.GetByProfileTypeId(id);
 
             if (userSystemsList.Any())
                 throw new Exception("Não foi possível excluir este perfil, está em uso.");
 
-            // TODO: Move this query to Repository layer.
-            var profileTypesTaskList = _profileTypeTaskService.GetAll().Where(f => f.ProfileTypeId == id).ToList();
+            var profileTypesTaskList = _profileTypeTaskService.GetByProfileTypeId(id);
 
             foreach (var item in profileTypesTaskList)
                 _profileTypeTaskService.DeleteById(item.Id);
@@ -48,8 +46,7 @@ namespace StefaniniCore.Application.AppServices
 
         public ProfileTypeListViewModel GetAll()
         {
-            var profileTypes = _profileTypeService.GetAll().Where(f => f.IsActive)
-                                     .OrderBy(f => f.Name).ToList();
+            var profileTypes = _profileTypeService.GetOnlyActives();
 
             ProfileTypeListViewModel viewModel = new ProfileTypeListViewModel();
             viewModel.Load(profileTypes);
@@ -64,8 +61,7 @@ namespace StefaniniCore.Application.AppServices
             if (profileType == null)
                 throw new Exception("Perfil não encontrado.");
 
-            // TODO: Add these queries to Repository layer with joins to match the data.
-            var relation = _profileTypeTaskService.GetAll().Where(f => f.ProfileTypeId == profileType.Id).Select(f => f.TaskId).ToList();
+            var relation = _profileTypeTaskService.GetByProfileTypeId(id).Select(f => f.TaskId).ToList();
             var tasks = _tasksService.GetAll();
             var tasksByProfileType = tasks.Where(f => relation.Contains(f.Id)).ToList();
 

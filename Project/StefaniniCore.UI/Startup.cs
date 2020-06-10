@@ -21,7 +21,10 @@ namespace StefaniniCore.UI
         {
             services.AddAuthenticationHandler();
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(options =>
+            {
+                options.Filters.Add(new CustomActionFilterAttribute());  // Filters
+            });
 
             services.AddDependencyInjections();
         }

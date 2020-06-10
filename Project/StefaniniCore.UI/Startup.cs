@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using StefaniniCore.UI.Middlewares;
+using StefaniniCore.DI;
 
 namespace StefaniniCore.UI
 {
@@ -23,7 +24,7 @@ namespace StefaniniCore.UI
 
             services.AddControllersWithViews(options =>
             {
-                options.Filters.Add(new CustomActionFilterAttribute());  // Filters
+                options.Filters.Add(new CustomActionFilterAttribute());  // ActionFilters
             });
 
             services.AddDependencyInjections();
@@ -57,5 +58,5 @@ namespace StefaniniCore.UI
                     pattern: "{controller=UserSystems}/{action=SignIn}/{id?}");
             });
         }
-    }  
+    }
 }

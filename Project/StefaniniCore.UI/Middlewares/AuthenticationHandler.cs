@@ -7,8 +7,10 @@ namespace StefaniniCore.UI.Middlewares
     {
         public static void AddAuthenticationHandler(this IServiceCollection services)
         {
-            services.AddAuthentication(ConstAuthentication.SchemeName)
-                    .AddCookie(ConstAuthentication.SchemeName, config =>
+            const string schemeName = ConstAuthentication.SchemeName;
+
+            services.AddAuthentication(schemeName)
+                    .AddCookie(schemeName, config =>
                     {
                         config.Cookie.Name = ConstAuthentication.CookieName;
                         config.LoginPath = ConstAuthentication.RedirectionUrl;

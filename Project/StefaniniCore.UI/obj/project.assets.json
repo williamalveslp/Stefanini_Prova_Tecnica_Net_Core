@@ -498,10 +498,10 @@
           "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection/3.1.4": {
+      "Microsoft.Extensions.DependencyInjection/3.1.5": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.4"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.5"
         },
         "compile": {
           "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll": {}
@@ -510,7 +510,7 @@
           "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.4": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.5": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
@@ -2523,6 +2523,23 @@
           "bin/placeholder/StefaniniCore.Application.dll": {}
         }
       },
+      "StefaniniCore.DI/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "3.1.5",
+          "StefaniniCore.Application": "1.0.0",
+          "StefaniniCore.Domain": "1.0.0",
+          "StefaniniCore.Infra.DataStore.SQLServer": "1.0.0",
+          "StefaniniCore.Services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/StefaniniCore.DI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StefaniniCore.DI.dll": {}
+        }
+      },
       "StefaniniCore.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -3167,10 +3184,10 @@
         "microsoft.extensions.configuration.binder.nuspec"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection/3.1.4": {
-      "sha512": "dAWhz6BEjUFIVLUPbT1s1sUrPTwbUWdw2iBRRe3ej3xXcKS+oo64dKrIWFxRjYP6TWyESpGFNY5NGeA5FcHVlg==",
+    "Microsoft.Extensions.DependencyInjection/3.1.5": {
+      "sha512": "I+RTJQi7TtenIHZqL2zr6523PYXfL88Ruu4UIVmspIxdw14GHd8zZ+2dGLSdwX7fn41Hth4d42S1e1iHWVOJyQ==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection/3.1.4",
+      "path": "microsoft.extensions.dependencyinjection/3.1.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3183,21 +3200,21 @@
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
-        "microsoft.extensions.dependencyinjection.3.1.4.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.3.1.5.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.nuspec"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.4": {
-      "sha512": "AceHamXNKDMDwIoZqEoApLp8s3935wSC3VXrPaRWa0wWOaEcYdDlo1nWQ1zLiezoDmpJzV7FqDm53E0Ty/hEMg==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.5": {
+      "sha512": "2VSCj2TZPMdeEi279Lawi6qJQu4+sEWizSOYrhY6hapyS1jxn1jVUZT1Ugv68bya+x8+3lD4+RqhUZql9PhISQ==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.4",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.3.1.4.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.3.1.5.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec"
       ]
     },
@@ -8255,6 +8272,11 @@
       "path": "../StefaniniCore.Application/StefaniniCore.Application.csproj",
       "msbuildProject": "../StefaniniCore.Application/StefaniniCore.Application.csproj"
     },
+    "StefaniniCore.DI/1.0.0": {
+      "type": "project",
+      "path": "../StefaniniCore.DI/StefaniniCore.DI.csproj",
+      "msbuildProject": "../StefaniniCore.DI/StefaniniCore.DI.csproj"
+    },
     "StefaniniCore.Domain/1.0.0": {
       "type": "project",
       "path": "../StefaniniCore.Domain/StefaniniCore.Domain.csproj",
@@ -8280,6 +8302,7 @@
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.3",
       "StefaniniCore.Application >= 1.0.0",
+      "StefaniniCore.DI >= 1.0.0",
       "StefaniniCore.Domain >= 1.0.0",
       "StefaniniCore.Infra.CrossCutting >= 1.0.0",
       "StefaniniCore.Infra.DataStore.SQLServer >= 1.0.0",
@@ -8319,6 +8342,9 @@
           "projectReferences": {
             "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Application\\StefaniniCore.Application.csproj": {
               "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Application\\StefaniniCore.Application.csproj"
+            },
+            "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.DI\\StefaniniCore.DI.csproj": {
+              "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.DI\\StefaniniCore.DI.csproj"
             },
             "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Domain\\StefaniniCore.Domain.csproj": {
               "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Domain\\StefaniniCore.Domain.csproj"

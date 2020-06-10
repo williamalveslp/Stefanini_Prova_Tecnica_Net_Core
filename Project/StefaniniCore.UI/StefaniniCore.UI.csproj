@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\StefaniniCore.Application\StefaniniCore.Application.csproj" />
+    <ProjectReference Include="..\StefaniniCore.DI\StefaniniCore.DI.csproj" />
     <ProjectReference Include="..\StefaniniCore.Domain\StefaniniCore.Domain.csproj" />
     <ProjectReference Include="..\StefaniniCore.Infra.CrossCutting\StefaniniCore.Infra.CrossCutting.csproj" />
     <ProjectReference Include="..\StefaniniCore.Infra.DataStore.SQLServer\StefaniniCore.Infra.DataStore.SQLServer.csproj" />

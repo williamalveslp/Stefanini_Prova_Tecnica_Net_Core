@@ -6,7 +6,7 @@ using StefaniniCore.Domain.Interfaces.Services;
 using StefaniniCore.Infra.DataStore.SQLServer.Repositories;
 using StefaniniCore.Services.Services;
 
-namespace StefaniniCore.UI.Middlewares
+namespace StefaniniCore.Common
 {
     public static class DependencyInjections
     {
@@ -38,7 +38,7 @@ namespace StefaniniCore.UI.Middlewares
         {
             _ = services.AddScoped<ITaskAppService, TaskAppService>();
             _ = services.AddScoped<IUserSystemAppService, UserSystemAppService>();
-            _ = services.AddScoped<IProfileTypeAppService, ProfileTypeAppService>();            
+            _ = services.AddScoped<IProfileTypeAppService, ProfileTypeAppService>();
         }
         #endregion
     }

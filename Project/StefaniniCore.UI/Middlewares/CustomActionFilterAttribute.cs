@@ -13,8 +13,10 @@ namespace StefaniniCore.UI.Middlewares
         /// <param name="context"></param>
         public override void OnActionExecuting(ActionExecutingContext context)
         {
-            string controller = ((ControllerActionDescriptor)((ActionContext)((ControllerBase)context.Controller).ControllerContext).ActionDescriptor).ControllerName;
-            string action = ((ControllerActionDescriptor)((ActionContext)((ControllerBase)context.Controller).ControllerContext).ActionDescriptor).ActionName;
+            var actionDescriptor = ((ControllerActionDescriptor)((ActionContext)((ControllerBase)context.Controller).ControllerContext).ActionDescriptor);
+           
+            string controller = actionDescriptor.ControllerName;
+            string action = actionDescriptor.ActionName;
             bool isModelStateValid = context.ModelState.IsValid;
             string method = context.HttpContext?.Request?.Method;
 
@@ -27,8 +29,10 @@ namespace StefaniniCore.UI.Middlewares
         /// <param name="context"></param>
         public override void OnActionExecuted(ActionExecutedContext context)
         {
-            string controller = ((ControllerActionDescriptor)((ActionContext)((ControllerBase)context.Controller).ControllerContext).ActionDescriptor).ControllerName;
-            string action = ((ControllerActionDescriptor)((ActionContext)((ControllerBase)context.Controller).ControllerContext).ActionDescriptor).ActionName;
+            var actionDescriptor = ((ControllerActionDescriptor)((ActionContext)((ControllerBase)context.Controller).ControllerContext).ActionDescriptor);
+
+            string controller = actionDescriptor.ControllerName;
+            string action = actionDescriptor.ActionName;
             bool isModelStateValid = context.ModelState.IsValid;
 
             SaveLog(controller, action, isModelStateValid);
@@ -36,8 +40,10 @@ namespace StefaniniCore.UI.Middlewares
 
         public override void OnResultExecuting(ResultExecutingContext context)
         {
-            string controller = ((ControllerActionDescriptor)((ActionContext)((ControllerBase)context.Controller).ControllerContext).ActionDescriptor).ControllerName;
-            string action = ((ControllerActionDescriptor)((ActionContext)((ControllerBase)context.Controller).ControllerContext).ActionDescriptor).ActionName;
+            var actionDescriptor = ((ControllerActionDescriptor)((ActionContext)((ControllerBase)context.Controller).ControllerContext).ActionDescriptor);
+
+            string controller = actionDescriptor.ControllerName;
+            string action = actionDescriptor.ActionName;
             bool isModelStateValid = context.ModelState.IsValid;
 
             SaveLog(controller, action, isModelStateValid);
@@ -45,8 +51,10 @@ namespace StefaniniCore.UI.Middlewares
 
         public override void OnResultExecuted(ResultExecutedContext context)
         {
-            string controller = ((ControllerActionDescriptor)((ActionContext)((ControllerBase)context.Controller).ControllerContext).ActionDescriptor).ControllerName;
-            string action = ((ControllerActionDescriptor)((ActionContext)((ControllerBase)context.Controller).ControllerContext).ActionDescriptor).ActionName;
+            var actionDescriptor = ((ControllerActionDescriptor)((ActionContext)((ControllerBase)context.Controller).ControllerContext).ActionDescriptor);
+
+            string controller = actionDescriptor.ControllerName;
+            string action = actionDescriptor.ActionName;
             bool isModelStateValid = context.ModelState.IsValid;
 
             SaveLog(controller, action, isModelStateValid);

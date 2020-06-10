@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oq3+7ZwQMoXGTkJLimn5fSarFnyhr7jNe1j7QddF+kqcDQrzesOXZeizTugeXJpBMici3OhJO/eIz1Ctl4oDgw==",
+  "dgSpecHash": "Xr8Yx81TZdgcBz6IRKI4u4kdgURybmCcQWW+7MFsrKe5MUAnOYSsZcnxTmpi0TGQ/wwJmJSKnGdmd51RfMkPOw==",
   "success": true,
   "projectFilePath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.UI\\StefaniniCore.UI.csproj",
   "expectedPackageFiles": [
@@ -30,8 +30,8 @@
     "C:\\Users\\willi\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.4\\microsoft.extensions.configuration.3.1.4.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.4\\microsoft.extensions.configuration.abstractions.3.1.4.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.4\\microsoft.extensions.configuration.binder.3.1.4.nupkg.sha512",
-    "C:\\Users\\willi\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.4\\microsoft.extensions.dependencyinjection.3.1.4.nupkg.sha512",
-    "C:\\Users\\willi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.4\\microsoft.extensions.dependencyinjection.abstractions.3.1.4.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.5\\microsoft.extensions.dependencyinjection.3.1.5.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.5\\microsoft.extensions.dependencyinjection.abstractions.3.1.5.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\microsoft.extensions.logging\\3.1.4\\microsoft.extensions.logging.3.1.4.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.4\\microsoft.extensions.logging.abstractions.3.1.4.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\microsoft.extensions.options\\3.1.4\\microsoft.extensions.options.3.1.4.nupkg.sha512",

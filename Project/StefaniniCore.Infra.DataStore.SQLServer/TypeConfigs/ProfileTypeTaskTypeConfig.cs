@@ -18,13 +18,13 @@ namespace StefaniniCore.Infra.DataStore.SQLServer.TypeConfigs
                         .WithMany(p => p.ProfileTypeTask)
                         .HasForeignKey(d => d.ProfileTypeId)
                         .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("Profile_Type_Profile_TypeFk");
+                        .HasConstraintName("ProfileTypeProfileTypeFk");
 
             _ = builder.HasOne(d => d.Task)
                         .WithMany(p => p.ProfileTypeTask)
                         .HasForeignKey(d => d.TaskId)
                         .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("Profile_Type_TaskFk");
+                        .HasConstraintName("ProfileTypeTaskFk");
         }
     }
 }

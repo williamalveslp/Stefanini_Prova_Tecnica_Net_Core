@@ -14,6 +14,7 @@ namespace StefaniniCore.Infra.DataStore.SQLServer.TypeConfigs
             _ = builder.Property(g => g.UserName).HasColumnName("User_Name").HasMaxLength(30).IsRequired();
             _ = builder.Property(g => g.Password).HasColumnName("Password").HasMaxLength(30).IsRequired();
             _ = builder.Property(g => g.IsActive).HasColumnName("Is_Active").IsRequired();
+            _ = builder.Property(g => g.ProfileTypeId).HasColumnName("Profile_Type_Id").IsRequired();
 
             _ = builder.Property(g => g.Date_Created)
                                 .HasColumnName("Date_Created")
@@ -22,6 +23,12 @@ namespace StefaniniCore.Infra.DataStore.SQLServer.TypeConfigs
             _ = builder.Property(g => g.Date_Updated)
                                 .HasColumnName("Date_Updated")
                                 .HasColumnType("datetime").IsRequired();
+
+            _ = builder.HasOne(d => d.ProfileType)
+                                .WithMany(p => p.UserSystem)
+                                .HasForeignKey(d => d.ProfileTypeId)
+                                .OnDelete(DeleteBehavior.ClientSetNull)
+                                .HasConstraintName("UserSystemProfileTypeFk");
 
             _ = builder.HasIndex(g => g.UserName).IsUnique();
         }

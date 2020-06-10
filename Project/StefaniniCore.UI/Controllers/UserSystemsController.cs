@@ -69,7 +69,6 @@ namespace StefaniniCore.UI.Controllers
             return RedirectToAction("SignIn", "UserSystems");
         }
 
-        [Authorize]
         [HttpPost]
         /// <summary>
         /// Save the UserSystem.

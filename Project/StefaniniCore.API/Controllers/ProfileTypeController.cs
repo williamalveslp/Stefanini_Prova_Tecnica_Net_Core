@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Logging;
 using StefaniniCore.API.Controllers.Base;
 using StefaniniCore.Application.AppInterfaces;
-using StefaniniCore.Application.InputModels.Tasks;
 using System;
 using System.Threading.Tasks;
 
@@ -10,18 +9,18 @@ namespace StefaniniCore.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class TasksController : MainController
+    public class ProfileTypeController : MainController
     {
         private readonly ILogger<TasksController> _logger;
-        private readonly ITaskAppService _appService;
+        private readonly IProfileTypeAppService _appService;
 
-        public TasksController(ILogger<TasksController> logger, ITaskAppService appService)
+        public ProfileTypeController(ILogger<TasksController> logger, IProfileTypeAppService appService)
         {
             this._logger = logger;
             this._appService = appService;
         }
 
-        // api/Tasks/5
+        // api/ProfileType/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -35,34 +34,7 @@ namespace StefaniniCore.API.Controllers
             }
         }
 
-        // api/Tasks
-        [HttpPost]
-        public async Task<IActionResult> Insert([FromBody] TaskInputModel inputModel)
-        {
-            try
-            {
-                return Created("/api/Tasks", _appService.Save(inputModel));
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-        [HttpPut]
-        public async Task<IActionResult> Update([FromBody] TaskInputModel inputModel)
-        {
-            try
-            {
-                return Created("/api/Tasks", _appService.Save(inputModel));
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-        // api/Tasks
+        // api/ProfileType
         [HttpGet]
         public async Task<IActionResult> Get()
         {

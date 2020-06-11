@@ -3,7 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using StefaniniCore.DI;
+using StefaniniCore.Infra.CrossCutting.Constants;
+using System;
 
 namespace StefaniniCore.API
 {
@@ -22,6 +25,8 @@ namespace StefaniniCore.API
             services.AddControllers();
 
             services.AddDependencyInjections();
+
+            services.ConfigureSwagger();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +45,34 @@ namespace StefaniniCore.API
             {
                 endpoints.MapControllers();
             });
+
+            // Activating Swagger middlewares.
+            app.UseSwagger();
+            app.UseSwaggerUI(options =>
+                     options.SwaggerEndpoint("/api/swagger/v1/swagger.json", "William Goi Scheme"));
+        }
+    }
+
+    internal static class DependencyInjectionSwagger
+    {
+        public static void ConfigureSwagger(this IServiceCollection services)
+        {
+            _ = services.AddSwaggerGen(c =>
+              {
+                  c.SwaggerDoc(ConstSwagger.API_Version,
+                      new OpenApiInfo
+                      {
+                          Title = ConstSwagger.Title,
+                          Version = ConstSwagger.API_Version,
+                          Description = ConstSwagger.Description,
+                          Contact = new OpenApiContact
+                          {
+                              Name = ConstSwagger.Contact_Name,
+                              Email = ConstSwagger.Contact_Email,
+                              Url = new Uri(ConstSwagger.Contact_Url)
+                          }
+                      });
+              });
         }
     }
 }

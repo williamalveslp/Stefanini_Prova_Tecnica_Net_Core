@@ -10,12 +10,14 @@ ASPNET Core 3.1
   - Autenticação com Claims
   - ActionFilters
   - FluentValidators
+  - Swagger
   - EntityTypeConfigurations
   - xUnit
   - Ajax
   - Jquery
   - Bootstrap
-   
+
+Aplicação Web e REST API.
 
 ## Instruções
 

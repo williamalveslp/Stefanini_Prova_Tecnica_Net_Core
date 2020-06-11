@@ -17,7 +17,7 @@ ASPNET Core 3.1
   - Jquery
   - Bootstrap
 
-Aplicação Web e REST API.
+Aplicação Web (Razor Pages) e REST API (integrado com Swagger).
 
 ## Instruções
 

@@ -9,6 +9,7 @@ ASPNET Core 3.1
   - Injeção de Dependência
   - Autenticação com Claims
   - ActionFilters
+  - FluentValidators
   - EntityTypeConfigurations
   - xUnit
   - Ajax

@@ -21,7 +21,7 @@
                 window.location = data.urlToRedirect;
                 return;
             }
-
+            console.info('[' + data.statusCode + '] ' + data.message);
             alert(data.message);
 
             if (data.refreshPage) {
@@ -34,11 +34,15 @@
 
                 if (data.responseJSON.urlToRedirect)
                     window.location = data.responseJSON.urlToRedirect;
-                else
-                    alert(data.responseJSON.message + " [" + data.status + "]");
+                else {
+                    console.error('[' + data.status + '] ' + data.responseJSON.message);
+                    alert(data.responseJSON.message);
+                }
 
             } else {
-                var message = "Erro ocorreu no envio da requisição. Tente mais tarde.";
+                var message = 'Erro ocorreu no envio da requisição. Tente mais tarde.';
+                console.error('[' + data.status + '] ' + message);
+
                 alert(message);
             }
         }

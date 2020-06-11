@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "RKtISFvq29oagCDzeNba6lRx9DCZmImiYFyFs3nR/gOMASgzcvnjt2x4i5WjOpYhKCytJqOUJquKIQnqWNicVQ==",
+  "dgSpecHash": "mIcXbl+ZH9GtB59OyQeBKTVUoO6fDvyt2PrPbadNeaZFejFG7Rev4JYVovx3U6u43PTESbLb/MRCFXJLVB03Sw==",
   "success": true,
   "projectFilePath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Application\\StefaniniCore.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\willi\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\fluentvalidation.aspnetcore\\8.6.2\\fluentvalidation.aspnetcore.8.6.2.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\8.6.2\\fluentvalidation.dependencyinjectionextensions.8.6.2.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\system.componentmodel.annotations\\4.4.1\\system.componentmodel.annotations.4.4.1.nupkg.sha512"
+  ],
   "logs": []
 }

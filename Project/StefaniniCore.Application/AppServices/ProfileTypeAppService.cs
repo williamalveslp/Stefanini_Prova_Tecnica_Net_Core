@@ -1,6 +1,7 @@
 ﻿using StefaniniCore.Application.AppInterfaces;
 using StefaniniCore.Application.AppServices.Base;
 using StefaniniCore.Application.InputModels.ProfileTypes;
+using StefaniniCore.Application.Validators.ProfileTypes;
 using StefaniniCore.Application.ViewModels;
 using StefaniniCore.Domain.Entities;
 using StefaniniCore.Domain.Interfaces.Services;
@@ -146,19 +147,12 @@ namespace StefaniniCore.Application.AppServices
             }
         }
 
-        private void ValidationsToSave(ProfileTypeInputModel inputModel)
+        public void ValidationsToSave(ProfileTypeInputModel inputModel)
         {
-            if (inputModel == null)
-                throw new Exception("Erro no envio dos dados.");
+            var validate = new ProfileTypeInputModelValidator().Validate(inputModel);
 
-            if (string.IsNullOrEmpty(inputModel.Name))
-                throw new Exception("Campo 'Nome' não foi preenchido.");
-
-            if (inputModel.TaskIds == null)
-                throw new Exception("Campo 'Funcionalidades' estão inválidos");
-
-            if (!inputModel.TaskIds.Any())
-                throw new Exception("Campo 'Funcionalidades' não foi preenchido.");
+            if (!validate.IsValid)
+                throw new Exception(validate.Errors.FirstOrDefault().ErrorMessage);
         }
     }
 }

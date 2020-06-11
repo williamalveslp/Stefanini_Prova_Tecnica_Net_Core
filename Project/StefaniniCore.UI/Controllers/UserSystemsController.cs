@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StefaniniCore.Application.AppInterfaces;
-using StefaniniCore.Application.InputModels.UserSystem;
+using StefaniniCore.Application.InputModels.UserSystemInputModel;
 using StefaniniCore.Application.ViewModels;
 using StefaniniCore.Domain.Entities;
 using StefaniniCore.Infra.CrossCutting.Constants;

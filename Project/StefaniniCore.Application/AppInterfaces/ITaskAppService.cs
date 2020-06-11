@@ -12,6 +12,8 @@ namespace StefaniniCore.Application.AppInterfaces
 
         Task Save(TaskInputModel inputModel);
 
+        void ValidationsToSave(TaskInputModel inputModel);
+
         void DeleteById(int id);
     }
 }

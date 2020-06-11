@@ -14,6 +14,8 @@ namespace StefaniniCore.Application.AppInterfaces
 
         ProfileType Save(ProfileTypeInputModel inputModel);
 
+        void ValidationsToSave(ProfileTypeInputModel inputModel);
+
         void DeleteById(int id);
     }
 }

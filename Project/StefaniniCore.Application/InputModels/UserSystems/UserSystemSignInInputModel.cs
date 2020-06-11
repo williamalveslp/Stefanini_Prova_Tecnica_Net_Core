@@ -1,4 +1,4 @@
-﻿namespace StefaniniCore.Application.InputModels.UserSystem
+﻿namespace StefaniniCore.Application.InputModels.UserSystemInputModel
 {
     public class UserSystemSignInInputModel
     {

@@ -4,7 +4,9 @@ using StefaniniCore.Application.InputModels.Tasks;
 using StefaniniCore.Application.ViewModels;
 using StefaniniCore.Domain.Entities;
 using StefaniniCore.Domain.Interfaces.Services;
+using StefaniniCore.Services.Validators;
 using System;
+using System.Linq;
 
 namespace StefaniniCore.Application.AppServices
 {
@@ -38,7 +40,7 @@ namespace StefaniniCore.Application.AppServices
 
             if (task == null)
                 throw new Exception("Funcionalidade não encontrada.");
-          
+
             TaskDetailViewModel viewModel = new TaskDetailViewModel();
             viewModel.Load(task.Id, task.Name, task.Description);
 
@@ -49,7 +51,7 @@ namespace StefaniniCore.Application.AppServices
         {
             ValidationsToSave(inputModel);
 
-            Task task;
+              Task task;
             if (inputModel.Id <= 0)
             {
                 task = new Task(inputModel.Name, inputModel.Description);
@@ -64,15 +66,12 @@ namespace StefaniniCore.Application.AppServices
             return task;
         }
 
-        #region .: PRIVATE METHODS :.
-        private void ValidationsToSave(TaskInputModel inputModel)
+        public void ValidationsToSave(TaskInputModel inputModel)
         {
-            if (inputModel == null)
-                throw new Exception("Erro no envio dos dados.");
+            var validate = new TaskInputModelValidator().Validate(inputModel);
 
-            if (string.IsNullOrEmpty(inputModel.Name))
-                throw new Exception("Campo 'Nome' não foi preenchido.");
+            if (!validate.IsValid)
+                throw new Exception(validate.Errors.FirstOrDefault().ErrorMessage);
         }
-        #endregion
     }
 }

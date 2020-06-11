@@ -6,4 +6,3 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Domain\obj\D
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Domain\obj\Debug\netcoreapp3.1\StefaniniCore.Domain.csproj.CoreCompileInputs.cache
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Domain\obj\Debug\netcoreapp3.1\StefaniniCore.Domain.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Domain\obj\Debug\netcoreapp3.1\StefaniniCore.Domain.pdb
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Domain\obj\Debug\netcoreapp3.1\StefaniniCore.Domain.csprojAssemblyReference.cache

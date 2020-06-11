@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Xr8Yx81TZdgcBz6IRKI4u4kdgURybmCcQWW+7MFsrKe5MUAnOYSsZcnxTmpi0TGQ/wwJmJSKnGdmd51RfMkPOw==",
+  "dgSpecHash": "pFfjbvmLau4ZjfOmZf7R18OguaOF6CcAOpNqc05nVUqcpEoNKMM1hDZclTVca9o0ZjUo1akB1hPWhIofiJz1rw==",
   "success": true,
   "projectFilePath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.UI\\StefaniniCore.UI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\willi\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\fluentvalidation.aspnetcore\\8.6.2\\fluentvalidation.aspnetcore.8.6.2.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\8.6.2\\fluentvalidation.dependencyinjectionextensions.8.6.2.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",

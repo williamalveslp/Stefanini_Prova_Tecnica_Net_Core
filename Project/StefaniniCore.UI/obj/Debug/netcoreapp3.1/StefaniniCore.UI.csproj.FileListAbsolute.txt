@@ -159,3 +159,7 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.UI\obj\Debug
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.UI\obj\Debug\netcoreapp3.1\StefaniniCore.UI.MvcApplicationPartsAssemblyInfo.cache
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.UI\bin\Debug\netcoreapp3.1\StefaniniCore.DI.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.UI\bin\Debug\netcoreapp3.1\StefaniniCore.DI.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.UI\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.UI\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.UI\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.UI\obj\Debug\netcoreapp3.1\StefaniniCore.UI.MvcApplicationPartsAssemblyInfo.cs

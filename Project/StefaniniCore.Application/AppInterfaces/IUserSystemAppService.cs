@@ -1,4 +1,4 @@
-﻿using StefaniniCore.Application.InputModels.UserSystem;
+﻿using StefaniniCore.Application.InputModels.UserSystemInputModel;
 using StefaniniCore.Application.ViewModels;
 using StefaniniCore.Domain.Entities;
 
@@ -10,12 +10,10 @@ namespace StefaniniCore.Application.AppInterfaces
 
         UserSystemDetailViewModel GetListsPopulated();
 
-        TaskListViewModel GetAll();
-
         UserSystem GetSignIn(UserSystemSignInInputModel inputModel);
 
         UserSystem Save(UserSystemInputModel inputModel);
 
-        void DeleteById(int id);
+        void ValidationsToSave(UserSystemInputModel inputModel);
     }
 }

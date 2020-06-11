@@ -6,14 +6,16 @@ namespace StefaniniCore.UI.Controllers
 {
     public abstract class MainController : Controller
     {
-        protected IActionResult SuccessMessage(string message, int? id, bool refreshPage, string urlToRedirect = null)
+        public IActionResult SuccessMessage(string message, int? id, bool refreshPage, string urlToRedirect = null)
         {
             return GeneralMessage(message, id, refreshPage, HttpStatusCode.OK, urlToRedirect);
         }
 
-        protected IActionResult ErrorMessage(string message, ILogger<object> logger)
+        public IActionResult ErrorMessage(string message, ILogger<object> logger = null)
         {
-            logger.LogError("Error ocorreu.");
+            if (logger != null)
+                logger.LogError($"[Erro] {message}");
+
             return GeneralMessage(message, null, false, HttpStatusCode.BadRequest);
         }
 
@@ -24,7 +26,7 @@ namespace StefaniniCore.UI.Controllers
 
             if (statusCode != HttpStatusCode.OK)
                 return BadRequest(objectToUI);
-            
+
             return Ok(objectToUI);
         }
 

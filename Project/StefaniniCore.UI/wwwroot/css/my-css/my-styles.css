@@ -23,6 +23,10 @@
     max-width: 100%;
 }
 
-.headerNoSignIn{
-    margin-bottom:30px;
+.headerNoSignIn {
+    margin-bottom: 30px;
+}
+
+.textColorDeleteButton {
+    color: white !important;
 }

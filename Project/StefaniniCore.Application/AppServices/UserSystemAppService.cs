@@ -1,6 +1,7 @@
 ﻿using StefaniniCore.Application.AppInterfaces;
 using StefaniniCore.Application.AppServices.Base;
-using StefaniniCore.Application.InputModels.UserSystem;
+using StefaniniCore.Application.InputModels.UserSystemInputModel;
+using StefaniniCore.Application.Validators;
 using StefaniniCore.Application.ViewModels;
 using StefaniniCore.Domain.Entities;
 using StefaniniCore.Domain.Interfaces.Services;
@@ -18,16 +19,6 @@ namespace StefaniniCore.Application.AppServices
         {
             _userSystemService = userSystemService;
             _profileTypeService = profileTypeService;
-        }
-
-        public void DeleteById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public TaskListViewModel GetAll()
-        {
-            throw new NotImplementedException();
         }
 
         public UserSystemDetailViewModel GetListsPopulated()
@@ -84,21 +75,12 @@ namespace StefaniniCore.Application.AppServices
             return userSystem;
         }
 
-        #region .: PRIVATE METHODS :.
-        private void ValidationsToSave(UserSystemInputModel inputModel)
+        public void ValidationsToSave(UserSystemInputModel inputModel)
         {
-            if (inputModel == null)
-                throw new Exception("Erro no envio dos dados.");
+            var validate = new UserSystemInputModelValidator().Validate(inputModel);
 
-            if (string.IsNullOrEmpty(inputModel.UserName))
-                throw new Exception("Campo 'Nome do Usuário' não foi preenchido.");
-
-            if (string.IsNullOrEmpty(inputModel.Password))
-                throw new Exception("Campo 'Senha' não foi preenchido.");
-
-            if (inputModel.ProfileTypeId <= 0)
-                throw new Exception("Campo 'Perfil' não foi selecionado.");
+            if (!validate.IsValid)
+                throw new Exception(validate.Errors.FirstOrDefault().ErrorMessage);
         }
-        #endregion
     }
 }

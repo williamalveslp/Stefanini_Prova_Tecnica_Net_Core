@@ -27,3 +27,5 @@ Após fazer o clone do repositório, siga os seguintes passos abaixo:
 Pronto, está configurado sua aplicação para ser executada.
 
 * Você pode realizar login utilizando algum dos usuários pré-cadastrados da tabela ***User_System***, ou crie um usuário novo pela aplicação.
+
+@williamgoi

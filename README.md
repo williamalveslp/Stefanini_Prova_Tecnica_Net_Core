@@ -8,7 +8,7 @@ ASPNET Core 3.1
   - EntityFrameworkCore
   - Injeção de Dependência
   - Autenticação com Claims
-  - ActionFilters
+  - ActionFilterAttribute
   - FluentValidators
   - Swagger
   - Health Checks

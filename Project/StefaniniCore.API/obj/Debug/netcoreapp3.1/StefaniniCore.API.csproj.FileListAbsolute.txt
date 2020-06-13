@@ -7,6 +7,7 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debu
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.API.runtimeconfig.dev.json
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.API.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.API.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.API.xml
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\FluentValidation.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
@@ -77,4 +78,3 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debu
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.genruntimeconfig.cache
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.API.xml

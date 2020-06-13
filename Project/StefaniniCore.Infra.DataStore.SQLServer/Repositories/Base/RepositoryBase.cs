@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace StefaniniCore.Infra.DataStore.SQLServer.Repositories.Base
 {
-    public class RepositoryBase<T> : IDisposable, IRepositoryBase<T> where T : class
+    public abstract class RepositoryBase<T> : IDisposable, IRepositoryBase<T> where T : class
     {
         protected readonly StefDbContext ctx = new StefDbContext();
 

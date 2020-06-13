@@ -11,7 +11,7 @@ namespace StefaniniCore.API.HealthChecks
     /// <summary>
     /// Garbage Colector Info.
     /// </summary>
-    public static class GCInfoHealthCheckBuilderExtensions
+    internal static class GCInfoHealthCheckBuilderExtensions
     {
         public static IHealthChecksBuilder AddGCInfoCheck(
             this IHealthChecksBuilder builder,
@@ -36,7 +36,7 @@ namespace StefaniniCore.API.HealthChecks
         }
     }
 
-    public class GCInfoHealthCheck : IHealthCheck
+    internal class GCInfoHealthCheck : IHealthCheck
     {
         private readonly IOptionsMonitor<GCInfoOptions> _options;
 
@@ -75,7 +75,7 @@ namespace StefaniniCore.API.HealthChecks
         }
     }
 
-    public class GCInfoOptions
+    internal class GCInfoOptions
     {
         // The failure threshold (in bytes)
         public long Threshold { get; set; } = 1024L * 1024L * 1024L;

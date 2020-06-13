@@ -10,6 +10,7 @@ namespace StefaniniCore.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Produces("application/json")]
     public class TasksController : MainController
     {
         private readonly ILogger<TasksController> _logger;

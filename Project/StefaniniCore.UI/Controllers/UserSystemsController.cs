@@ -24,10 +24,6 @@ namespace StefaniniCore.UI.Controllers
             _logger = logger;
         }
 
-        /// <summary>
-        /// Detail with the fields of UserSystem.
-        /// </summary>
-        /// <returns></returns>
         public IActionResult Detail(int? userSystemId)
         {
             try
@@ -43,10 +39,6 @@ namespace StefaniniCore.UI.Controllers
             }
         }
 
-        /// <summary>
-        /// SingIn/Login from application.
-        /// </summary>
-        /// <returns></returns>
         public IActionResult SignIn()
         {
             foreach (var cookie in Request.Cookies.Keys)
@@ -58,10 +50,6 @@ namespace StefaniniCore.UI.Controllers
             return View(new UserSystemSignInViewModel());
         }
 
-        /// <summary>
-        /// SignOut from application.
-        /// </summary>
-        /// <returns></returns>
         public IActionResult SignOut()
         {
             RemoveAuthentication();
@@ -69,11 +57,6 @@ namespace StefaniniCore.UI.Controllers
         }
 
         [HttpPost]
-        /// <summary>
-        /// Save the UserSystem.
-        /// </summary>
-        /// <param name="taskId"></param>
-        /// <returns></returns>
         public IActionResult Save(UserSystemInputModel inputModel)
         {
             try
@@ -94,11 +77,6 @@ namespace StefaniniCore.UI.Controllers
         }
 
         [HttpPost]
-        /// <summary>
-        /// SignIn the UserSystem.
-        /// </summary>
-        /// <param name="inputModel"></param>
-        /// <returns></returns>
         public IActionResult RegisterSignIn(UserSystemSignInInputModel inputModel)
         {
             try

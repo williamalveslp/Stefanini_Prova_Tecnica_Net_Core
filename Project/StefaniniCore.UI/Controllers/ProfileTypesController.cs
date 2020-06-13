@@ -18,10 +18,6 @@ namespace StefaniniCore.UI.Controllers
             _logger = logger;
         }
 
-        /// <summary>
-        /// Detail of ProfileTypes.
-        /// </summary>
-        /// <returns></returns>
         [Authorize]
         public IActionResult Detail(int? profileTypeId)
         {
@@ -38,10 +34,6 @@ namespace StefaniniCore.UI.Controllers
             }
         }
 
-        /// <summary>
-        /// List of Tasks.
-        /// </summary>
-        /// <returns></returns>
         [Authorize]
         public IActionResult List()
         {
@@ -58,11 +50,6 @@ namespace StefaniniCore.UI.Controllers
 
         [Authorize]
         [HttpPost]
-        /// <summary>
-        /// Save the ProfileType.
-        /// </summary>
-        /// <param name="taskId"></param>
-        /// <returns></returns>
         public IActionResult Save(ProfileTypeInputModel inputModel)
         {
             try
@@ -78,11 +65,6 @@ namespace StefaniniCore.UI.Controllers
 
         [Authorize]
         [HttpDelete]
-        /// <summary>
-        /// Delete the ProfileType.
-        /// </summary>
-        /// <param name="taskId"></param>
-        /// <returns></returns>
         public IActionResult Remove(int profileTypeId)
         {
             try

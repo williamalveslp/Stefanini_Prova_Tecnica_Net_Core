@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/Tasks",
+      "launchUrl": "api/check",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "StefaniniCore.API": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "Tasks",
+      "launchUrl": "check",
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

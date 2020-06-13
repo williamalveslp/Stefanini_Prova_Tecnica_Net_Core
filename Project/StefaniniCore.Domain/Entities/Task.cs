@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-using StefaniniCore.Domain.ValueObject;
-using System;
+﻿using StefaniniCore.Domain.ValueObject;
 using System.Collections.Generic;
 
 namespace StefaniniCore.Domain.Entities

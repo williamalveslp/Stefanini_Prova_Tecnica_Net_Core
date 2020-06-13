@@ -19,10 +19,6 @@ namespace StefaniniCore.UI.Controllers
             _appService = appService;
         }
 
-        /// <summary>
-        /// List of Tasks.
-        /// </summary>
-        /// <returns></returns>
         [Authorize]
         public IActionResult List()
         {
@@ -37,11 +33,6 @@ namespace StefaniniCore.UI.Controllers
             }
         }
 
-        /// <summary>
-        /// Detail of the fields of Tasks.
-        /// </summary>
-        /// <param name="taskId"></param>
-        /// <returns></returns>
         [Authorize]
         public IActionResult Detail(int? taskId)
         {
@@ -60,11 +51,6 @@ namespace StefaniniCore.UI.Controllers
 
         [Authorize]
         [HttpPost]
-        /// <summary>
-        /// Save the Task.
-        /// </summary>
-        /// <param name="taskId"></param>
-        /// <returns></returns>
         public IActionResult Save(TaskInputModel inputModel)
         {
             try
@@ -80,11 +66,6 @@ namespace StefaniniCore.UI.Controllers
 
         [Authorize]
         [HttpDelete]
-        /// <summary>
-        /// Delete the Task.
-        /// </summary>
-        /// <param name="taskId"></param>
-        /// <returns></returns>
         public IActionResult Remove(int taskId)
         {
             try

@@ -9,12 +9,13 @@ namespace StefaniniCore.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ProfileTypeController : MainController
+    [Produces("application/json")]
+    public class ProfileTypesController : MainController
     {
-        private readonly ILogger<TasksController> _logger;
+        private readonly ILogger<ProfileTypesController> _logger;
         private readonly IProfileTypeAppService _appService;
 
-        public ProfileTypeController(ILogger<TasksController> logger, IProfileTypeAppService appService)
+        public ProfileTypesController(ILogger<ProfileTypesController> logger, IProfileTypeAppService appService)
         {
             this._logger = logger;
             this._appService = appService;

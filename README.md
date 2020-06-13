@@ -8,16 +8,17 @@ ASPNET Core 3.1
   - EntityFrameworkCore
   - Injeção de Dependência
   - Autenticação com Claims
-  - ActionFilters
+  - ActionFilterAttribute
   - FluentValidators
   - Swagger
+  - Health Checks
   - EntityTypeConfigurations
   - xUnit
   - Ajax
   - Jquery
   - Bootstrap
 
-Aplicação Web (Razor Pages) e REST API (integrado com Swagger).
+Aplicação Web (Razor Pages) e REST API (integrado com Swagger e Health Checks).
 
 ## Instruções
 

@@ -23,6 +23,11 @@ namespace StefaniniCore.API.Controllers
         }
 
         // api/Tasks/5
+        /// <summary>
+        /// List of Tasks by Id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -37,6 +42,11 @@ namespace StefaniniCore.API.Controllers
         }
 
         // api/Tasks
+        /// <summary>
+        ///  Insert the Task.
+        /// </summary>
+        /// <param name="inputModel"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> Insert([FromBody] TaskInputModel inputModel)
         {
@@ -50,6 +60,12 @@ namespace StefaniniCore.API.Controllers
             }
         }
 
+        // api/Tasks
+        /// <summary>
+        /// Update the Task.
+        /// </summary>
+        /// <param name="inputModel"></param>
+        /// <returns></returns>
         [HttpPut]
         public async Task<IActionResult> Update([FromBody] TaskInputModel inputModel)
         {
@@ -64,6 +80,10 @@ namespace StefaniniCore.API.Controllers
         }
 
         // api/Tasks
+        /// <summary>
+        /// List of Tasks.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -78,6 +98,11 @@ namespace StefaniniCore.API.Controllers
         }
 
         // api/Tasks
+        /// <summary>
+        /// Delete the Task by Id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

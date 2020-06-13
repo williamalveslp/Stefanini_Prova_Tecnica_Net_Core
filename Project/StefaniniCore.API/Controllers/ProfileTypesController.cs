@@ -22,6 +22,11 @@ namespace StefaniniCore.API.Controllers
         }
 
         // api/ProfileType/5
+        /// <summary>
+        /// List of ProfileType by Id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -36,6 +41,10 @@ namespace StefaniniCore.API.Controllers
         }
 
         // api/ProfileType
+        /// <summary>
+        /// List of ProfileTypes.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -50,6 +59,11 @@ namespace StefaniniCore.API.Controllers
         }
 
         // api/Tasks
+        /// <summary>
+        /// Delete the ProfileType by Id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

@@ -13,7 +13,9 @@ using StefaniniCore.API.HealthChecks;
 using StefaniniCore.DI;
 using StefaniniCore.Infra.CrossCutting.Constants;
 using System;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace StefaniniCore.API
@@ -63,7 +65,7 @@ namespace StefaniniCore.API
             // Activating Swagger middlewares
             app.UseSwagger();
             app.UseSwaggerUI(options =>
-                options.SwaggerEndpoint($"/api/swagger/{ConstSwagger.API_Version}/swagger.json", "William Goi Scheme"));
+                options.SwaggerEndpoint($"/api/swagger/{ConstSwagger.API_Version}/swagger.json", $"William Goi {ConstSwagger.API_Version}"));
 
             // Health Checks
             app.UseHealthChecks("/check", new HealthCheckOptions()
@@ -111,6 +113,11 @@ namespace StefaniniCore.API
                               Url = new Uri(ConstSwagger.Contact_Url)
                           }
                       });
+
+                  // Set the comments path for the Swagger JSON and UI (Properties > Build > set 'XML documentation file').
+                  var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                  var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                  c.IncludeXmlComments(xmlPath);
               });
         }
     }

@@ -1,24 +1,10 @@
 # Stefanini_Prova_Tecnica_Net_Core
 
-## Características da Aplicação
+## Stack Utilizada
 
-ASPNET Core 3.1
-  - DDD
-  - MVC
-  - EntityFrameworkCore
-  - Injeção de Dependência
-  - Autenticação com Claims
-  - ActionFilterAttribute
-  - FluentValidators
-  - Swagger
-  - Health Checks
-  - EntityTypeConfigurations
-  - xUnit
-  - Ajax
-  - Jquery
-  - Bootstrap
+![](/Images_Stack_Templates/Template.png)
 
-Aplicação Web (Razor Pages) e REST API (integrado com Swagger e Health Checks).
+Aplicação Web (Razor Pages) e aplicação REST API (integrado com Swagger e Health Checks).
 
 ## Instruções
 

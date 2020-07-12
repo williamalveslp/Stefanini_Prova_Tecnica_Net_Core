@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using StefaniniCore.Domain.Interfaces.Repositories.Base;
+using StefaniniCore.Infra.CrossCutting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,12 +9,21 @@ namespace StefaniniCore.Infra.DataStore.SQLServer.Repositories.Base
 {
     public abstract class RepositoryBase<T> : IDisposable, IRepositoryBase<T> where T : class
     {
-        protected readonly StefDbContext ctx = new StefDbContext();
+        protected readonly StefDbContext ctx;
+
+        protected RepositoryBase()
+        {
+            var optionsBuilder = new DbContextOptionsBuilder<StefDbContext>();
+            optionsBuilder.UseSqlServer(ConnectionString.Path);
+           
+            this.ctx = new StefDbContext(optionsBuilder.Options);
+        }
 
         public T Insert(T entity)
         {
             ctx.Set<T>().Add(entity);
             ctx.SaveChanges();
+
             return entity;
         }
 

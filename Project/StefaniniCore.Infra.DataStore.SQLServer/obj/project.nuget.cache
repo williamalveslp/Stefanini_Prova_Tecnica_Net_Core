@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WWMGbu37GCDcqQa0RxOjlh9sRy8xpBKE5CjhS4AUNZECy02WBIBqRBLJIlDgSkUGvGnxNe2jJHY80Q9JHEoyxQ==",
+  "dgSpecHash": "LfRDIyoBkx68j6pRiE4ZSaXX1mogO5zPl4EJ7YiM0MnqOs0EqEbOAy8xoVdatY1Af7Z61bJW7S5S0jB6jBwiHg==",
   "success": true,
   "projectFilePath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Infra.DataStore.SQLServer\\StefaniniCore.Infra.DataStore.SQLServer.csproj",
   "expectedPackageFiles": [

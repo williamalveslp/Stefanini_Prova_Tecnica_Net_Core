@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\StefaniniCore.Domain\StefaniniCore.Domain.csproj" />
+    <ProjectReference Include="..\StefaniniCore.Infra.CrossCutting\StefaniniCore.Infra.CrossCutting.csproj" />
   </ItemGroup>
 
 </Project>

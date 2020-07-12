@@ -378,6 +378,9 @@
             "projectReferences": {
               "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Domain\\StefaniniCore.Domain.csproj": {
                 "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Domain\\StefaniniCore.Domain.csproj"
+              },
+              "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Infra.CrossCutting\\StefaniniCore.Infra.CrossCutting.csproj": {
+                "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Infra.CrossCutting\\StefaniniCore.Infra.CrossCutting.csproj"
               }
             }
           }

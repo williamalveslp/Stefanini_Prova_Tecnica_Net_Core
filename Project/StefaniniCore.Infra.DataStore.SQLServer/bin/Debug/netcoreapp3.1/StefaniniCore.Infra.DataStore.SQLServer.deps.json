@@ -12,7 +12,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.4",
           "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.6",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.4",
-          "StefaniniCore.Domain": "1.0.0"
+          "StefaniniCore.Domain": "1.0.0",
+          "StefaniniCore.Infra.CrossCutting": "1.0.0"
         },
         "runtime": {
           "StefaniniCore.Infra.DataStore.SQLServer.dll": {}
@@ -1266,6 +1267,11 @@
         "runtime": {
           "StefaniniCore.Domain.dll": {}
         }
+      },
+      "StefaniniCore.Infra.CrossCutting/1.0.0": {
+        "runtime": {
+          "StefaniniCore.Infra.CrossCutting.dll": {}
+        }
       }
     }
   },
@@ -2158,6 +2164,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "StefaniniCore.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StefaniniCore.Infra.CrossCutting/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

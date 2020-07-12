@@ -1,10 +1,13 @@
 # Stefanini_Prova_Tecnica_Net_Core
 
+## Objetivo
+Repositorório que foi uma Técnica para a Stefanini IT Solutions da filial de Brasília. Após o envio, continuo trabalhando neste repositório com o intuito de ser um projeto modelo/consulta para outros novos projetos com estratégias de mercado.
+
 ## Stack Utilizada
 
 ![](/Images_Stack_Templates/Template.png)
 
-Aplicação Web (Razor Pages) e aplicação REST API (integrado com Swagger e Health Checks).
+Aplicações em .Net 3.1: Web (Razor Pages) e aplicação REST API (integrado com Swagger e Health Checks).
 
 ## Instruções
 

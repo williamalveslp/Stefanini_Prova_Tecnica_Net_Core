@@ -1,7 +1,7 @@
 # Stefanini_Prova_Tecnica_Net_Core
 
 ## Objetivo
-Repositorório que foi uma Técnica para a Stefanini IT Solutions da filial de Brasília. Após o envio, continuo trabalhando neste repositório com o intuito de ser um projeto modelo/consulta para outros novos projetos com estratégias de mercado.
+Inicialmente, este projeto foi uma prova Técnica para Stefanini IT Solutions da filial de Brasília. Após o envio, continuo trabalhando neste repositório com o intuito de ser um projeto modelo/consulta para outros novos projetos com estratégias de mercado.
 
 ## Stack Utilizada
 
@@ -20,3 +20,5 @@ Após fazer o clone do repositório, siga os seguintes passos abaixo:
 Pronto, está configurado sua aplicação para ser executada.
 
 * Você pode realizar login utilizando algum dos usuários pré-cadastrados da tabela ***User_System***, ou crie um usuário novo pela aplicação.
+
+ @williamalveslp

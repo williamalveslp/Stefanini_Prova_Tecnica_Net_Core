@@ -5,15 +5,15 @@ namespace StefaniniCore.Domain.Entities
 {
     public class Task : ValueObjectBase
     {
-        public string Name { get; private set; }
+        public virtual string Name { get; private set; }
 
-        public string Description { get; private set; }
+        public virtual string Description { get; private set; }
 
-        public bool IsActive { get; private set; }
+        public virtual bool IsActive { get; private set; }
 
         public virtual IList<ProfileTypeTask> ProfileTypeTask { get; set; }
 
-        private Task() { }
+        protected Task() { }
 
         public Task(string name, string description) : base()
         {

@@ -23,7 +23,7 @@ namespace StefaniniCore.Application.AppServices
 
         public UserSystemDetailViewModel GetListsPopulated()
         {
-            var profileTypes = _profileTypeService.GetAll().Where(f => f.IsActive).ToList();
+            var profileTypes = _profileTypeService.GetAll().Where(f => f.IsActive).OrderBy(f => f.Id).ToList();
 
             UserSystemDetailViewModel viewModel = new UserSystemDetailViewModel();
             viewModel.UpdateProfileTypes(profileTypes);
@@ -32,7 +32,7 @@ namespace StefaniniCore.Application.AppServices
         }
 
         public UserSystemDetailViewModel GetById(int id)
-        {
+        { 
             var userSystem = _userSystemService.GetById(id);
 
             if (userSystem == null)

@@ -4,14 +4,13 @@ namespace StefaniniCore.Domain.Entities
 {
     public class UserSystem : ValueObjectBase
     {
-        public string UserName { get; private set; }
-        public string Password { get; private set; }
-        public int ProfileTypeId { get; private set; }
-        public bool IsActive { get; private set; }
-
+        public virtual string UserName { get; private set; }
+        public virtual string Password { get; private set; }
+        public virtual int ProfileTypeId { get; private set; }
+        public virtual bool IsActive { get; private set; }
         public virtual ProfileType ProfileType { get; set; }
 
-        private UserSystem() : base() { }
+        protected UserSystem() : base() { }
 
         public UserSystem(string userName, string password, int profileTypeId) : base()
         {

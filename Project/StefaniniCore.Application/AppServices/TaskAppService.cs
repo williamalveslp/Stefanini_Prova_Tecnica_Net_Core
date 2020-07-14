@@ -26,7 +26,7 @@ namespace StefaniniCore.Application.AppServices
 
         public TaskListViewModel GetAll()
         {
-            var tasks = _taskService.GetOnlyActives();
+            var tasks = _taskService.GetAll().OrderBy(f=> f.Id).ToList();
 
             TaskListViewModel viewModel = new TaskListViewModel();
             viewModel.Load(tasks);

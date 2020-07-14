@@ -83,30 +83,16 @@ namespace StefaniniCore.xUnit.Tests.ServicesTests
         {   
             Mock<List<Mock<ProfileType>>> mockSetupList = new Mock<List<Mock<ProfileType>>>();
 
-            Mock<ProfileType> mockProfileType = new Mock<ProfileType>();
-            mockProfileType.SetupGet(f => f.Id).Returns(1);
-            mockProfileType.SetupGet(f => f.Name).Returns("some name 1");
-            mockProfileType.SetupGet(f => f.IsActive).Returns(true);
-            mockProfileType.SetupGet(f => f.Date_Created).Returns(DateTime.Now);
-            mockProfileType.SetupGet(f => f.Date_Updated).Returns(DateTime.Now);
-            mockSetupList.Object.Add(mockProfileType);
-
-            mockProfileType = new Mock<ProfileType>();
-            mockProfileType.SetupGet(f => f.Id).Returns(2);
-            mockProfileType.SetupGet(f => f.Name).Returns("some name 2");
-            mockProfileType.SetupGet(f => f.IsActive).Returns(false);
-            mockProfileType.SetupGet(f => f.Date_Created).Returns(DateTime.Now);
-            mockProfileType.SetupGet(f => f.Date_Updated).Returns(DateTime.Now);
-            mockSetupList.Object.Add(mockProfileType);
-
-            mockProfileType = new Mock<ProfileType>();
-            mockProfileType.SetupGet(f => f.Id).Returns(3);
-            mockProfileType.SetupGet(f => f.Name).Returns("some name 3");
-            mockProfileType.SetupGet(f => f.IsActive).Returns(true);
-            mockProfileType.SetupGet(f => f.Date_Created).Returns(DateTime.Now);
-            mockProfileType.SetupGet(f => f.Date_Updated).Returns(DateTime.Now);
-            mockSetupList.Object.Add(mockProfileType);
-
+            for (int i = 1; i <= 3; i++)
+            {
+                Mock<ProfileType> mockProfileType = new Mock<ProfileType>();
+                mockProfileType.SetupGet(f => f.Id).Returns(i);
+                mockProfileType.SetupGet(f => f.Name).Returns($"some name {i}");
+                mockProfileType.SetupGet(f => f.IsActive).Returns(true);
+                mockProfileType.SetupGet(f => f.Date_Created).Returns(DateTime.Now);
+                mockProfileType.SetupGet(f => f.Date_Updated).Returns(DateTime.Now);
+                mockSetupList.Object.Add(mockProfileType);
+            }
             IList<ProfileType> profileTypes = new List<ProfileType>();
 
             foreach (var item in mockSetupList.Object)

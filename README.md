@@ -1,24 +1,13 @@
 # Stefanini_Prova_Tecnica_Net_Core
 
-## Características da Aplicação
+## Objetivo
+Inicialmente, este projeto foi uma prova Técnica para Stefanini IT Solutions da filial de Brasília. Após o envio, continuo trabalhando neste repositório com o intuito de ser um projeto modelo/consulta para outros novos projetos com estratégias de mercado.
 
-ASPNET Core 3.1
-  - DDD
-  - MVC
-  - EntityFrameworkCore
-  - Injeção de Dependência
-  - Autenticação com Claims
-  - ActionFilterAttribute
-  - FluentValidators
-  - Swagger
-  - Health Checks
-  - EntityTypeConfigurations
-  - xUnit
-  - Ajax
-  - Jquery
-  - Bootstrap
+## Stack Utilizada
 
-Aplicação Web (Razor Pages) e REST API (integrado com Swagger e Health Checks).
+![](/Images_Stack_Templates/Template.png)
+
+Aplicações em .Net 3.1: Web (Razor Pages) e aplicação REST API (integrado com Swagger e Health Checks).
 
 ## Instruções
 
@@ -31,3 +20,5 @@ Após fazer o clone do repositório, siga os seguintes passos abaixo:
 Pronto, está configurado sua aplicação para ser executada.
 
 * Você pode realizar login utilizando algum dos usuários pré-cadastrados da tabela ***User_System***, ou crie um usuário novo pela aplicação.
+
+ @williamalveslp

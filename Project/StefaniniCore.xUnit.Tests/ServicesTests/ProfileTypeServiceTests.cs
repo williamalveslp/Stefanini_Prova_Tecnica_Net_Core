@@ -84,6 +84,22 @@ namespace StefaniniCore.xUnit.Tests.ServicesTests
             Assert.NotNull(profileType);
         }
 
+        // TODO: Test for Update.
+
+        [Fact(DisplayName = "Delete ById ProfileType Service")]
+        public void DeleteById_ProfileType_Service()
+        {
+            // Arrange
+            int id = 5;
+            _mockRepository.Setup(f => f.DeleteById(id));
+
+            // Action
+            _service.DeleteById(id);
+
+            // Assert
+            _mockRepository.Verify(f => f.DeleteById(id), Times.Once);
+        }
+
         #region .: PRIVATE METHODS :.
         private IList<ProfileType> GetMockSetupList()
         {   

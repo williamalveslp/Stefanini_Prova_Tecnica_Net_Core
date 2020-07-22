@@ -87,6 +87,22 @@ namespace StefaniniCore.xUnit.Tests.ServicesTests
             Assert.NotNull(profileType);
         }
 
+        // TODO: Test for Update.
+
+        [Fact(DisplayName = "Delete ById Task Service")]
+        public void DeleteById_Task_Service()
+        {
+            // Arrange
+            int id = 5;
+            _mockRepository.Setup(f => f.DeleteById(id));
+
+            // Action
+            _service.DeleteById(id);
+
+            // Assert
+            _mockRepository.Verify(f => f.DeleteById(id), Times.Once);
+        }
+
         #region .: PRIVATE METHODS :.
         private IList<Task> GetMockSetupList()
         {
@@ -111,5 +127,7 @@ namespace StefaniniCore.xUnit.Tests.ServicesTests
             return tasks;
         }
         #endregion
+
+        // TODO: Test for Update
     }
 }

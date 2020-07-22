@@ -50,20 +50,42 @@ namespace StefaniniCore.xUnit.Tests.FluentValidatorsTests
 
         #region .: WITH ALL FIEDS :.
 
-        [Fact(DisplayName = "FluentValidator Task - Validate All Fields")]
-        public void FluentValidator_Task_Validate_All_Fields()
+        [Theory(DisplayName = "FluentValidator Task - Validate All Fields - Success")]
+        [InlineData(1)]
+        [InlineData(3)]
+        [InlineData(10)]
+        public void FluentValidator_Task_Validate_All_Fields_Success(int id)
         {
             // Arrange
             var validationResult = _taskInputModelValidator.Validate(
                 new TaskInputModel()
                 {
-                    Id = 123,
+                    Id = id,
                     Name = "Do something",
                     Description = "Do something very well"
                 });
 
             // Assert
             Assert.True(validationResult.IsValid);
+        }
+
+        [Theory(DisplayName = "FluentValidator Task - Validate All Fields - Failed")]
+        [InlineData(-10)]
+        [InlineData(0)]
+        [InlineData(5)]
+        public void FluentValidator_Task_Validate_All_Fields__Failed(int id)
+        {
+            // Arrange
+            var validationResult = _taskInputModelValidator.Validate(
+                new TaskInputModel()
+                {
+                    Id = id,
+                    Name = null,
+                    Description = null
+                });
+
+            // Assert
+            Assert.False(validationResult.IsValid);
         }
         #endregion
     }

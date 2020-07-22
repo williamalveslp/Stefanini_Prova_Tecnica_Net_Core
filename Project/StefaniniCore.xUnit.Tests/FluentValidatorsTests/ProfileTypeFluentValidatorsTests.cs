@@ -46,8 +46,8 @@ namespace StefaniniCore.xUnit.Tests.FluentValidatorsTests
         #endregion
 
         #region .: WITH ALL FIELDS :.
-        [Fact(DisplayName = "FluentValidator ProfileType - Validate All Fields")]
-        public void FluentValidator_ProfileType_Validate_All_Fields()
+        [Fact(DisplayName = "FluentValidator ProfileType - Validate All Fields - Sucess")]
+        public void FluentValidator_ProfileType_Validate_All_Fields_Sucess()
         {
             // Arrange
             var validationResult = _profileTypeInputModelValidator.Validate(
@@ -59,6 +59,21 @@ namespace StefaniniCore.xUnit.Tests.FluentValidatorsTests
 
             // Assert
             Assert.True(validationResult.IsValid);
+        }
+
+        [Fact(DisplayName = "FluentValidator ProfileType - Validate All Fields - Failed")]
+        public void FluentValidator_ProfileType_Validate_All_Fields_Failed()
+        {
+            // Arrange
+            var validationResult = _profileTypeInputModelValidator.Validate(
+                new ProfileTypeInputModel()
+                {
+                    Name = null,
+                    TaskIds = null
+                });
+
+            // Assert
+            Assert.False(validationResult.IsValid);
         }
         #endregion
     }

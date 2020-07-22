@@ -69,14 +69,17 @@ namespace StefaniniCore.xUnit.Tests.FluentValidatorsTests
         #endregion
 
         #region .: WITH ALL FIELDS :.
-        [Fact(DisplayName = "FluentValidator UserSystem - Validate All Fields")]
-        public void FluentValidator_UserSystem_Validate_All_Fields()
+        [Theory(DisplayName = "FluentValidator UserSystem - Validate All Fields - Success")]
+        [InlineData(1)]
+        [InlineData(7)]
+        [InlineData(10)]
+        public void FluentValidator_UserSystem_Validate_All_Fields_Success(int id)
         {
             // Arrange
             var validationResult = _userSystemInputModelValidator.Validate(
                new UserSystemInputModel()
                {
-                   Id = 123,
+                   Id = id,
                    UserName = "john_snow",
                    Password = "myPa$sword",
                    ProfileTypeId = 1
@@ -84,6 +87,26 @@ namespace StefaniniCore.xUnit.Tests.FluentValidatorsTests
 
             // Assert
             Assert.True(validationResult.IsValid);
+        }
+
+        [Theory(DisplayName = "FluentValidator UserSystem - Validate All Fields - Failed")]
+        [InlineData(-3)]
+        [InlineData(0)]
+        [InlineData(10)]
+        public void FluentValidator_UserSystem_Validate_All_Fields_Failed(int id)
+        {
+            // Arrange
+            var validationResult = _userSystemInputModelValidator.Validate(
+               new UserSystemInputModel()
+               {
+                   Id = id,
+                   UserName = null,
+                   Password = null,
+                   ProfileTypeId = 1
+               });
+
+            // Assert
+            Assert.False(validationResult.IsValid);
         }
         #endregion
     }

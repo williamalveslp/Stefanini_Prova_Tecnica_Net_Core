@@ -20,15 +20,19 @@ namespace StefaniniCore.xUnit.Tests.ServicesTests
             _service = new ProfileTypeService(_mockRepository.Object);
         }
 
-        [Fact(DisplayName = "Insert ProfileType Service - Success")]
-        public void Insert_ProfileType_Service_Success()
+        [Theory(DisplayName = "Insert ProfileType Service - Success")]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void Insert_ProfileType_Service_Success(bool isActive)
         {
             // Arrange
+            int id = 0;
             string name = "some name 123";
+
             Mock<ProfileType> mockExpectedProfileType = new Mock<ProfileType>();
-            mockExpectedProfileType.SetupGet(f => f.Id).Returns(4);
+            mockExpectedProfileType.SetupGet(f => f.Id).Returns(id);
             mockExpectedProfileType.SetupGet(f => f.Name).Returns(name);
-            mockExpectedProfileType.SetupGet(f => f.IsActive).Returns(true);
+            mockExpectedProfileType.SetupGet(f => f.IsActive).Returns(isActive);
             mockExpectedProfileType.SetupGet(f => f.Date_Created).Returns(DateTime.Now);
             mockExpectedProfileType.SetupGet(f => f.Date_Updated).Returns(DateTime.Now);
 
@@ -61,8 +65,10 @@ namespace StefaniniCore.xUnit.Tests.ServicesTests
         public void GetById_ProfileType_Service()
         {
             // Arrange
+            int id = 123;
+
             Mock<ProfileType> mockProfileType = new Mock<ProfileType>();
-            mockProfileType.SetupGet(f => f.Id).Returns(4);
+            mockProfileType.SetupGet(f => f.Id).Returns(id);
             mockProfileType.SetupGet(f => f.Name).Returns("some name 4");
             mockProfileType.SetupGet(f => f.IsActive).Returns(true);
             mockProfileType.SetupGet(f => f.Date_Created).Returns(DateTime.Now);
@@ -71,7 +77,7 @@ namespace StefaniniCore.xUnit.Tests.ServicesTests
             _mockRepository.Setup(x => x.GetById(It.IsAny<int>())).Returns(mockProfileType.Object);
 
             // Action
-            var profileType = _service.GetById(123);
+            var profileType = _service.GetById(id);
 
             // Assert
             _mockRepository.Verify(f => f.GetById(It.IsAny<int>()), Times.Once);

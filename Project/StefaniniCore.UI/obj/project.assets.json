@@ -2568,26 +2568,6 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "StefaniniCore.DI/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection": "3.1.5",
-          "StefaniniCore.Application": "1.0.0",
-          "StefaniniCore.Domain": "1.0.0",
-          "StefaniniCore.Infra.DataStore.SQLServer": "1.0.0",
-          "StefaniniCore.Services": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/StefaniniCore.DI.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/StefaniniCore.DI.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "StefaniniCore.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -2607,6 +2587,26 @@
         "runtime": {
           "bin/placeholder/StefaniniCore.Infra.CrossCutting.dll": {}
         }
+      },
+      "StefaniniCore.Infra.CrossCutting.IoC/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "3.1.5",
+          "StefaniniCore.Application": "1.0.0",
+          "StefaniniCore.Domain": "1.0.0",
+          "StefaniniCore.Infra.DataStore.SQLServer": "1.0.0",
+          "StefaniniCore.Services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/StefaniniCore.Infra.CrossCutting.IoC.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StefaniniCore.Infra.CrossCutting.IoC.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "StefaniniCore.Infra.DataStore.SQLServer/1.0.0": {
         "type": "project",
@@ -8374,11 +8374,6 @@
       "path": "../StefaniniCore.Application/StefaniniCore.Application.csproj",
       "msbuildProject": "../StefaniniCore.Application/StefaniniCore.Application.csproj"
     },
-    "StefaniniCore.DI/1.0.0": {
-      "type": "project",
-      "path": "../StefaniniCore.DI/StefaniniCore.DI.csproj",
-      "msbuildProject": "../StefaniniCore.DI/StefaniniCore.DI.csproj"
-    },
     "StefaniniCore.Domain/1.0.0": {
       "type": "project",
       "path": "../StefaniniCore.Domain/StefaniniCore.Domain.csproj",
@@ -8388,6 +8383,11 @@
       "type": "project",
       "path": "../StefaniniCore.Infra.CrossCutting/StefaniniCore.Infra.CrossCutting.csproj",
       "msbuildProject": "../StefaniniCore.Infra.CrossCutting/StefaniniCore.Infra.CrossCutting.csproj"
+    },
+    "StefaniniCore.Infra.CrossCutting.IoC/1.0.0": {
+      "type": "project",
+      "path": "../StefaniniCore.Infra.CrossCutting.IoC/StefaniniCore.Infra.CrossCutting.IoC.csproj",
+      "msbuildProject": "../StefaniniCore.Infra.CrossCutting.IoC/StefaniniCore.Infra.CrossCutting.IoC.csproj"
     },
     "StefaniniCore.Infra.DataStore.SQLServer/1.0.0": {
       "type": "project",
@@ -8404,9 +8404,9 @@
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.3",
       "StefaniniCore.Application >= 1.0.0",
-      "StefaniniCore.DI >= 1.0.0",
       "StefaniniCore.Domain >= 1.0.0",
       "StefaniniCore.Infra.CrossCutting >= 1.0.0",
+      "StefaniniCore.Infra.CrossCutting.IoC >= 1.0.0",
       "StefaniniCore.Infra.DataStore.SQLServer >= 1.0.0",
       "StefaniniCore.Services >= 1.0.0"
     ]
@@ -8445,11 +8445,11 @@
             "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Application\\StefaniniCore.Application.csproj": {
               "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Application\\StefaniniCore.Application.csproj"
             },
-            "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.DI\\StefaniniCore.DI.csproj": {
-              "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.DI\\StefaniniCore.DI.csproj"
-            },
             "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Domain\\StefaniniCore.Domain.csproj": {
               "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Domain\\StefaniniCore.Domain.csproj"
+            },
+            "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Infra.CrossCutting.IoC\\StefaniniCore.Infra.CrossCutting.IoC.csproj": {
+              "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Infra.CrossCutting.IoC\\StefaniniCore.Infra.CrossCutting.IoC.csproj"
             },
             "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Infra.CrossCutting\\StefaniniCore.Infra.CrossCutting.csproj": {
               "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Infra.CrossCutting\\StefaniniCore.Infra.CrossCutting.csproj"

@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using StefaniniCore.Infra.CrossCutting.IoC;
 using StefaniniCore.UI.Middlewares;
-using StefaniniCore.DI;
 
 namespace StefaniniCore.UI
 {

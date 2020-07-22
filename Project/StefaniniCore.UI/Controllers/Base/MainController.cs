@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Net;
 
 namespace StefaniniCore.UI.Controllers
@@ -11,12 +12,10 @@ namespace StefaniniCore.UI.Controllers
             return GeneralMessage(message, id, refreshPage, HttpStatusCode.OK, urlToRedirect);
         }
 
-        public IActionResult ErrorMessage(string message, ILogger<object> logger = null)
+        public IActionResult ErrorMessage<T>(ILogger<T> logger, Exception ex)
         {
-            if (logger != null)
-                logger.LogError($"[Erro] {message}");
-
-            return GeneralMessage(message, null, false, HttpStatusCode.BadRequest);
+            logger.LogError($"Error: {ex.Message}\r\nStackTrace: {ex.StackTrace}\r\n\r\n");
+            return GeneralMessage(ex.Message, null, false, HttpStatusCode.BadRequest);
         }
 
         private IActionResult GeneralMessage(string message, int? id, bool refreshPage, HttpStatusCode statusCode

@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StefaniniCore.API.Controllers.Base;
+using StefaniniCore.API.Swagger.ResponseTypes;
 using StefaniniCore.Application.AppInterfaces;
+using StefaniniCore.Application.ViewModels;
 using System;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace StefaniniCore.API.Controllers
@@ -28,6 +31,8 @@ namespace StefaniniCore.API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(ProfileTypeDetailViewModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(ErrorViewModel), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> GetById(int id)
         {
             try
@@ -36,7 +41,7 @@ namespace StefaniniCore.API.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return ResponseWithError(_logger, ex);
             }
         }
 
@@ -46,6 +51,8 @@ namespace StefaniniCore.API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
+        [ProducesResponseType(typeof(ProfileTypeListViewModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(ErrorViewModel), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> Get()
         {
             try
@@ -54,7 +61,7 @@ namespace StefaniniCore.API.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return ResponseWithError(_logger, ex);
             }
         }
 
@@ -65,6 +72,8 @@ namespace StefaniniCore.API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete("{id}")]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(ErrorViewModel), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> Delete(int id)
         {
             try
@@ -74,7 +83,7 @@ namespace StefaniniCore.API.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return ResponseWithError(_logger, ex);
             }
         }
     }

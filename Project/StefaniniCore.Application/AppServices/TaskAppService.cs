@@ -26,7 +26,7 @@ namespace StefaniniCore.Application.AppServices
 
         public TaskListViewModel GetAll()
         {
-            var tasks = _taskService.GetAll().OrderBy(f=> f.Id).ToList();
+            var tasks = _taskService.GetAll().OrderBy(f => f.Id).ToList();
 
             TaskListViewModel viewModel = new TaskListViewModel();
             viewModel.Load(tasks);
@@ -51,7 +51,7 @@ namespace StefaniniCore.Application.AppServices
         {
             ValidationsToSave(inputModel);
 
-              Task task;
+            Task task;
             if (inputModel.Id <= 0)
             {
                 task = new Task(inputModel.Name, inputModel.Description);

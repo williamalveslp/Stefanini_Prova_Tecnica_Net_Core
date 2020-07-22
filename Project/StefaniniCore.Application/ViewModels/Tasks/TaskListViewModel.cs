@@ -5,9 +5,9 @@ namespace StefaniniCore.Application.ViewModels
 {
     public class TaskListViewModel : ViewModelBase
     {
-        public IList<Task> Tasks { get; private set; }
+        public virtual IList<Task> Tasks { get; private set; }
 
-        public int TotalRecords { get; private set; }
+        public virtual int TotalRecords { get; private set; }
 
         public void Load(IList<Task> tasks)
         {

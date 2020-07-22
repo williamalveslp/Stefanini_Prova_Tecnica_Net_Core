@@ -10,12 +10,10 @@ using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using StefaniniCore.API.HealthChecks;
-using StefaniniCore.DI;
+using StefaniniCore.API.Swagger;
 using StefaniniCore.Infra.CrossCutting.Constants;
-using System;
-using System.IO;
+using StefaniniCore.Infra.CrossCutting.IoC;
 using System.Linq;
-using System.Reflection;
 using System.Threading.Tasks;
 
 namespace StefaniniCore.API
@@ -38,10 +36,13 @@ namespace StefaniniCore.API
                     options.JsonSerializerOptions.WriteIndented = true;
                 });
 
+            // Dependency Injections.
             services.AddDependencyInjections();
-
+            
+            // Swagger Documentations.
             services.ConfigureSwagger();
 
+            // Health Checks.
             services.AddHealthChecks().AddGCInfoCheck("GCInfo");
         }
 
@@ -91,34 +92,6 @@ namespace StefaniniCore.API
                 new JProperty("description", pair.Value.Description),
                 new JProperty("data", new JObject(pair.Value.Data.Select(p => new JProperty(p.Key, p.Value))))))))));
             return httpContext.Response.WriteAsync(json.ToString(Formatting.Indented));
-        }
-    }
-
-    internal static class DependencyInjectionSwagger
-    {
-        public static void ConfigureSwagger(this IServiceCollection services)
-        {
-            _ = services.AddSwaggerGen(c =>
-              {
-                  c.SwaggerDoc(ConstSwagger.API_Version,
-                      new OpenApiInfo
-                      {
-                          Title = ConstSwagger.Title,
-                          Version = ConstSwagger.API_Version,
-                          Description = ConstSwagger.Description,
-                          Contact = new OpenApiContact
-                          {
-                              Name = ConstSwagger.Contact_Name,
-                              Email = ConstSwagger.Contact_Email,
-                              Url = new Uri(ConstSwagger.Contact_Url)
-                          }
-                      });
-
-                  // Set the comments path for the Swagger JSON and UI (Properties > Build > set 'XML documentation file').
-                  var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                  var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                  c.IncludeXmlComments(xmlPath);
-              });
         }
     }
 }

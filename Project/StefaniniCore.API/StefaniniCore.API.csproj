@@ -16,8 +16,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\StefaniniCore.Application\StefaniniCore.Application.csproj" />
-    <ProjectReference Include="..\StefaniniCore.DI\StefaniniCore.DI.csproj" />
     <ProjectReference Include="..\StefaniniCore.Domain\StefaniniCore.Domain.csproj" />
+    <ProjectReference Include="..\StefaniniCore.Infra.CrossCutting.IoC\StefaniniCore.Infra.CrossCutting.IoC.csproj" />
   </ItemGroup>
 
 

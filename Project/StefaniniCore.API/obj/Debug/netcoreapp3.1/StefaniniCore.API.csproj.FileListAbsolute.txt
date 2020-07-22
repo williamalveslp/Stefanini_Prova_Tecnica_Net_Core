@@ -54,13 +54,11 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debu
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Application.dll
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.DI.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Domain.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.DataStore.SQLServer.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Services.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Application.pdb
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.DI.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Domain.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.DataStore.SQLServer.pdb
@@ -78,3 +76,5 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debu
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.genruntimeconfig.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.IoC.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.IoC.pdb

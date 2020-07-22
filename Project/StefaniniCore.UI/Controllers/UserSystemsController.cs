@@ -35,7 +35,7 @@ namespace StefaniniCore.UI.Controllers
             }
             catch (Exception ex)
             {
-                return ErrorMessage(ex.Message, _logger);
+                return ErrorMessage(_logger, ex);
             }
         }
 
@@ -72,7 +72,7 @@ namespace StefaniniCore.UI.Controllers
             }
             catch (Exception ex)
             {
-                return ErrorMessage(ex.Message, _logger);
+                return ErrorMessage(_logger, ex);
             }
         }
 
@@ -88,7 +88,7 @@ namespace StefaniniCore.UI.Controllers
             }
             catch (Exception ex)
             {
-                return ErrorMessage(ex.Message, _logger);
+                return ErrorMessage(_logger, ex);
             }
         }
 

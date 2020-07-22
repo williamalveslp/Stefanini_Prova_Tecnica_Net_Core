@@ -27,8 +27,8 @@
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.5",
           "Newtonsoft.Json": "12.0.3",
           "StefaniniCore.Application": "1.0.0",
-          "StefaniniCore.DI": "1.0.0",
           "StefaniniCore.Domain": "1.0.0",
+          "StefaniniCore.Infra.CrossCutting.IoC": "1.0.0",
           "Swashbuckle.AspNetCore": "5.4.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -1770,21 +1770,6 @@
           "StefaniniCore.Application.dll": {}
         }
       },
-      "StefaniniCore.DI/1.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection": "3.1.5",
-          "StefaniniCore.Application": "1.0.0",
-          "StefaniniCore.Domain": "1.0.0",
-          "StefaniniCore.Infra.DataStore.SQLServer": "1.0.0",
-          "StefaniniCore.Services": "1.0.0"
-        },
-        "runtime": {
-          "StefaniniCore.DI.dll": {}
-        },
-        "compile": {
-          "StefaniniCore.DI.dll": {}
-        }
-      },
       "StefaniniCore.Domain/1.0.0": {
         "runtime": {
           "StefaniniCore.Domain.dll": {}
@@ -1799,6 +1784,21 @@
         },
         "compile": {
           "StefaniniCore.Infra.CrossCutting.dll": {}
+        }
+      },
+      "StefaniniCore.Infra.CrossCutting.IoC/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "3.1.5",
+          "StefaniniCore.Application": "1.0.0",
+          "StefaniniCore.Domain": "1.0.0",
+          "StefaniniCore.Infra.DataStore.SQLServer": "1.0.0",
+          "StefaniniCore.Services": "1.0.0"
+        },
+        "runtime": {
+          "StefaniniCore.Infra.CrossCutting.IoC.dll": {}
+        },
+        "compile": {
+          "StefaniniCore.Infra.CrossCutting.IoC.dll": {}
         }
       },
       "StefaniniCore.Infra.DataStore.SQLServer/1.0.0": {
@@ -4414,17 +4414,17 @@
       "serviceable": false,
       "sha512": ""
     },
-    "StefaniniCore.DI/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "StefaniniCore.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "StefaniniCore.Infra.CrossCutting/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StefaniniCore.Infra.CrossCutting.IoC/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

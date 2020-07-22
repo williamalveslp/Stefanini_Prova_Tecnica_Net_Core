@@ -71,5 +71,10 @@
             <param name="result"></param>
             <returns></returns>
         </member>
+        <member name="T:StefaniniCore.API.Swagger.ResponseTypes.ErrorViewModel">
+            <summary>
+            View Model to send error informations.
+            </summary>
+        </member>
     </members>
 </doc>

@@ -6,7 +6,7 @@ namespace StefaniniCore.Domain.Interfaces.Repositories
 {
     public interface ITaskRepository : IRepositoryBase<Task>
     {
-        IList<Task> GetOnlyActives();
+        IList<Task> GetsActivesOnly();
 
         bool Exists(string name);
     }

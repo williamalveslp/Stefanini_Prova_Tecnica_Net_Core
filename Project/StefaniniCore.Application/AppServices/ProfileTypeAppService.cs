@@ -47,7 +47,7 @@ namespace StefaniniCore.Application.AppServices
 
         public ProfileTypeListViewModel GetAll()
         {
-            var profileTypes = _profileTypeService.GetOnlyActives();
+            var profileTypes = _profileTypeService.GetAll();
 
             ProfileTypeListViewModel viewModel = new ProfileTypeListViewModel();
             viewModel.Load(profileTypes);

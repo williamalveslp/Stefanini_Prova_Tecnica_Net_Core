@@ -8,6 +8,7 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debu
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.API.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.API.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.API.xml
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\Castle.Core.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\FluentValidation.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
@@ -18,6 +19,7 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debu
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.Design.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
@@ -56,19 +58,18 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debu
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Application.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Domain.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.IoC.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.DataStore.SQLServer.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Services.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Application.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Domain.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.IoC.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.DataStore.SQLServer.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Services.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.csprojAssemblyReference.cache
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.AssemblyInfoInputs.cache
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.AssemblyInfo.cs
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.csproj.CoreCompileInputs.cache
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.RazorTargetAssemblyInfo.cache
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.csproj.CopyComplete
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\staticwebassets\StefaniniCore.API.StaticWebAssets.Manifest.cache
@@ -76,5 +77,6 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debu
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.genruntimeconfig.cache
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.IoC.dll
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.IoC.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.csproj.CoreCompileInputs.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.API\obj\Debug\netcoreapp3.1\StefaniniCore.API.MvcApplicationPartsAssemblyInfo.cache

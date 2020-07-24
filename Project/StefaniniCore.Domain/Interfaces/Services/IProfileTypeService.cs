@@ -6,6 +6,10 @@ namespace StefaniniCore.Domain.Interfaces.Services
 {
     public interface IProfileTypeService : IServiceBase<ProfileType>
     {
-        IList<ProfileType> GetOnlyActives();
+        /// <summary>
+        /// Get the Profile Types that are 'Active' only.
+        /// </summary>
+        /// <returns></returns>
+        IList<ProfileType> GetActivesOnly();
     }
 }

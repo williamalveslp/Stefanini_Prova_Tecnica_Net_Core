@@ -6,8 +6,17 @@ namespace StefaniniCore.Domain.Interfaces.Services
 {
     public interface ITaskService : IServiceBase<Task>
     {
-        IList<Task> GetOnlyActives();
+        /// <summary>
+        /// Get the Tasks that are 'Active' only.
+        /// </summary>
+        /// <returns></returns>
+        IList<Task> GetActivesOnly();
 
+        /// <summary>
+        /// Check if the same 'Name' field is already stored.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         bool Exists(string name);
     }
 }

@@ -10,3 +10,8 @@
 Commands
 Scaffold-DbContext "<CONNECTION_STRING>" Microsoft.EntityFrameworkCore.SqlServer
 
+	** ADD LAZY LOAD TO ENTITY CORE **
+- Microsoft.EntityFrameworkCore.Proxies
+	
+For Query logs on Console:
+- Microsoft.Extensions.Logging.Console

@@ -12,7 +12,7 @@ namespace StefaniniCore.Infra.DataStore.SQLServer.Repositories
             ctx.UserSystem.Where(f => f.ProfileTypeId == profileTypeId).ToList();
 
         public IList<UserSystem> GetOnlyActives() =>
-            ctx.UserSystem.Where(f => f.IsActive).ToList();
+            ctx.UserSystem.Where(f => f.IsActive).OrderBy(f => f.Id).ToList();
 
         public UserSystem GetSignIn(string userName, string password)
         {

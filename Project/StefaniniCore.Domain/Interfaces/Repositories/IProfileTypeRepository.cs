@@ -6,6 +6,6 @@ namespace StefaniniCore.Domain.Interfaces.Repositories
 {
     public interface IProfileTypeRepository : IRepositoryBase<ProfileType>
     {
-        IList<ProfileType> GetOnlyActives();
+        IList<ProfileType> GetActivesOnly();
     }
 }

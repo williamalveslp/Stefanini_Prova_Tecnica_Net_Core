@@ -38,7 +38,7 @@ namespace StefaniniCore.Application.AppServices
             if (userSystem == null)
                 throw new Exception("Usuário não encontrado.");
 
-            var profileTypes = _profileTypeService.GetAll().Where(f => f.IsActive).ToList();
+            var profileTypes = _profileTypeService.GetAll();
 
             UserSystemDetailViewModel viewModel = new UserSystemDetailViewModel();
             viewModel.Load(userSystem.Id, userSystem.UserName, userSystem.Password, userSystem.ProfileTypeId, profileTypes);

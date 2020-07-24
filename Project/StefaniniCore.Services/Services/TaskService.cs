@@ -18,7 +18,7 @@ namespace StefaniniCore.Services.Services
 
         public bool Exists(string name)=> _repository.Exists(name);
 
-        public IList<Task> GetOnlyActives() =>
-                _repository.GetOnlyActives().OrderBy(f => f.Name).ToList();
+        public IList<Task> GetActivesOnly() =>
+                _repository.GetsActivesOnly();
     }
 }

@@ -8,7 +8,8 @@ namespace StefaniniCore.Infra.DataStore.SQLServer.Repositories
 {
     public class ProfileTypeRepository : RepositoryBase<ProfileType>, IProfileTypeRepository
     {
-        public IList<ProfileType> GetOnlyActives() =>
-                ctx.ProfileType.Where(f => f.IsActive).ToList();
+        public IList<ProfileType> GetActivesOnly() =>
+                ctx.ProfileType.Where(f => f.IsActive)
+                                .OrderBy(f=> f.Name).ToList();
     }
 }

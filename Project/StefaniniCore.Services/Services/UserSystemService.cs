@@ -19,7 +19,7 @@ namespace StefaniniCore.Services.Services
         public IList<UserSystem> GetByProfileTypeId(int profileTypeId) =>
             _repository.GetByProfileTypeId(profileTypeId);
 
-        public IList<UserSystem> GetOnlyActives() =>
+        public IList<UserSystem> GetActivesOnly() =>
              _repository.GetOnlyActives().OrderBy(f => f.UserName).ToList();
 
         public UserSystem GetSignIn(string userName, string password) =>

@@ -7,7 +7,8 @@ Inicialmente, este projeto foi uma prova Técnica para Stefanini IT Solutions da
 
 ![](/Images_Stack_Templates/Template.png)
 
-Aplicações em <b>.Net 3.1</b>: <b>Web</b> (Razor Pages) e aplicação <b>REST API</b> (integrado com Swagger e Health Checks).
+Aplicações em <b>.Net 3.1</b>: <b>Web</b> (Razor Pages, em *Presentation*) e aplicação <b>REST API</b> (integrado com Swagger e Health Checks, em *Service*).<br/>
+Contemplam Testes Unitários com <b>xUnit</b> e Mocks.
 
 ## Instruções
 

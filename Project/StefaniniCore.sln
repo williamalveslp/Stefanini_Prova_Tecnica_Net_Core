@@ -35,7 +35,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StefaniniCore.API", "Stefan
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StefaniniCore.xUnit.Tests", "StefaniniCore.xUnit.Tests\StefaniniCore.xUnit.Tests.csproj", "{5A93B47B-8030-4E05-9F24-F2068A53B3AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StefaniniCore.Infra.CrossCutting.IoC", "StefaniniCore.Infra.CrossCutting.IoC\StefaniniCore.Infra.CrossCutting.IoC.csproj", "{94FB8669-3DD8-48E7-8D5C-CC6B97780E4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StefaniniCore.Infra.CrossCutting.IoC", "StefaniniCore.Infra.CrossCutting.IoC\StefaniniCore.Infra.CrossCutting.IoC.csproj", "{94FB8669-3DD8-48E7-8D5C-CC6B97780E4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

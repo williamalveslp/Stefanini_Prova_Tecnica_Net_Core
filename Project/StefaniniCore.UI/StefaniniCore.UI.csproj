@@ -17,4 +17,8 @@
     <ProjectReference Include="..\StefaniniCore.Services\StefaniniCore.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UI_React\" />
+  </ItemGroup>
+
 </Project>

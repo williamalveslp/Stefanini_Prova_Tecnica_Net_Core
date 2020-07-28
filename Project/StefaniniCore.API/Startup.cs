@@ -2,19 +2,17 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using StefaniniCore.API.CORS;
 using StefaniniCore.API.HealthChecks;
 using StefaniniCore.API.Swagger;
-using StefaniniCore.Infra.CrossCutting;
 using StefaniniCore.Infra.CrossCutting.Constants;
 using StefaniniCore.Infra.CrossCutting.IoC;
-using StefaniniCore.Infra.DataStore.SQLServer;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -32,22 +30,18 @@ namespace StefaniniCore.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // CORS.
+            services.CORSConfigurations();
+
             services.AddControllers()
                 .AddJsonOptions(options =>
                 {
                     options.JsonSerializerOptions.WriteIndented = true;
                 });
 
-            // Active Lazy Loading.
-            //services.AddDbContext<StefDbContext>(options =>
-            //{
-            //    options.UseSqlServer(ConnectionString.Path)
-            //            .UseLazyLoadingProxies();
-            //});
-
             // Dependency Injections.
             services.AddDependencyInjections();
-            
+
             // Swagger Documentations.
             services.ConfigureSwagger();
 
@@ -65,6 +59,9 @@ namespace StefaniniCore.API
 
             app.UseRouting();
 
+            app.UseCors(ConstCORS.Key);
+
+            // Are you allowed?  
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -75,7 +72,7 @@ namespace StefaniniCore.API
             // Activating Swagger middlewares
             app.UseSwagger();
             app.UseSwaggerUI(options =>
-                options.SwaggerEndpoint($"/api/swagger/{ConstSwagger.API_Version}/swagger.json", $"William Goi {ConstSwagger.API_Version}"));
+            options.SwaggerEndpoint($"/api/swagger/{ConstSwagger.API_Version}/swagger.json", $"William Goi {ConstSwagger.API_Version}"));
 
             // Health Checks
             app.UseHealthChecks("/check", new HealthCheckOptions()

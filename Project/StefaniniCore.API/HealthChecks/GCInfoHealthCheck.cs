@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace StefaniniCore.API.HealthChecks
 {
-    /// <summary>
-    /// Garbage Colector Info.
-    /// </summary>
     internal static class GCInfoHealthCheckBuilderExtensions
     {
+        /// <summary>
+        /// Garbage Colector Info.
+        /// </summary>
         public static IHealthChecksBuilder AddGCInfoCheck(
             this IHealthChecksBuilder builder,
             string name,

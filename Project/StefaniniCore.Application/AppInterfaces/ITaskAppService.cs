@@ -1,6 +1,5 @@
 ﻿using StefaniniCore.Application.InputModels.Tasks;
 using StefaniniCore.Application.ViewModels;
-using StefaniniCore.Domain.Entities;
 
 namespace StefaniniCore.Application.AppInterfaces
 {
@@ -10,7 +9,7 @@ namespace StefaniniCore.Application.AppInterfaces
 
         TaskListViewModel GetAll();
 
-        Task Save(TaskInputModel inputModel);
+        TaskDetailViewModel Save(TaskInputModel inputModel);
 
         void ValidationsToSave(TaskInputModel inputModel);
 

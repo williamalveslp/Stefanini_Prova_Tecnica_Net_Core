@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StefaniniCore.API.Controllers.Base;
-using StefaniniCore.API.Swagger.ResponseTypes;
 using StefaniniCore.Application.AppInterfaces;
+using StefaniniCore.Application.Responses;
+using StefaniniCore.Application.Responses.ProfileTypes;
 using StefaniniCore.Application.ViewModels;
 using System;
 using System.Net;
@@ -32,7 +33,7 @@ namespace StefaniniCore.API.Controllers
         /// <returns></returns>
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(ProfileTypeDetailViewModel), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(ErrorViewModel), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> GetById(int id)
         {
             try
@@ -51,13 +52,13 @@ namespace StefaniniCore.API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [ProducesResponseType(typeof(ProfileTypeListViewModel), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(ErrorViewModel), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(ProfileTypeListResponse), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> Get()
         {
             try
             {
-                return Ok(_appService.GetAll());
+                return ResponseOk(_appService.GetAll());
             }
             catch (Exception ex)
             {
@@ -73,7 +74,7 @@ namespace StefaniniCore.API.Controllers
         /// <returns></returns>
         [HttpDelete("{id}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(ErrorViewModel), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> Delete(int id)
         {
             try

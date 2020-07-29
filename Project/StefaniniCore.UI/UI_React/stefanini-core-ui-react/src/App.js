@@ -5,8 +5,8 @@ import TabPanel from './components/top-tab';
 
 function App() {
   return (
-    <div >
-      <div className='appContainer'>
+    <div>
+      <div className='appContainer backgroundColor'>
         <TabPanel />
       </div>
     </div>

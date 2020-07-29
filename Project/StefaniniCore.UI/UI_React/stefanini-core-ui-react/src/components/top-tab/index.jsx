@@ -1,4 +1,6 @@
 import React from 'react';
+import '../../components/top-tab/top-tab.css';
+
 //import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 
 /* Router */
@@ -52,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function TabsWrappedLabel() {
     const classes = useStyles();
-    const [value, setValue] = React.useState('home');
+    const [value, setValue] = React.useState('taskList');
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -68,38 +70,38 @@ export default function TabsWrappedLabel() {
                         <Tab
                             value="taskList"
                             label="Listar Funcionalidades"
-                            component={Link} exact to='/Funcionalidades/' />
+                            component={Link} exact='true' to='/Funcionalidades/' />
 
                         <Tab
                             value="taskDetail"
                             label="Cadastrar Funcionalidades"
-                            component={Link} exact to='/Funcionalidades/Cadastro/' />
+                            component={Link} exact='true' to='/Funcionalidades/Cadastro/' />
 
                         <Tab value="profiles"
                             label="Perfis"
-                            component={Link} exact to='/Perfis/' />
+                            component={Link} exact='true' to='/Perfis/' />
 
                         <Tab value="user-systems" label="Usuários"
-                            component={Link} exact to='/Usuários/' />
+                            component={Link} exact='true' to='/Usuários/' />
                     </Tabs>
                 </AppBar>
 
-                <TabPanel value={value} index="home">
+                <TabPanel value={value} index="home" className='sizePanel'>
                     <Home />
                 </TabPanel>
 
-                <TabPanel value={value} index="taskList">
+                <TabPanel value={value} index="taskList" className='sizePanel'>
                     <TaskListPage />
                 </TabPanel>
 
-                <TabPanel value={value} index="taskDetail">
+                <TabPanel value={value} index="taskDetail" className='sizePanel'>
                     <TaskDetailPage />
                 </TabPanel>
 
-                <TabPanel value={value} index="profiles">
+                <TabPanel value={value} index="profiles" className='sizePanel'>
                     Item Two
                 </TabPanel>
-                <TabPanel value={value} index="user-systems">
+                <TabPanel value={value} index="user-systems" className='sizePanel'>
                     Item Three
                 </TabPanel>
             </div>

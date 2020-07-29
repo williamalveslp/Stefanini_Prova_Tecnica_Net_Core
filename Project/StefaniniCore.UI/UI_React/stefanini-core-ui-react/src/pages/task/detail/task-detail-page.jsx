@@ -48,7 +48,6 @@ class TaskDetailPage extends React.Component {
                     <Typography color="textPrimary">Cadastro</Typography>
                 </Breadcrumbs>
 
-                <br />
                 <h3>Cadastro de Funcionalidades</h3>
 
                 <div>

@@ -4,6 +4,32 @@
         <name>StefaniniCore.API</name>
     </assembly>
     <members>
+        <member name="M:StefaniniCore.API.Controllers.Base.MainController.ResponseOk``1(``0)">
+            <summary>
+            Use for 2xx (Ok) responses.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StefaniniCore.API.Controllers.Base.MainController.ResponseWithError``1(Microsoft.Extensions.Logging.ILogger{``0},System.Exception)">
+            <summary>
+            User for BadRequest.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="logger"></param>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StefaniniCore.API.Controllers.Base.MainController.ResponseWithError(Microsoft.Extensions.Logging.ILogger{StefaniniCore.API.Controllers.TasksController},System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            User for specific Http Status.
+            </summary>
+            <param name="logger"></param>
+            <param name="ex"></param>
+            <param name="httpStatusCode"></param>
+            <returns></returns>
+        </member>
         <member name="M:StefaniniCore.API.Controllers.ProfileTypesController.GetById(System.Int32)">
             <summary>
             List of ProfileType by Id.
@@ -58,7 +84,14 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="T:StefaniniCore.API.HealthChecks.GCInfoHealthCheckBuilderExtensions">
+        <member name="M:StefaniniCore.API.CORS.CORSOptions.CORSConfigurations(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add Policies to CORS to accept requests from another specifics domains.
+            It's a Access-Control-Allow-Origin.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:StefaniniCore.API.HealthChecks.GCInfoHealthCheckBuilderExtensions.AddGCInfoCheck(Microsoft.Extensions.DependencyInjection.IHealthChecksBuilder,System.String,System.Nullable{Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int64})">
             <summary>
             Garbage Colector Info.
             </summary>
@@ -70,11 +103,6 @@
             <param name="httpContext"></param>
             <param name="result"></param>
             <returns></returns>
-        </member>
-        <member name="T:StefaniniCore.API.Swagger.ResponseTypes.ErrorViewModel">
-            <summary>
-            View Model to send error informations.
-            </summary>
         </member>
     </members>
 </doc>

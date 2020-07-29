@@ -1,18 +1,14 @@
-﻿namespace StefaniniCore.Application.ViewModels
+﻿using StefaniniCore.Domain.Entities;
+
+namespace StefaniniCore.Application.ViewModels
 {
     public class TaskDetailViewModel : ViewModelBase
     {
-        public virtual int Id { get; private set; }
+        public virtual Task Task { get; private set; }
 
-        public virtual string Name { get; private set; }
-
-        public virtual string Description { get; private set; }
-
-        public void Load(int id, string name, string description)
+        public void Load(Task task)
         {
-            this.Id = id;
-            this.Name = name;
-            this.Description = description;
+            this.Task = task;
         }
     }
 }

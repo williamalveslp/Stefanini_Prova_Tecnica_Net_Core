@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StefaniniCore.API.Controllers.Base;
-using StefaniniCore.API.Swagger.ResponseTypes;
 using StefaniniCore.Application.AppInterfaces;
 using StefaniniCore.Application.InputModels.Tasks;
+using StefaniniCore.Application.Responses;
+using StefaniniCore.Application.Responses.Tasks;
 using StefaniniCore.Application.ViewModels;
 using System;
 using System.Net;
@@ -33,12 +34,12 @@ namespace StefaniniCore.API.Controllers
         /// <returns></returns>
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(TaskDetailViewModel), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(ErrorViewModel), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> GetById(int id)
         {
             try
             {
-                return Ok(_appService.GetById(id));
+                return ResponseOk(_appService.GetById(id));
             }
             catch (Exception ex)
             {
@@ -53,13 +54,13 @@ namespace StefaniniCore.API.Controllers
         /// <param name="inputModel"></param>
         /// <returns></returns>
         [HttpPost]
-        [ProducesResponseType(typeof(Domain.Entities.Task), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(ErrorViewModel), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(TaskDetailResponse), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> Insert([FromBody] TaskInputModel inputModel)
         {
             try
             {
-                return Created("/api/Tasks", _appService.Save(inputModel));
+                return ResponseOk(_appService.Save(inputModel));
             }
             catch (Exception ex)
             {
@@ -74,13 +75,13 @@ namespace StefaniniCore.API.Controllers
         /// <param name="inputModel"></param>
         /// <returns></returns>
         [HttpPut]
-        [ProducesResponseType(typeof(Domain.Entities.Task), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(ErrorViewModel), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(TaskDetailResponse), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> Update([FromBody] TaskInputModel inputModel)
         {
             try
             {
-                return Created("/api/Tasks", _appService.Save(inputModel));
+                return ResponseOk(_appService.Save(inputModel));
             }
             catch (Exception ex)
             {
@@ -94,13 +95,13 @@ namespace StefaniniCore.API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [ProducesResponseType(typeof(TaskListViewModel), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(ErrorViewModel), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(TaskListResponse), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> Get()
         {
             try
             {
-                return Ok(_appService.GetAll());
+                return ResponseOk(_appService.GetAll());
             }
             catch (Exception ex)
             {
@@ -116,7 +117,7 @@ namespace StefaniniCore.API.Controllers
         /// <returns></returns>
         [HttpDelete("{id}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(ErrorViewModel), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> Delete(int id)
         {
             try

@@ -42,12 +42,12 @@ namespace StefaniniCore.Application.AppServices
                 throw new Exception("Funcionalidade não encontrada.");
 
             TaskDetailViewModel viewModel = new TaskDetailViewModel();
-            viewModel.Load(task.Id, task.Name, task.Description);
+            viewModel.Load(task);
 
             return viewModel;
         }
 
-        public Task Save(TaskInputModel inputModel)
+        public TaskDetailViewModel Save(TaskInputModel inputModel)
         {
             ValidationsToSave(inputModel);
 
@@ -63,7 +63,10 @@ namespace StefaniniCore.Application.AppServices
                 task.Update(inputModel.Name, inputModel.Description);
                 _taskService.Update(task);
             }
-            return task;
+            TaskDetailViewModel viewModel = new TaskDetailViewModel();
+            viewModel.Load(task);
+
+            return viewModel;
         }
 
         public void ValidationsToSave(TaskInputModel inputModel)

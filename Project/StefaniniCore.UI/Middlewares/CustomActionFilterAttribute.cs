@@ -14,13 +14,13 @@ namespace StefaniniCore.UI.Middlewares
         public override void OnActionExecuting(ActionExecutingContext context)
         {
             var actionDescriptor = ((ControllerActionDescriptor)((ActionContext)((ControllerBase)context.Controller).ControllerContext).ActionDescriptor);
-           
+
             string controller = actionDescriptor.ControllerName;
             string action = actionDescriptor.ActionName;
             bool isModelStateValid = context.ModelState.IsValid;
             string method = context.HttpContext?.Request?.Method;
 
-            SaveLog(controller, action, isModelStateValid, method);
+            _ = SaveLog(controller, action, isModelStateValid, method);
         }
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace StefaniniCore.UI.Middlewares
             string action = actionDescriptor.ActionName;
             bool isModelStateValid = context.ModelState.IsValid;
 
-            SaveLog(controller, action, isModelStateValid);
+            _ = SaveLog(controller, action, isModelStateValid);
         }
 
         public override void OnResultExecuting(ResultExecutingContext context)
@@ -46,7 +46,7 @@ namespace StefaniniCore.UI.Middlewares
             string action = actionDescriptor.ActionName;
             bool isModelStateValid = context.ModelState.IsValid;
 
-            SaveLog(controller, action, isModelStateValid);
+            _ = SaveLog(controller, action, isModelStateValid);
         }
 
         public override void OnResultExecuted(ResultExecutedContext context)
@@ -57,7 +57,7 @@ namespace StefaniniCore.UI.Middlewares
             string action = actionDescriptor.ActionName;
             bool isModelStateValid = context.ModelState.IsValid;
 
-            SaveLog(controller, action, isModelStateValid);
+            _ = SaveLog(controller, action, isModelStateValid);
         }
 
         /// <summary>
@@ -70,9 +70,17 @@ namespace StefaniniCore.UI.Middlewares
             string action = context?.ActionDescriptor?.DisplayName;
             bool isModelStateValid = context.ModelState.IsValid;
 
-            SaveLog(controller, action, isModelStateValid);
+            _ = SaveLog(controller, action, isModelStateValid);
         }
 
+        /// <summary>
+        /// Save the log.
+        /// </summary>
+        /// <param name="controller"></param>
+        /// <param name="action"></param>
+        /// <param name="isModelStateValid"></param>
+        /// <param name="method"></param>
+        /// <returns></returns>
         private async Task SaveLog(string controller, string action, bool isModelStateValid, string method = null)
         {
             // TODO: Implement a log here.

@@ -55,8 +55,8 @@ namespace StefaniniCore.UI.Controllers
         {
             try
             {
-                var task = _appService.Save(inputModel);
-                return SuccessMessage("Salvo com sucesso!", task.Id, false);
+                var viewModel = _appService.Save(inputModel);
+                return SuccessMessage("Salvo com sucesso!", viewModel.Task.Id, false);
             }
             catch (Exception ex)
             {

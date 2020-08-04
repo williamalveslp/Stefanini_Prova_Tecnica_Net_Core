@@ -17,22 +17,23 @@
 
 <div>
     <form id="formTask">
-        @Html.HiddenFor(f => f.Id, new { @id = "hddTaskId", @name = "hddTaskId" })
+        @Html.HiddenFor(f => f.Task.Id, new { @id = "hddTaskId", @name = "hddTaskId" })
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Nome da Funcionalidade<i class="requiredField">*</i>:</label>
-                    @Html.TextBoxFor(f => f.Name, new { @id = "txtName", @name = "txtName", @class = "form-control", @type = "text", @maxlength = "30" })
+                    @Html.TextBoxFor(f => f.Task.Name, new { @id = "txtName", @name = "txtName", @class = "form-control", @type = "text", @maxlength = "30" })
                 </div>
 
                 <div class="form-group">
                     <label>Descrição:</label>
-                    <textarea class="form-control" id="txtDescription" name="txtDescription" maxlength="150" rows="3">@Model.Description</textarea>
+                    <textarea class="form-control" id="txtDescription" name="txtDescription" maxlength="150" rows="3">@Model.Task.Description</textarea>
                 </div>
             </div>
         </div>
 
         <div class="row">
+
             <div class="text-center">
                 <button type="button" id="btnSave" name="btnSave" class="btn btn-primary">Salvar</button>
                 <button type="button" id="btnClear" name="btnClear" class="btn btn-default">Limpar</button>

@@ -15,3 +15,14 @@ Scaffold-DbContext "<CONNECTION_STRING>" Microsoft.EntityFrameworkCore.SqlServer
 	
 For Query logs on Console:
 - Microsoft.Extensions.Logging.Console
+
+	** SPECFLOW **
+- Install the Specflow extension for Visual Studio.
+
+- Some test Provider (xUnit/MSTest/NUnit...)
+
+
+MSTest.TestFramework
+Specflow
+Specflow.MsTest
+

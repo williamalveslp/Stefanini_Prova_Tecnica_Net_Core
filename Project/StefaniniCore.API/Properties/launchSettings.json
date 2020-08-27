@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/check",
+      "launchUrl": "api/healthchecks",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,11 +20,22 @@
     "StefaniniCore.API": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "check",
+      "launchUrl": "healthchecks",
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
+  },
+
+  "HealthChecksUI": {
+    "HealthChecks": [
+      {
+        "Name": "HealthCheckExample",
+        "Uri": "http://localhost:55612/api/healthchecks"
+      }
+    ],
+    "EvaluationTimeOnSeconds": 10,
+    "MinimumSecondsBetweenFailureNotifications": 60
   }
 }

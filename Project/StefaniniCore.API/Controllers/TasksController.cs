@@ -81,7 +81,7 @@ namespace StefaniniCore.API.Controllers
         {
             try
             {
-                return ResponseOk(_appService.Save(inputModel));
+                return ResponseOk(await _appService.Save(inputModel));
             }
             catch (Exception ex)
             {
@@ -101,7 +101,7 @@ namespace StefaniniCore.API.Controllers
         {
             try
             {
-                return ResponseOk(_appService.GetAll());
+                return ResponseOk(await _appService.GetAll());
             }
             catch (Exception ex)
             {

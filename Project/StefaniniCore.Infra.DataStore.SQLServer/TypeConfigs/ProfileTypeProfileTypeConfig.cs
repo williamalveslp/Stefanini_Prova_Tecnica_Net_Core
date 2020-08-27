@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using StefaniniCore.Domain.Entities;
+using System;
 
 namespace StefaniniCore.Infra.DataStore.SQLServer.TypeConfigs
 {

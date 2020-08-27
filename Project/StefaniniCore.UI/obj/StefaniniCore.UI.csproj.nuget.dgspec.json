@@ -185,7 +185,7 @@
           "dependencies": {
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
-              "version": "[3.1.6, )"
+              "version": "[3.1.7, )"
             }
           },
           "imports": [
@@ -313,7 +313,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.6, )"
+              "version": "[3.1.7, )"
             },
             "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
@@ -321,7 +321,7 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.4, )"
+              "version": "[3.1.7, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer.Design": {
               "target": "Package",
@@ -331,7 +331,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.4, )"
+              "version": "[3.1.7, )"
             }
           },
           "imports": [
@@ -476,6 +476,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.3, )"

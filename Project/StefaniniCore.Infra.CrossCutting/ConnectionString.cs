@@ -2,6 +2,6 @@
 {
     public static class ConnectionString
     {
-        public static string Path = "Data Source=.\\SQLEXPRESS;Initial Catalog=StefDb;Integrated Security=True";
+        public const string Path = "Data Source=.\\SQLEXPRESS;Initial Catalog=StefDb;Integrated Security=True";
     }
 }

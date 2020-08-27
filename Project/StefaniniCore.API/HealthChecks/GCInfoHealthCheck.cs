@@ -11,9 +11,9 @@ namespace StefaniniCore.API.HealthChecks
     internal static class GCInfoHealthCheckBuilderExtensions
     {
         /// <summary>
-        /// Garbage Colector Info.
+        /// Garbage Collector Info.
         /// </summary>
-        public static IHealthChecksBuilder AddGCInfoCheck(
+        public static IHealthChecksBuilder AddGCInfo(
             this IHealthChecksBuilder builder,
             string name,
             HealthStatus? failureStatus = null,
@@ -70,7 +70,7 @@ namespace StefaniniCore.API.HealthChecks
 
             return Task.FromResult(new HealthCheckResult(
                 result,
-                description: "reports degraded status if allocated bytes >= 1gb",
+                description: "Reports degraded status if allocated bytes >= 1gb",
                 data: data));
         }
     }

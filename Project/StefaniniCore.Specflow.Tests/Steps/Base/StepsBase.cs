@@ -1,5 +1,4 @@
-﻿using StefaniniCore.Specflow.Tests.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -179,6 +178,12 @@ namespace StefaniniCore.Specflow.Tests.Steps.Base
             public StepDefinitionType StepDefinition { get; set; }
             public string Action { get; set; }
             public string ExpectedResult { get; set; }
+        }
+
+        public enum EnumStepType
+        {
+            ACTION,
+            EXPECTED_RESULT
         }
     }
 }

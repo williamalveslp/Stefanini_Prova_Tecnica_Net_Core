@@ -125,7 +125,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("that user inform UserName \'123\' and Password \'456\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
- testRunner.When("checks the user exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("checks if the user exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 8
  testRunner.Then("should be returned the user data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

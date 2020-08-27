@@ -24,7 +24,7 @@ namespace StefaniniCore.Application.AppServices
             _taskService.DeleteById(id);
         }
 
-        public TaskListViewModel GetAll()
+        public async System.Threading.Tasks.Task<TaskListViewModel> GetAll()
         {
             var tasks = _taskService.GetAll().OrderBy(f => f.Id).ToList();
 
@@ -47,7 +47,7 @@ namespace StefaniniCore.Application.AppServices
             return viewModel;
         }
 
-        public TaskDetailViewModel Save(TaskInputModel inputModel)
+        public async System.Threading.Tasks.Task<TaskDetailViewModel> Save(TaskInputModel inputModel)
         {
             ValidationsToSave(inputModel);
 

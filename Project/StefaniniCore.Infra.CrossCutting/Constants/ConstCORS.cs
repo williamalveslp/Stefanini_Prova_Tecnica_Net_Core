@@ -1,6 +1,6 @@
 ﻿namespace StefaniniCore.Infra.CrossCutting.Constants
 {
-    public static class ConstCORS
+    public static class ConstCors
     {
         /// <summary>
         /// Key Name about the origins.
@@ -10,6 +10,6 @@
         /// <summary>
         /// Origin to be accepted.
         /// </summary>
-        public const string LocalHost_UI_React = "http://localhost:3000";
+        public const string EndpointToAllow = "http://localhost:3000";
     }
 }

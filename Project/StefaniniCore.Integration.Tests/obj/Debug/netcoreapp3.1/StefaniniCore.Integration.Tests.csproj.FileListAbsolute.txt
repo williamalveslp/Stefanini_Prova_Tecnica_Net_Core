@@ -1,0 +1,4 @@
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Integration.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.Integration.Tests.csprojAssemblyReference.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Integration.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.Integration.Tests.AssemblyInfoInputs.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Integration.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.Integration.Tests.AssemblyInfo.cs
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Integration.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.Integration.Tests.csproj.CoreCompileInputs.cache

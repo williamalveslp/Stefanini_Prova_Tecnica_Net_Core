@@ -17,6 +17,5 @@ namespace StefaniniCore.Services.Services
 
         public IList<ProfileType> GetActivesOnly() =>
                  _repository.GetActivesOnly();
-
     }
 }

@@ -1,3 +1,4 @@
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
@@ -11,8 +12,10 @@ using Newtonsoft.Json.Linq;
 using StefaniniCore.API.CORS;
 using StefaniniCore.API.HealthChecks;
 using StefaniniCore.API.Swagger;
+using StefaniniCore.Infra.CrossCutting;
 using StefaniniCore.Infra.CrossCutting.Constants;
 using StefaniniCore.Infra.CrossCutting.IoC;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -30,8 +33,8 @@ namespace StefaniniCore.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // CORS.
-            services.CORSConfigurations();
+            // Cors.
+            services.CorsConfigurations();
 
             services.AddControllers()
                 .AddJsonOptions(options =>
@@ -45,8 +48,15 @@ namespace StefaniniCore.API
             // Swagger Documentations.
             services.ConfigureSwagger();
 
-            // Health Checks.
-            services.AddHealthChecks().AddGCInfoCheck("GCInfo");
+            // Health Checks Info.
+            services.AddHealthChecks()
+                .AddGCInfo("GarbageCollector")
+                .AddSQLServerInfo("SQLServer_Database", ConnectionString.Path)   // nuget: Microsoft.Extensions.Diagnostics.HealthChecks.EntityFramework
+                .AddUrlGroup(new Uri("https://www.google.com/"), name: "Google") // nuget: AspNetCore.HealthChecks.Uris
+                .AddApplicationInsightsPublisher();                              // nuget: AspNetCore.HealthChecks.Publisher.ApplicationInsights
+
+            services.AddHealthChecksUI()
+                .AddInMemoryStorage();                                            // nuget: AspNetCore.HealthChecks.UI.InMemory.Storage
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,7 +69,7 @@ namespace StefaniniCore.API
 
             app.UseRouting();
 
-            app.UseCors(ConstCORS.Key);
+            app.UseCors(ConstCors.Key);
 
             // Are you allowed?  
             app.UseAuthorization();
@@ -67,6 +77,7 @@ namespace StefaniniCore.API
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHealthChecksUI();
             });
 
             // Activating Swagger middlewares
@@ -75,9 +86,16 @@ namespace StefaniniCore.API
             options.SwaggerEndpoint($"/api/swagger/{ConstSwagger.API_Version}/swagger.json", $"William Goi {ConstSwagger.API_Version}"));
 
             // Health Checks
-            app.UseHealthChecks("/check", new HealthCheckOptions()
+            app.UseHealthChecks("/healthchecks", new HealthCheckOptions()
             {
-                ResponseWriter = WriteResponse,
+                Predicate = _ => true,
+                ResponseWriter = WriteResponse
+                //ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+            });
+
+            app.UseHealthChecksUI(options =>
+            {
+                options.UIPath = "/healthchecks-ui";
             });
         }
 

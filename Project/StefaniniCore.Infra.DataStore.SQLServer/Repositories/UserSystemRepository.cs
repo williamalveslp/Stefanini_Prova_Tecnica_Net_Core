@@ -16,8 +16,7 @@ namespace StefaniniCore.Infra.DataStore.SQLServer.Repositories
 
         public UserSystem GetSignIn(string userName, string password)
         {
-            return ctx.UserSystem.Where(f => (!string.IsNullOrEmpty(userName) && !string.IsNullOrEmpty(password))
-                                                   && f.UserName.ToUpper() == userName.ToUpper()
+            return ctx.UserSystem.Where(f => f.UserName.ToUpper() == userName.ToUpper()
                                                    && f.Password == password).FirstOrDefault();
         }
     }

@@ -6,6 +6,9 @@ using System.Net;
 
 namespace StefaniniCore.API.Controllers.Base
 {
+    /// <summary>
+    /// Controller base for each API.
+    /// </summary>
     public abstract class MainController : ControllerBase
     {
         /// <summary>
@@ -70,19 +73,15 @@ namespace StefaniniCore.API.Controllers.Base
         {
             logger.LogError($"Error: {ex.Message}\r\nStackTrace: {ex.StackTrace}\r\n\r\n");
         }
+    }
 
-        private class ResponseData<T>
+    public class ResponseData<T>
+    {
+        public T Data { get; private set; }
+
+        public ResponseData(T data)
         {
-            public T Data { get; private set; }
-
-          //  public HttpStatusCode StatusCode { get; private set; }
-
-            // , HttpStatusCode statusCode
-            public ResponseData(T data)
-            {
-                this.Data = data;
-            //    this.StatusCode = statusCode;
-            }
+            this.Data = data;
         }
     }
 }

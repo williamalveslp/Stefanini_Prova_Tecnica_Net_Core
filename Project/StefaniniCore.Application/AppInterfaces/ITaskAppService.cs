@@ -7,9 +7,9 @@ namespace StefaniniCore.Application.AppInterfaces
     {
         TaskDetailViewModel GetById(int id);
 
-        TaskListViewModel GetAll();
+        System.Threading.Tasks.Task<TaskListViewModel> GetAll();
 
-        TaskDetailViewModel Save(TaskInputModel inputModel);
+        System.Threading.Tasks.Task<TaskDetailViewModel> Save(TaskInputModel inputModel);
 
         void ValidationsToSave(TaskInputModel inputModel);
 

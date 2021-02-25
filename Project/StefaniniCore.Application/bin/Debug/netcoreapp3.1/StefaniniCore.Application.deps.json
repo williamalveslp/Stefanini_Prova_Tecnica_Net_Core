@@ -10,6 +10,7 @@
         "dependencies": {
           "FluentValidation.AspNetCore": "8.6.2",
           "StefaniniCore.Domain": "1.0.0",
+          "StefaniniCore.Domain.Service": "1.0.0",
           "StefaniniCore.Infra.CrossCutting": "1.0.0"
         },
         "runtime": {
@@ -56,6 +57,14 @@
       "StefaniniCore.Domain/1.0.0": {
         "runtime": {
           "StefaniniCore.Domain.dll": {}
+        }
+      },
+      "StefaniniCore.Domain.Service/1.0.0": {
+        "dependencies": {
+          "StefaniniCore.Domain": "1.0.0"
+        },
+        "runtime": {
+          "StefaniniCore.Domain.Service.dll": {}
         }
       },
       "StefaniniCore.Infra.CrossCutting/1.0.0": {
@@ -107,6 +116,11 @@
       "hashPath": "system.componentmodel.annotations.4.4.1.nupkg.sha512"
     },
     "StefaniniCore.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StefaniniCore.Domain.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

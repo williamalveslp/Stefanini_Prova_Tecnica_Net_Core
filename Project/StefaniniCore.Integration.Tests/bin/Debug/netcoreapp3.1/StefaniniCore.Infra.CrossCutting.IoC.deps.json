@@ -11,8 +11,8 @@
           "Microsoft.Extensions.DependencyInjection": "3.1.7",
           "StefaniniCore.Application": "1.0.0",
           "StefaniniCore.Domain": "1.0.0",
-          "StefaniniCore.Infra.DataStore.SQLServer": "1.0.0",
-          "StefaniniCore.Services": "1.0.0"
+          "StefaniniCore.Domain.Service": "1.0.0",
+          "StefaniniCore.Infra.DataStore.SQLServer": "1.0.0"
         },
         "runtime": {
           "StefaniniCore.Infra.CrossCutting.IoC.dll": {}
@@ -1447,6 +1447,14 @@
           "StefaniniCore.Domain.dll": {}
         }
       },
+      "StefaniniCore.Domain.Service/1.0.0": {
+        "dependencies": {
+          "StefaniniCore.Domain": "1.0.0"
+        },
+        "runtime": {
+          "StefaniniCore.Domain.Service.dll": {}
+        }
+      },
       "StefaniniCore.Infra.CrossCutting/1.0.0": {
         "runtime": {
           "StefaniniCore.Infra.CrossCutting.dll": {}
@@ -1463,15 +1471,6 @@
         },
         "runtime": {
           "StefaniniCore.Infra.DataStore.SQLServer.dll": {}
-        }
-      },
-      "StefaniniCore.Services/1.0.0": {
-        "dependencies": {
-          "StefaniniCore.Application": "1.0.0",
-          "StefaniniCore.Domain": "1.0.0"
-        },
-        "runtime": {
-          "StefaniniCore.Services.dll": {}
         }
       }
     }
@@ -2458,17 +2457,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "StefaniniCore.Domain.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "StefaniniCore.Infra.CrossCutting/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "StefaniniCore.Infra.DataStore.SQLServer/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "StefaniniCore.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

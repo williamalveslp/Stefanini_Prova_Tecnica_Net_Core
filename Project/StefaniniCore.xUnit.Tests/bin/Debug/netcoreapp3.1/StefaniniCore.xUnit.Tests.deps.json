@@ -10,8 +10,9 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "Moq": "4.14.1",
+          "StefaniniCore.Application": "1.0.0",
           "StefaniniCore.Domain": "1.0.0",
-          "StefaniniCore.Services": "1.0.0",
+          "StefaniniCore.Domain.Service": "1.0.0",
           "coverlet.collector": "1.2.0",
           "xunit": "2.4.0",
           "xunit.runner.visualstudio": "2.4.0"
@@ -1245,18 +1246,17 @@
           "StefaniniCore.Domain.dll": {}
         }
       },
-      "StefaniniCore.Infra.CrossCutting/1.0.0": {
-        "runtime": {
-          "StefaniniCore.Infra.CrossCutting.dll": {}
-        }
-      },
-      "StefaniniCore.Services/1.0.0": {
+      "StefaniniCore.Domain.Service/1.0.0": {
         "dependencies": {
-          "StefaniniCore.Application": "1.0.0",
           "StefaniniCore.Domain": "1.0.0"
         },
         "runtime": {
-          "StefaniniCore.Services.dll": {}
+          "StefaniniCore.Domain.Service.dll": {}
+        }
+      },
+      "StefaniniCore.Infra.CrossCutting/1.0.0": {
+        "runtime": {
+          "StefaniniCore.Infra.CrossCutting.dll": {}
         }
       }
     }
@@ -2012,12 +2012,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "StefaniniCore.Infra.CrossCutting/1.0.0": {
+    "StefaniniCore.Domain.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "StefaniniCore.Services/1.0.0": {
+    "StefaniniCore.Infra.CrossCutting/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

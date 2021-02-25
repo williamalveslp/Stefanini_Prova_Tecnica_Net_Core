@@ -1,15 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "orJjbV+Yu4PTc744tu4rWPZGDZuC019XHacZPznJ+QuSnpktvK3v1JSUGqSRJld4yLqqjsEL2A1yq67b9xLu/w==",
+  "dgSpecHash": "nilDocMTGWI2+PCN0OX5t8bPPxJ86G7rsflD7DSH/OH6FJwmR7HRB9Ki5EhYUt8qEFNCWovh/6YrRpOFcIZmFw==",
   "success": true,
   "projectFilePath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Specflow.Tests\\StefaniniCore.Specflow.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\willi\\.nuget\\packages\\bodi\\1.4.1\\bodi.1.4.1.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\cucumber.messages\\6.0.1\\cucumber.messages.6.0.1.nupkg.sha512",
-    "C:\\Users\\willi\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
-    "C:\\Users\\willi\\.nuget\\packages\\fluentvalidation.aspnetcore\\8.6.2\\fluentvalidation.aspnetcore.8.6.2.nupkg.sha512",
-    "C:\\Users\\willi\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\8.6.2\\fluentvalidation.dependencyinjectionextensions.8.6.2.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\gherkin\\6.0.0\\gherkin.6.0.0.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\google.protobuf\\3.7.0\\google.protobuf.3.7.0.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

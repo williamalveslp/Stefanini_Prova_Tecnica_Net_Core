@@ -12,3 +12,5 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Application\
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Application\obj\Debug\netcoreapp3.1\StefaniniCore.Application.csproj.CopyComplete
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Application\obj\Debug\netcoreapp3.1\StefaniniCore.Application.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Application\obj\Debug\netcoreapp3.1\StefaniniCore.Application.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Application\bin\Debug\netcoreapp3.1\StefaniniCore.Domain.Service.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Application\bin\Debug\netcoreapp3.1\StefaniniCore.Domain.Service.pdb

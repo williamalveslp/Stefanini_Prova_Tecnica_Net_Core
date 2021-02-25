@@ -2,7 +2,7 @@
 using StefaniniCore.Domain.Entities;
 using StefaniniCore.Domain.Interfaces.Repositories;
 using StefaniniCore.Domain.Interfaces.Services;
-using StefaniniCore.Services.Services;
+using StefaniniCore.Domain.Services.Services;
 using System;
 using System.Collections.Generic;
 using Xunit;

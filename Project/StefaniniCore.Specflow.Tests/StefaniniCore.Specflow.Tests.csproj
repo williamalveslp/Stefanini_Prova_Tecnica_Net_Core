@@ -22,9 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\StefaniniCore.Domain.Service\StefaniniCore.Domain.Service.csproj" />
     <ProjectReference Include="..\StefaniniCore.Domain\StefaniniCore.Domain.csproj" />
     <ProjectReference Include="..\StefaniniCore.Infra.DataStore.SQLServer\StefaniniCore.Infra.DataStore.SQLServer.csproj" />
-    <ProjectReference Include="..\StefaniniCore.Services\StefaniniCore.Services.csproj" />
   </ItemGroup>
 
 </Project>

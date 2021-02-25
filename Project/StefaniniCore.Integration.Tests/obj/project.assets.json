@@ -4027,6 +4027,7 @@
         "dependencies": {
           "FluentValidation.AspNetCore": "8.6.2",
           "StefaniniCore.Domain": "1.0.0",
+          "StefaniniCore.Domain.Service": "1.0.0",
           "StefaniniCore.Infra.CrossCutting": "1.0.0"
         },
         "compile": {
@@ -4049,6 +4050,19 @@
           "bin/placeholder/StefaniniCore.Domain.dll": {}
         }
       },
+      "StefaniniCore.Domain.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "StefaniniCore.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/StefaniniCore.Domain.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StefaniniCore.Domain.Service.dll": {}
+        }
+      },
       "StefaniniCore.Infra.CrossCutting/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -4066,8 +4080,8 @@
           "Microsoft.Extensions.DependencyInjection": "3.1.7",
           "StefaniniCore.Application": "1.0.0",
           "StefaniniCore.Domain": "1.0.0",
-          "StefaniniCore.Infra.DataStore.SQLServer": "1.0.0",
-          "StefaniniCore.Services": "1.0.0"
+          "StefaniniCore.Domain.Service": "1.0.0",
+          "StefaniniCore.Infra.DataStore.SQLServer": "1.0.0"
         },
         "compile": {
           "bin/placeholder/StefaniniCore.Infra.CrossCutting.IoC.dll": {}
@@ -4096,23 +4110,6 @@
         "runtime": {
           "bin/placeholder/StefaniniCore.Infra.DataStore.SQLServer.dll": {}
         }
-      },
-      "StefaniniCore.Services/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "StefaniniCore.Application": "1.0.0",
-          "StefaniniCore.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/StefaniniCore.Services.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/StefaniniCore.Services.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
       }
     }
   },
@@ -11672,6 +11669,11 @@
       "path": "../StefaniniCore.Domain/StefaniniCore.Domain.csproj",
       "msbuildProject": "../StefaniniCore.Domain/StefaniniCore.Domain.csproj"
     },
+    "StefaniniCore.Domain.Service/1.0.0": {
+      "type": "project",
+      "path": "../StefaniniCore.Domain.Service/StefaniniCore.Domain.Service.csproj",
+      "msbuildProject": "../StefaniniCore.Domain.Service/StefaniniCore.Domain.Service.csproj"
+    },
     "StefaniniCore.Infra.CrossCutting/1.0.0": {
       "type": "project",
       "path": "../StefaniniCore.Infra.CrossCutting/StefaniniCore.Infra.CrossCutting.csproj",
@@ -11686,11 +11688,6 @@
       "type": "project",
       "path": "../StefaniniCore.Infra.DataStore.SQLServer/StefaniniCore.Infra.DataStore.SQLServer.csproj",
       "msbuildProject": "../StefaniniCore.Infra.DataStore.SQLServer/StefaniniCore.Infra.DataStore.SQLServer.csproj"
-    },
-    "StefaniniCore.Services/1.0.0": {
-      "type": "project",
-      "path": "../StefaniniCore.Services/StefaniniCore.Services.csproj",
-      "msbuildProject": "../StefaniniCore.Services/StefaniniCore.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {

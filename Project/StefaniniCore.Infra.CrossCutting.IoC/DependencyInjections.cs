@@ -3,8 +3,8 @@ using StefaniniCore.Application.AppInterfaces;
 using StefaniniCore.Application.AppServices;
 using StefaniniCore.Domain.Interfaces.Repositories;
 using StefaniniCore.Domain.Interfaces.Services;
+using StefaniniCore.Domain.Services.Services;
 using StefaniniCore.Infra.DataStore.SQLServer.Repositories;
-using StefaniniCore.Services.Services;
 
 namespace StefaniniCore.Infra.CrossCutting.IoC
 {

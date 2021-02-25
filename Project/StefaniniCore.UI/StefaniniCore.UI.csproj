@@ -15,7 +15,6 @@
     <ProjectReference Include="..\StefaniniCore.Infra.CrossCutting.IoC\StefaniniCore.Infra.CrossCutting.IoC.csproj" />
     <ProjectReference Include="..\StefaniniCore.Infra.CrossCutting\StefaniniCore.Infra.CrossCutting.csproj" />
     <ProjectReference Include="..\StefaniniCore.Infra.DataStore.SQLServer\StefaniniCore.Infra.DataStore.SQLServer.csproj" />
-    <ProjectReference Include="..\StefaniniCore.Services\StefaniniCore.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

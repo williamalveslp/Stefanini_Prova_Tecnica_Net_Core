@@ -11,9 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("StefaniniCore.API", "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.API", "StefaniniCore.API.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("StefaniniCore.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.API", "StefaniniCore.API.csproj", "0")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("StefaniniCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Application", "StefaniniCore.Application.csproj", "0")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("StefaniniCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Domain", "StefaniniCore.Domain.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("StefaniniCore.Domain.Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=nu" +
+    "ll", "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Domain.Servic" +
+    "e", "StefaniniCore.Domain.Service.csproj", "0")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("StefaniniCore.Infra.CrossCutting, Version=1.0.0.0, Culture=neutral, PublicKeyToke" +
     "n=null", "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Infra.CrossCu" +
     "tting", "StefaniniCore.Infra.CrossCutting.csproj", "0")]
@@ -23,7 +26,6 @@ using System.Reflection;
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("StefaniniCore.Infra.DataStore.SQLServer, Version=1.0.0.0, Culture=neutral, Public" +
     "KeyToken=null", "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Infra.DataSto" +
     "re.SQLServer", "StefaniniCore.Infra.DataStore.SQLServer.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("StefaniniCore.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Services", "StefaniniCore.Services.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("StefaniniCore.Integration.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

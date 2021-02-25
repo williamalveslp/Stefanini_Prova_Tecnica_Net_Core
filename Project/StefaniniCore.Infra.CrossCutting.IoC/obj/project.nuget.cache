@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yvNU3GMv7PGqrhtLk19/ZHpquMfDs8URm9MEI7wcM5EHpCiVa5WzfrdU9EKgGq/Y9kxcwERrmJbPvYlE0uGe1g==",
+  "dgSpecHash": "MLDxh68cZlUzvTu3wfx3+GpXPK2l7GbCV14PtXvdGmR6einJmiru61x79X4kOrULhbhh60ccVWlFYEt/yb1Ogw==",
   "success": true,
   "projectFilePath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Infra.CrossCutting.IoC\\StefaniniCore.Infra.CrossCutting.IoC.csproj",
   "expectedPackageFiles": [

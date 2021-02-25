@@ -1875,6 +1875,7 @@
         "dependencies": {
           "FluentValidation.AspNetCore": "8.6.2",
           "StefaniniCore.Domain": "1.0.0",
+          "StefaniniCore.Domain.Service": "1.0.0",
           "StefaniniCore.Infra.CrossCutting": "1.0.0"
         },
         "compile": {
@@ -1897,6 +1898,19 @@
           "bin/placeholder/StefaniniCore.Domain.dll": {}
         }
       },
+      "StefaniniCore.Domain.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "StefaniniCore.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/StefaniniCore.Domain.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StefaniniCore.Domain.Service.dll": {}
+        }
+      },
       "StefaniniCore.Infra.CrossCutting/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -1906,23 +1920,6 @@
         "runtime": {
           "bin/placeholder/StefaniniCore.Infra.CrossCutting.dll": {}
         }
-      },
-      "StefaniniCore.Services/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "StefaniniCore.Application": "1.0.0",
-          "StefaniniCore.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/StefaniniCore.Services.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/StefaniniCore.Services.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
       }
     }
   },
@@ -6394,23 +6391,24 @@
       "path": "../StefaniniCore.Domain/StefaniniCore.Domain.csproj",
       "msbuildProject": "../StefaniniCore.Domain/StefaniniCore.Domain.csproj"
     },
+    "StefaniniCore.Domain.Service/1.0.0": {
+      "type": "project",
+      "path": "../StefaniniCore.Domain.Service/StefaniniCore.Domain.Service.csproj",
+      "msbuildProject": "../StefaniniCore.Domain.Service/StefaniniCore.Domain.Service.csproj"
+    },
     "StefaniniCore.Infra.CrossCutting/1.0.0": {
       "type": "project",
       "path": "../StefaniniCore.Infra.CrossCutting/StefaniniCore.Infra.CrossCutting.csproj",
       "msbuildProject": "../StefaniniCore.Infra.CrossCutting/StefaniniCore.Infra.CrossCutting.csproj"
-    },
-    "StefaniniCore.Services/1.0.0": {
-      "type": "project",
-      "path": "../StefaniniCore.Services/StefaniniCore.Services.csproj",
-      "msbuildProject": "../StefaniniCore.Services/StefaniniCore.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "Moq >= 4.14.1",
+      "StefaniniCore.Application >= 1.0.0",
       "StefaniniCore.Domain >= 1.0.0",
-      "StefaniniCore.Services >= 1.0.0",
+      "StefaniniCore.Domain.Service >= 1.0.0",
       "coverlet.collector >= 1.2.0",
       "xunit >= 2.4.0",
       "xunit.runner.visualstudio >= 2.4.0"
@@ -6447,11 +6445,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Application\\StefaniniCore.Application.csproj": {
+              "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Application\\StefaniniCore.Application.csproj"
+            },
+            "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Domain.Service\\StefaniniCore.Domain.Service.csproj": {
+              "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Domain.Service\\StefaniniCore.Domain.Service.csproj"
+            },
             "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Domain\\StefaniniCore.Domain.csproj": {
               "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Domain\\StefaniniCore.Domain.csproj"
-            },
-            "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Services\\StefaniniCore.Services.csproj": {
-              "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Services\\StefaniniCore.Services.csproj"
             }
           }
         }

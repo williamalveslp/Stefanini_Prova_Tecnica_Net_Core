@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "StefaniniCore.API/1.0.0": {
         "dependencies": {
+          "AspNetCore.HealthChecks.Publisher.ApplicationInsights": "3.1.1",
           "AspNetCore.HealthChecks.SqlServer": "3.1.1",
           "AspNetCore.HealthChecks.UI": "3.1.1",
           "AspNetCore.HealthChecks.UI.Client": "3.1.1",
@@ -40,6 +41,7 @@
           "Newtonsoft.Json": "12.0.3",
           "StefaniniCore.Application": "1.0.0",
           "StefaniniCore.Domain": "1.0.0",
+          "StefaniniCore.Domain.Service": "1.0.0",
           "StefaniniCore.Infra.CrossCutting.IoC": "1.0.0",
           "Swashbuckle.AspNetCore": "5.4.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -311,6 +313,21 @@
         },
         "compile": {
           "StefaniniCore.API.dll": {}
+        }
+      },
+      "AspNetCore.HealthChecks.Publisher.ApplicationInsights/3.1.1": {
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "2.14.0",
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "3.1.7"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/HealthChecks.Publisher.ApplicationInsights.dll": {
+            "assemblyVersion": "3.1.1.0",
+            "fileVersion": "3.1.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/HealthChecks.Publisher.ApplicationInsights.dll": {}
         }
       },
       "AspNetCore.HealthChecks.SqlServer/3.1.1": {
@@ -2782,6 +2799,17 @@
           "StefaniniCore.Domain.dll": {}
         }
       },
+      "StefaniniCore.Domain.Service/1.0.0": {
+        "dependencies": {
+          "StefaniniCore.Domain": "1.0.0"
+        },
+        "runtime": {
+          "StefaniniCore.Domain.Service.dll": {}
+        },
+        "compile": {
+          "StefaniniCore.Domain.Service.dll": {}
+        }
+      },
       "StefaniniCore.Infra.CrossCutting/1.0.0": {
         "runtime": {
           "StefaniniCore.Infra.CrossCutting.dll": {}
@@ -2795,8 +2823,8 @@
           "Microsoft.Extensions.DependencyInjection": "3.1.7",
           "StefaniniCore.Application": "1.0.0",
           "StefaniniCore.Domain": "1.0.0",
-          "StefaniniCore.Infra.DataStore.SQLServer": "1.0.0",
-          "StefaniniCore.Services": "1.0.0"
+          "StefaniniCore.Domain.Service": "1.0.0",
+          "StefaniniCore.Infra.DataStore.SQLServer": "1.0.0"
         },
         "runtime": {
           "StefaniniCore.Infra.CrossCutting.IoC.dll": {}
@@ -2819,18 +2847,6 @@
         },
         "compile": {
           "StefaniniCore.Infra.DataStore.SQLServer.dll": {}
-        }
-      },
-      "StefaniniCore.Services/1.0.0": {
-        "dependencies": {
-          "StefaniniCore.Application": "1.0.0",
-          "StefaniniCore.Domain": "1.0.0"
-        },
-        "runtime": {
-          "StefaniniCore.Services.dll": {}
-        },
-        "compile": {
-          "StefaniniCore.Services.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -4419,6 +4435,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AspNetCore.HealthChecks.Publisher.ApplicationInsights/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6Bh93z/1NDPLDh2WZKM157Yihb9rhuyFQCvoPe2AoTDDIZ9RoD2oEadlJZ42HHujZ/eu076gxAD163Ds6Btz+w==",
+      "path": "aspnetcore.healthchecks.publisher.applicationinsights/3.1.1",
+      "hashPath": "aspnetcore.healthchecks.publisher.applicationinsights.3.1.1.nupkg.sha512"
+    },
     "AspNetCore.HealthChecks.SqlServer/3.1.1": {
       "type": "package",
       "serviceable": true,
@@ -5913,6 +5936,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "StefaniniCore.Domain.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "StefaniniCore.Infra.CrossCutting/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -5924,11 +5952,6 @@
       "sha512": ""
     },
     "StefaniniCore.Infra.DataStore.SQLServer/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "StefaniniCore.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

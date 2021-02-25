@@ -10,9 +10,6 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tes
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\BoDi.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\Castle.Core.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\Cucumber.Messages.dll
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\FluentValidation.dll
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\Gherkin.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
@@ -63,6 +60,7 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tes
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\Utf8Json.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
@@ -137,15 +135,13 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tes
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\StefaniniCore.Application.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\StefaniniCore.Domain.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\StefaniniCore.Domain.Service.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.DataStore.SQLServer.dll
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\StefaniniCore.Services.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\StefaniniCore.Domain.Service.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\StefaniniCore.Domain.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.DataStore.SQLServer.pdb
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\StefaniniCore.Services.pdb
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\StefaniniCore.Application.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.Specflow.Tests.csprojAssemblyReference.cache
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.Specflow.Tests.AssemblyInfoInputs.cache

@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\StefaniniCore.Domain.Service\StefaniniCore.Domain.Service.csproj" />
     <ProjectReference Include="..\StefaniniCore.Domain\StefaniniCore.Domain.csproj" />
     <ProjectReference Include="..\StefaniniCore.Infra.CrossCutting\StefaniniCore.Infra.CrossCutting.csproj" />
   </ItemGroup>

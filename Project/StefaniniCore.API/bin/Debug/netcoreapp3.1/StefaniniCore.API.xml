@@ -89,19 +89,19 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:StefaniniCore.API.CORS.CorsOptions.CorsConfigurations(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+        <member name="M:StefaniniCore.API.ServicesCollection.Cors.CorsCollection.AddCorsSettings(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             Add Policies to Cors to accept requests from another specifics domains.
             It's a Access-Control-Allow-Origin.
             </summary>
             <param name="services"></param>
         </member>
-        <member name="M:StefaniniCore.API.HealthChecks.GCInfoHealthCheckBuilderExtensions.AddGCInfo(Microsoft.Extensions.DependencyInjection.IHealthChecksBuilder,System.String,System.Nullable{Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int64})">
+        <member name="M:StefaniniCore.API.ServicesCollection.HealthChecks.GCInfoHealthCheckBuilderExtensions.AddGCInfo(Microsoft.Extensions.DependencyInjection.IHealthChecksBuilder,System.String,System.Nullable{Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int64})">
             <summary>
             Garbage Collector Info.
             </summary>
         </member>
-        <member name="M:StefaniniCore.API.HealthChecks.SqlServerHealthCheck.AddSQLServerInfo(Microsoft.Extensions.DependencyInjection.IHealthChecksBuilder,System.String,System.String,System.Nullable{Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int64})">
+        <member name="M:StefaniniCore.API.ServicesCollection.HealthChecks.SqlServerHealthCheck.AddSQLServerInfo(Microsoft.Extensions.DependencyInjection.IHealthChecksBuilder,System.String,System.String,System.Nullable{Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int64})">
             <summary>
             Check the Health of SQL Server instance.
             </summary>

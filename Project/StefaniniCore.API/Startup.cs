@@ -1,4 +1,3 @@
-using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
@@ -9,9 +8,9 @@ using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using StefaniniCore.API.CORS;
-using StefaniniCore.API.HealthChecks;
-using StefaniniCore.API.Swagger;
+using StefaniniCore.API.ServicesCollection.Cors;
+using StefaniniCore.API.ServicesCollection.HealthChecks;
+using StefaniniCore.API.ServicesCollection.Swagger;
 using StefaniniCore.Infra.CrossCutting;
 using StefaniniCore.Infra.CrossCutting.Constants;
 using StefaniniCore.Infra.CrossCutting.IoC;
@@ -34,7 +33,7 @@ namespace StefaniniCore.API
         public void ConfigureServices(IServiceCollection services)
         {
             // Cors.
-            services.CorsConfigurations();
+            services.AddCorsSettings();
 
             services.AddControllers()
                 .AddJsonOptions(options =>
@@ -46,7 +45,7 @@ namespace StefaniniCore.API
             services.AddDependencyInjections();
 
             // Swagger Documentations.
-            services.ConfigureSwagger();
+            services.AddSwagger();
 
             // Health Checks Info.
             services.AddHealthChecks()

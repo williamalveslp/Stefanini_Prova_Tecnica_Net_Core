@@ -3,7 +3,7 @@ using Moq;
 using StefaniniCore.Domain.Entities;
 using StefaniniCore.Domain.Interfaces.Repositories;
 using StefaniniCore.Domain.Interfaces.Services;
-using StefaniniCore.Services.Services;
+using StefaniniCore.Domain.Services.Services;
 using StefaniniCore.Specflow.Tests.Steps.Base;
 using System;
 using TechTalk.SpecFlow;

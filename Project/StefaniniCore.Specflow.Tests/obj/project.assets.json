@@ -47,47 +47,6 @@
           "lib/netstandard2.0/Cucumber.Messages.dll": {}
         }
       },
-      "FluentValidation/8.6.2": {
-        "type": "package",
-        "dependencies": {
-          "System.ComponentModel.Annotations": "4.4.1"
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentValidation.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentValidation.dll": {}
-        }
-      },
-      "FluentValidation.AspNetCore/8.6.2": {
-        "type": "package",
-        "dependencies": {
-          "FluentValidation": "8.6.2",
-          "FluentValidation.DependencyInjectionExtensions": "8.6.2"
-        },
-        "compile": {
-          "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "FluentValidation.DependencyInjectionExtensions/8.6.2": {
-        "type": "package",
-        "dependencies": {
-          "FluentValidation": "8.6.2",
-          "Microsoft.Extensions.Dependencyinjection.Abstractions": "2.1.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {}
-        }
-      },
       "Gherkin/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -2633,24 +2592,6 @@
           "lib/netstandard2.0/Utf8Json.dll": {}
         }
       },
-      "StefaniniCore.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "FluentValidation.AspNetCore": "8.6.2",
-          "StefaniniCore.Domain": "1.0.0",
-          "StefaniniCore.Infra.CrossCutting": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/StefaniniCore.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/StefaniniCore.Application.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "StefaniniCore.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -2659,6 +2600,19 @@
         },
         "runtime": {
           "bin/placeholder/StefaniniCore.Domain.dll": {}
+        }
+      },
+      "StefaniniCore.Domain.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "StefaniniCore.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/StefaniniCore.Domain.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StefaniniCore.Domain.Service.dll": {}
         }
       },
       "StefaniniCore.Infra.CrossCutting/1.0.0": {
@@ -2688,23 +2642,6 @@
         "runtime": {
           "bin/placeholder/StefaniniCore.Infra.DataStore.SQLServer.dll": {}
         }
-      },
-      "StefaniniCore.Services/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "StefaniniCore.Application": "1.0.0",
-          "StefaniniCore.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/StefaniniCore.Services.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/StefaniniCore.Services.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
       }
     }
   },
@@ -2764,55 +2701,6 @@
         "cucumber.messages.nuspec",
         "lib/net45/Cucumber.Messages.dll",
         "lib/netstandard2.0/Cucumber.Messages.dll"
-      ]
-    },
-    "FluentValidation/8.6.2": {
-      "sha512": "N2vz+f6pAX9AI19hu83U2LJjjc/ETzWGlICVanu3DIG76QhzEu3PR/CQSFBX69PRuBTivrW4jhBzeV7dXIfqyw==",
-      "type": "package",
-      "path": "fluentvalidation/8.6.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "fluentvalidation.8.6.2.nupkg.sha512",
-        "fluentvalidation.nuspec",
-        "lib/net45/FluentValidation.dll",
-        "lib/net45/FluentValidation.xml",
-        "lib/netstandard1.1/FluentValidation.dll",
-        "lib/netstandard1.1/FluentValidation.xml",
-        "lib/netstandard1.6/FluentValidation.dll",
-        "lib/netstandard1.6/FluentValidation.xml",
-        "lib/netstandard2.0/FluentValidation.dll",
-        "lib/netstandard2.0/FluentValidation.xml"
-      ]
-    },
-    "FluentValidation.AspNetCore/8.6.2": {
-      "sha512": "55s9XfDEtykWAd3KjWiB9xM6FsYQW4K0gTWY4Sl4f65vEdb2nlS3uijtKIpRuayLYMC5/Bvd9QUhOsSGZ11Pwg==",
-      "type": "package",
-      "path": "fluentvalidation.aspnetcore/8.6.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "fluentvalidation.aspnetcore.8.6.2.nupkg.sha512",
-        "fluentvalidation.aspnetcore.nuspec",
-        "lib/netcoreapp3.0/FluentValidation.AspNetCore.dll",
-        "lib/netcoreapp3.0/FluentValidation.AspNetCore.xml",
-        "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll",
-        "lib/netcoreapp3.1/FluentValidation.AspNetCore.xml",
-        "lib/netstandard2.0/FluentValidation.AspNetCore.dll",
-        "lib/netstandard2.0/FluentValidation.AspNetCore.xml"
-      ]
-    },
-    "FluentValidation.DependencyInjectionExtensions/8.6.2": {
-      "sha512": "A3Hw0xjB/j6b/UiC8RgLsp5TkApZOsLzh5LAmfZkbQpWBrAqo8B4eOm+uyYhN3crSg0E6kgse8k6EdZpRoj+sQ==",
-      "type": "package",
-      "path": "fluentvalidation.dependencyinjectionextensions/8.6.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "fluentvalidation.dependencyinjectionextensions.8.6.2.nupkg.sha512",
-        "fluentvalidation.dependencyinjectionextensions.nuspec",
-        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
-        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml"
       ]
     },
     "Gherkin/6.0.0": {
@@ -8782,15 +8670,15 @@
         "utf8json.nuspec"
       ]
     },
-    "StefaniniCore.Application/1.0.0": {
-      "type": "project",
-      "path": "../StefaniniCore.Application/StefaniniCore.Application.csproj",
-      "msbuildProject": "../StefaniniCore.Application/StefaniniCore.Application.csproj"
-    },
     "StefaniniCore.Domain/1.0.0": {
       "type": "project",
       "path": "../StefaniniCore.Domain/StefaniniCore.Domain.csproj",
       "msbuildProject": "../StefaniniCore.Domain/StefaniniCore.Domain.csproj"
+    },
+    "StefaniniCore.Domain.Service/1.0.0": {
+      "type": "project",
+      "path": "../StefaniniCore.Domain.Service/StefaniniCore.Domain.Service.csproj",
+      "msbuildProject": "../StefaniniCore.Domain.Service/StefaniniCore.Domain.Service.csproj"
     },
     "StefaniniCore.Infra.CrossCutting/1.0.0": {
       "type": "project",
@@ -8801,11 +8689,6 @@
       "type": "project",
       "path": "../StefaniniCore.Infra.DataStore.SQLServer/StefaniniCore.Infra.DataStore.SQLServer.csproj",
       "msbuildProject": "../StefaniniCore.Infra.DataStore.SQLServer/StefaniniCore.Infra.DataStore.SQLServer.csproj"
-    },
-    "StefaniniCore.Services/1.0.0": {
-      "type": "project",
-      "path": "../StefaniniCore.Services/StefaniniCore.Services.csproj",
-      "msbuildProject": "../StefaniniCore.Services/StefaniniCore.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8816,8 +8699,8 @@
       "Moq >= 4.14.1",
       "SpecFlow.MsTest >= 3.3.57",
       "StefaniniCore.Domain >= 1.0.0",
-      "StefaniniCore.Infra.DataStore.SQLServer >= 1.0.0",
-      "StefaniniCore.Services >= 1.0.0"
+      "StefaniniCore.Domain.Service >= 1.0.0",
+      "StefaniniCore.Infra.DataStore.SQLServer >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8851,14 +8734,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Domain.Service\\StefaniniCore.Domain.Service.csproj": {
+              "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Domain.Service\\StefaniniCore.Domain.Service.csproj"
+            },
             "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Domain\\StefaniniCore.Domain.csproj": {
               "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Domain\\StefaniniCore.Domain.csproj"
             },
             "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Infra.DataStore.SQLServer\\StefaniniCore.Infra.DataStore.SQLServer.csproj": {
               "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Infra.DataStore.SQLServer\\StefaniniCore.Infra.DataStore.SQLServer.csproj"
-            },
-            "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Services\\StefaniniCore.Services.csproj": {
-              "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Services\\StefaniniCore.Services.csproj"
             }
           }
         }
@@ -8904,9 +8787,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

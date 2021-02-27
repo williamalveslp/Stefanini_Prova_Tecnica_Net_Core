@@ -488,3 +488,4 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Integration.
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Integration.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.Integration.Tests.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Integration.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.Integration.Tests.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Integration.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.Integration.Tests.genruntimeconfig.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Integration.Tests\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.Configs.xml

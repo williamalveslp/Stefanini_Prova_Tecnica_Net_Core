@@ -1,0 +1,17 @@
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Infra.CrossCutting.Configs\obj\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.Configs.csprojAssemblyReference.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Infra.CrossCutting.Configs\obj\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.Configs.AssemblyInfoInputs.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Infra.CrossCutting.Configs\obj\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.Configs.AssemblyInfo.cs
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Infra.CrossCutting.Configs\obj\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.Configs.csproj.CoreCompileInputs.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Infra.CrossCutting.Configs\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.Configs.deps.json
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Infra.CrossCutting.Configs\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.Configs.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Infra.CrossCutting.Configs\bin\Debug\netcoreapp3.1\StefaniniCore.Domain.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Infra.CrossCutting.Configs\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Infra.CrossCutting.Configs\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.DataStore.SQLServer.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Infra.CrossCutting.Configs\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.DataStore.SQLServer.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Infra.CrossCutting.Configs\bin\Debug\netcoreapp3.1\StefaniniCore.Domain.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Infra.CrossCutting.Configs\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Infra.CrossCutting.Configs\obj\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.Configs.csproj.CopyComplete
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Infra.CrossCutting.Configs\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.Configs.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Infra.CrossCutting.Configs\obj\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.Configs.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Infra.CrossCutting.Configs\obj\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.Configs.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Infra.CrossCutting.Configs\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.Configs.xml

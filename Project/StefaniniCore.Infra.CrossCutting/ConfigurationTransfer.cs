@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿/*using Microsoft.Extensions.Configuration;
 using System;
 
 namespace StefaniniCore.Infra.CrossCutting
@@ -21,4 +21,4 @@ namespace StefaniniCore.Infra.CrossCutting
             return objectData;
         }
     }
-}
+} */

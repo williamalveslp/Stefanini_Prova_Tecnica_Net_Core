@@ -1235,6 +1235,7 @@
         "dependencies": {
           "FluentValidation.AspNetCore": "8.6.2",
           "StefaniniCore.Domain": "1.0.0",
+          "StefaniniCore.Domain.Service": "1.0.0",
           "StefaniniCore.Infra.CrossCutting": "1.0.0"
         },
         "runtime": {

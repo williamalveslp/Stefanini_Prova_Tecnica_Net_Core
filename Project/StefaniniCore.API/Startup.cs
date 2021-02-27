@@ -3,11 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using StefaniniCore.API.StartupConfigs.ApplicationBuilders;
-using StefaniniCore.API.StartupConfigs.ServicesCollection;
-using StefaniniCore.API.StartupConfigs.ServicesCollection.SQLServerConnection;
-using StefaniniCore.API.StartupConfigs.ServicesCollection.Swagger;
 using StefaniniCore.Infra.CrossCutting.IoC;
+using StefaniniCore.Infra.CrossCutting.Configs.ServicesCollection;
+using StefaniniCore.Infra.CrossCutting.Configs.ApplicationBuilders;
 
 namespace StefaniniCore.API
 {
@@ -43,7 +41,7 @@ namespace StefaniniCore.API
             services.AddSwagger(Configuration);
 
             // Health Checks.
-            services.AddHealthChecks(Configuration);
+            services.AddHealthChecks(Configuration); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

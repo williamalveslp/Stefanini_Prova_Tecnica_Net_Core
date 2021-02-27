@@ -17,6 +17,9 @@ using System.Reflection;
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("StefaniniCore.Domain.Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=nu" +
     "ll", "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Domain.Servic" +
     "e", "StefaniniCore.Domain.Service.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("StefaniniCore.Infra.CrossCutting.Configs, Version=1.0.0.0, Culture=neutral, Publi" +
+    "cKeyToken=null", "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Infra.CrossCu" +
+    "tting.Configs", "StefaniniCore.Infra.CrossCutting.Configs.csproj", "0")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("StefaniniCore.Infra.CrossCutting, Version=1.0.0.0, Culture=neutral, PublicKeyToke" +
     "n=null", "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Infra.CrossCu" +
     "tting", "StefaniniCore.Infra.CrossCutting.csproj", "0")]

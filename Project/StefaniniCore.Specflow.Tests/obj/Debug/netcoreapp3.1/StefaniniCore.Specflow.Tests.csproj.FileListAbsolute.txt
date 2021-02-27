@@ -60,7 +60,6 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tes
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\Utf8Json.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Specflow.Tests\bin\Debug\netcoreapp3.1\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll

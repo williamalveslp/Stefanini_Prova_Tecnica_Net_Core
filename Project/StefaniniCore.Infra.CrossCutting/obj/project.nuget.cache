@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SzUq3TAqPJejqDIcsPBvVlPST85w2lGyB9fpMyxtSyaaxnv/RYPTydUfAwPfvtRygMWJuSmqq7LTofxu7MHRVA==",
+  "dgSpecHash": "hIDo+I2Zyw88wHdL4CgWfszZzM7uOH4yf73sXWrp18FQxgdcRD+jBXT+7Ru+0nyuYK7LWQb63+HinNjvLRAI2Q==",
   "success": true,
   "projectFilePath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\StefaniniCore.Infra.CrossCutting\\StefaniniCore.Infra.CrossCutting.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\willi\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "C:\\Users\\willi\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\willi\\.nuget\\packages\\swashbuckle.aspnetcore\\6.0.7\\swashbuckle.aspnetcore.6.0.7.nupkg.sha512",
-    "C:\\Users\\willi\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.0.7\\swashbuckle.aspnetcore.swagger.6.0.7.nupkg.sha512",
-    "C:\\Users\\willi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.0.7\\swashbuckle.aspnetcore.swaggergen.6.0.7.nupkg.sha512",
-    "C:\\Users\\willi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.0.7\\swashbuckle.aspnetcore.swaggerui.6.0.7.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

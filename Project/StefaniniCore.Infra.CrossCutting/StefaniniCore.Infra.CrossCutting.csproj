@@ -8,8 +8,4 @@
     <Folder Include="EnumsGlobal\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.0.7" />
-  </ItemGroup>
-
 </Project>

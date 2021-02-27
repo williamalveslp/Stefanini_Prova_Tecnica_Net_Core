@@ -89,37 +89,5 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:StefaniniCore.API.StartupConfigs.ApplicationBuilders.HealthChecksAppBuilder.WriteResponse(Microsoft.AspNetCore.Http.HttpContext,Microsoft.Extensions.Diagnostics.HealthChecks.HealthReport)">
-            <summary>
-            Response from Health Checks.
-            </summary>
-            <param name="httpContext"></param>
-            <param name="result"></param>
-            <returns></returns>
-        </member>
-        <member name="M:StefaniniCore.API.StartupConfigs.ServicesCollection.CorsCollection.AddCorsSettings(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
-            <summary>
-            Add Policies to Cors to accept requests from another specifics domains.
-            It's a Access-Control-Allow-Origin.
-            </summary>
-            <param name="services"></param>
-        </member>
-        <member name="M:StefaniniCore.API.StartupConfigs.ServicesCollection.GCInfoHealthCheckBuilderExtensions.AddGCInfo(Microsoft.Extensions.DependencyInjection.IHealthChecksBuilder,System.String,System.Nullable{Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int64})">
-            <summary>
-            Garbage Collector Info.
-            </summary>
-        </member>
-        <member name="M:StefaniniCore.API.StartupConfigs.ServicesCollection.SqlServerHealthCheck.AddSQLServerInfo(Microsoft.Extensions.DependencyInjection.IHealthChecksBuilder,System.String,System.String,System.Nullable{Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int64})">
-            <summary>
-            Check the Health of SQL Server instance.
-            </summary>
-            <param name="builder"></param>
-            <param name="name">Name field on JSON.</param>
-            <param name="connectionString">Connection String.</param>
-            <param name="failureStatus"></param>
-            <param name="tags"></param>
-            <param name="thresholdInBytes"></param>
-            <returns></returns>
-        </member>
     </members>
 </doc>

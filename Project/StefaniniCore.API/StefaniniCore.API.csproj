@@ -9,24 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="StartupConfigs\ServicesCollection\CorsOptions.cs~RF19503624.TMP" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="AspNetCore.HealthChecks.Publisher.ApplicationInsights" Version="3.1.1" />
-    <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="3.1.1" />
-    <PackageReference Include="AspNetCore.HealthChecks.UI" Version="3.1.1" />
-    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="3.1.1" />
-    <PackageReference Include="AspNetCore.HealthChecks.UI.InMemory.Storage" Version="3.1.1" />
-    <PackageReference Include="AspNetCore.HealthChecks.Uris" Version="3.1.2" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.14.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.HealthChecks" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="3.1.7" />
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions" Version="3.1.7" />
-    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="3.1.7" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.0.7" />
   </ItemGroup>
@@ -34,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\StefaniniCore.Application\StefaniniCore.Application.csproj" />
     <ProjectReference Include="..\StefaniniCore.Domain\StefaniniCore.Domain.csproj" />
+    <ProjectReference Include="..\StefaniniCore.Infra.CrossCutting.Configs\StefaniniCore.Infra.CrossCutting.Configs.csproj" />
     <ProjectReference Include="..\StefaniniCore.Infra.CrossCutting.IoC\StefaniniCore.Infra.CrossCutting.IoC.csproj" />
     <ProjectReference Include="..\StefaniniCore.Infra.CrossCutting\StefaniniCore.Infra.CrossCutting.csproj" />
   </ItemGroup>

@@ -11,12 +11,16 @@ namespace StefaniniCore.Infra.DataStore.SQLServer.Repositories.Base
     {
         protected readonly StefDbContext ctx;
 
-        protected RepositoryBase()
+        protected RepositoryBase(StefDbContext ctx)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<StefDbContext>();
+            this.ctx = ctx;
+
+            #region .: OLD WAY :.
+        /*    var optionsBuilder = new DbContextOptionsBuilder<StefDbContext>();
             optionsBuilder.UseSqlServer(ConnectionString.Path);
            
-            this.ctx = new StefDbContext(optionsBuilder.Options);
+            this.ctx = new StefDbContext(optionsBuilder.Options); */
+            #endregion
         }
 
         public T Insert(T entity)

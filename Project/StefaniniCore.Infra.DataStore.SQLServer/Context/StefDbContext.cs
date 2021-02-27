@@ -1,21 +1,25 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using StefaniniCore.Domain.Entities;
-using StefaniniCore.Infra.CrossCutting;
 using StefaniniCore.Infra.DataStore.SQLServer.TypeConfigs;
 
 namespace StefaniniCore.Infra.DataStore.SQLServer
 {
     public partial class StefDbContext : DbContext
     {
-        public StefDbContext(DbContextOptions<StefDbContext> options)
-            : base(options)
+        public StefDbContext(string connectionString) : base(GetOptions(connectionString))
         {
         }
 
-        public virtual DbSet<ProfileType> ProfileType { get; set; }
-        public virtual DbSet<ProfileTypeTask> ProfileTypeTask { get; set; }
-        public virtual DbSet<Task> Task { get; set; }
-        public virtual DbSet<UserSystem> UserSystem { get; set; }
+        private static DbContextOptions GetOptions(string connectionString)
+        {
+            return SqlServerDbContextOptionsExtensions.UseSqlServer(new DbContextOptionsBuilder(), connectionString).Options;
+        }
+
+        #region .: OLD WAY :.
+     /*   public StefDbContext(DbContextOptions<StefDbContext> options)
+             : base(options)
+        {
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -25,7 +29,13 @@ namespace StefaniniCore.Infra.DataStore.SQLServer
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer(ConnectionString.Path);
             }
-        }
+        } */
+        #endregion
+
+        public virtual DbSet<ProfileType> ProfileType { get; set; }
+        public virtual DbSet<ProfileTypeTask> ProfileTypeTask { get; set; }
+        public virtual DbSet<Task> Task { get; set; }
+        public virtual DbSet<UserSystem> UserSystem { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

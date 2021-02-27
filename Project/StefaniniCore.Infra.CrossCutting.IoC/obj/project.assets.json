@@ -2331,7 +2331,10 @@
         },
         "runtime": {
           "bin/placeholder/StefaniniCore.Infra.DataStore.SQLServer.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },

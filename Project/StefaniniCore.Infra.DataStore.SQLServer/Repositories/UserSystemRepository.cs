@@ -8,6 +8,8 @@ namespace StefaniniCore.Infra.DataStore.SQLServer.Repositories
 {
     public class UserSystemRepository : RepositoryBase<UserSystem>, IUserSystemRepository
     {
+        public UserSystemRepository(StefDbContext ctx) : base(ctx) { }
+
         public IList<UserSystem> GetByProfileTypeId(int profileTypeId) =>
             ctx.UserSystem.Where(f => f.ProfileTypeId == profileTypeId).ToList();
 

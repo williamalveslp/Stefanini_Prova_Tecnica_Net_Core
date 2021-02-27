@@ -8,6 +8,8 @@ namespace StefaniniCore.Infra.DataStore.SQLServer.Repositories
 {
     public class TaskRepository : RepositoryBase<Task>, ITaskRepository
     {
+        public TaskRepository(StefDbContext ctx) : base(ctx) { }
+
         public bool Exists(string name) =>
                  ctx.Task.Where(f => !string.IsNullOrEmpty(name)
                                 && f.Name.ToLower().Trim() == name.ToLower().Trim()).Any();

@@ -21,13 +21,7 @@ namespace StefaniniCore.API.StartupConfigs.DataTransfers
             [Description("Garbage Collector informations. Example: 'GarbageCollector'")]
             public string GCInfo { get; set; }
 
-            public SqlServerDto SQLServer { get; set; }
             public UrlGroupDto UrlGroup { get; set; }
-            public class SqlServerDto
-            {
-                public string DatabaseName { get; set; }
-                public string ConnectionString { get; set; }
-            }
 
             internal class UrlGroupDto
             {

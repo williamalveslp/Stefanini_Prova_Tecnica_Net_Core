@@ -11,12 +11,14 @@ namespace StefaniniCore.API.StartupConfigs.ServicesCollection
         public static void AddHealthChecks(this IServiceCollection services, IConfiguration configuration)
         {
             var healthChecksData = ConfigurationTransfer.GetObject<HeathChecksSettings>(configuration);
+            var dbContextSQLData = ConfigurationTransfer.GetObject<SQLServerConnectionSettings>(configuration);
 
-            string gcInfo = healthChecksData.ServiceCollection.GCInfo;
-            string connectionString = healthChecksData.ServiceCollection.SQLServer.ConnectionString;
-            string databaseName = healthChecksData.ServiceCollection.SQLServer.DatabaseName;
+            string gcInfo = healthChecksData.ServiceCollection.GCInfo;           
             string urlGroupName = healthChecksData.ServiceCollection.UrlGroup.Name;
             string urlGroup = healthChecksData.ServiceCollection.UrlGroup.Url;
+
+            string connectionString = dbContextSQLData.ConnectionString;
+            string databaseName = dbContextSQLData.DatabaseName;
 
             services.AddHealthChecks()
               .AddGCInfo(gcInfo)

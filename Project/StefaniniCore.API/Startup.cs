@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using StefaniniCore.API.StartupConfigs.ApplicationBuilders;
 using StefaniniCore.API.StartupConfigs.ServicesCollection;
+using StefaniniCore.API.StartupConfigs.ServicesCollection.SQLServerConnection;
 using StefaniniCore.API.StartupConfigs.ServicesCollection.Swagger;
 using StefaniniCore.Infra.CrossCutting.IoC;
 
@@ -12,12 +13,12 @@ namespace StefaniniCore.API
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -27,6 +28,10 @@ namespace StefaniniCore.API
                 {
                     options.JsonSerializerOptions.WriteIndented = true;
                 });
+
+
+            // SQLServer DbContext.
+            services.AddDbContextSQLServer(Configuration);
 
             // Dependency Injections.
             services.AddDependencyInjections();

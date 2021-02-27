@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace StefaniniCore.API.ServicesCollection.HealthChecks
+namespace StefaniniCore.API.StartupConfigs.ServicesCollection
 {
     internal static class GCInfoHealthCheckBuilderExtensions
     {

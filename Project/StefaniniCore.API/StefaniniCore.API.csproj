@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="ServicesCollection\CorsOptions.cs~RF19503624.TMP" />
+    <None Remove="StartupConfigs\ServicesCollection\CorsOptions.cs~RF19503624.TMP" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,13 +28,14 @@
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions" Version="3.1.7" />
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="3.1.7" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.0.7" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\StefaniniCore.Application\StefaniniCore.Application.csproj" />
     <ProjectReference Include="..\StefaniniCore.Domain\StefaniniCore.Domain.csproj" />
     <ProjectReference Include="..\StefaniniCore.Infra.CrossCutting.IoC\StefaniniCore.Infra.CrossCutting.IoC.csproj" />
+    <ProjectReference Include="..\StefaniniCore.Infra.CrossCutting\StefaniniCore.Infra.CrossCutting.csproj" />
   </ItemGroup>
 
 

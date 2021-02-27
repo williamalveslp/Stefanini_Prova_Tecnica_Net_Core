@@ -3,7 +3,7 @@ using Microsoft.Extensions.Diagnostics.HealthChecks;
 using System;
 using System.Collections.Generic;
 
-namespace StefaniniCore.API.ServicesCollection.HealthChecks
+namespace StefaniniCore.API.StartupConfigs.ServicesCollection
 {
     internal static class SqlServerHealthCheck
     {

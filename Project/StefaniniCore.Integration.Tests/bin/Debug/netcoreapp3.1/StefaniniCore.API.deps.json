@@ -41,7 +41,6 @@
           "Newtonsoft.Json": "12.0.3",
           "StefaniniCore.Application": "1.0.0",
           "StefaniniCore.Domain": "1.0.0",
-          "StefaniniCore.Domain.Service": "1.0.0",
           "StefaniniCore.Infra.CrossCutting.IoC": "1.0.0",
           "Swashbuckle.AspNetCore": "5.4.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -2782,6 +2781,7 @@
         "dependencies": {
           "FluentValidation.AspNetCore": "8.6.2",
           "StefaniniCore.Domain": "1.0.0",
+          "StefaniniCore.Domain.Service": "1.0.0",
           "StefaniniCore.Infra.CrossCutting": "1.0.0"
         },
         "runtime": {

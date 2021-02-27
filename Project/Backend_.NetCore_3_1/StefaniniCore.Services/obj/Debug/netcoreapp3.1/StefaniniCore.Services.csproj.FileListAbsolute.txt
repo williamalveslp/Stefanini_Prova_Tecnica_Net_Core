@@ -1,0 +1,16 @@
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Services\bin\Debug\netcoreapp3.1\StefaniniCore.Services.deps.json
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Services\bin\Debug\netcoreapp3.1\StefaniniCore.Services.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Services\bin\Debug\netcoreapp3.1\StefaniniCore.Services.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Services\bin\Debug\netcoreapp3.1\StefaniniCore.Application.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Services\bin\Debug\netcoreapp3.1\StefaniniCore.Domain.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Services\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Services\bin\Debug\netcoreapp3.1\StefaniniCore.Application.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Services\bin\Debug\netcoreapp3.1\StefaniniCore.Domain.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Services\bin\Debug\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Services\obj\Debug\netcoreapp3.1\StefaniniCore.Services.csprojAssemblyReference.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Services\obj\Debug\netcoreapp3.1\StefaniniCore.Services.AssemblyInfoInputs.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Services\obj\Debug\netcoreapp3.1\StefaniniCore.Services.AssemblyInfo.cs
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Services\obj\Debug\netcoreapp3.1\StefaniniCore.Services.csproj.CoreCompileInputs.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Services\obj\Debug\netcoreapp3.1\StefaniniCore.Services.csproj.CopyComplete
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Services\obj\Debug\netcoreapp3.1\StefaniniCore.Services.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\StefaniniCore.Services\obj\Debug\netcoreapp3.1\StefaniniCore.Services.pdb

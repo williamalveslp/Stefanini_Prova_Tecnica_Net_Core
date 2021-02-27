@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StefaniniCore.Application\StefaniniCore.Application.csproj" />
+    <ProjectReference Include="..\StefaniniCore.Domain\StefaniniCore.Domain.csproj" />
+    <ProjectReference Include="..\StefaniniCore.Infra.DataStore.SQLServer\StefaniniCore.Infra.DataStore.SQLServer.csproj" />
+    <ProjectReference Include="..\StefaniniCore.Services\StefaniniCore.Services.csproj" />
+  </ItemGroup>
+
+</Project>

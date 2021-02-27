@@ -1,0 +1,118 @@
+﻿@model StefaniniCore.Application.ViewModels.ProfileTypeDetailViewModel
+
+@{
+    ViewData["Title"] = "Cadastro de Perfis";
+}
+
+<ol class="breadcrumb">
+    <li><a href="/">Home</a> /</li>
+    <li>@Html.ActionLink("Perfis", "List", "ProfileTypes") /</li>
+    <li class="active"> Cadastro</li>
+</ol>
+
+<div>
+    <h2>Cadastro de Perfis</h2>
+    <label class="requiredFields">*</label> Campos obrigatórios.
+</div>
+
+<div>
+    <form id="formProfileType">
+        @Html.HiddenFor(f => f.Id, new { @id = "hddProfileTypeId", @name = "hddProfileTypeId" })
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Nome do Perfil<i class="requiredField">*</i>:</label>
+                    @Html.TextBoxFor(f => f.Name, new { @id = "txtName", @name = "txtName", @class = "form-control", @type = "text", @maxlength = "30" })
+                    <br />
+                </div>
+            </div>
+
+            <div class="col-md-6">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <h3>Listagem das Funcionalidades Disponíveis</h3>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nome</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Tasks)
+                            {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.Name</td>
+                                    <td>
+                                        <button onclick="addTask(@item.Id, '@item.Name')" type="button" class="btn btn-primary">Adicionar</button>
+                                        <button onclick="removeTask(@item.Id, '@item.Name')" type="button" class="btn btn-danger">Remover</button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <br />
+                    <br />
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <h3>Funcionalidades associadas ao seu Perfil</h3>
+
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nome</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tBodyIdNewRows">
+
+                            @if (Model.TasksByProfileType.Any())
+                            {
+                                foreach (var item in Model.TasksByProfileType)
+                                {
+                                    <tr id="taskRow_@item.Id">
+                                        <td>@item.Id</td>
+                                        <td>@item.Name</td>
+                                    </tr>
+                                }
+                            }
+
+                        </tbody>
+                    </table>
+
+                    <div id="divTasks" name="divTasks">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center">
+                <button type="button" id="btnSave" name="btnSave" class="btn btn-primary">Salvar</button>
+                <button type="button" id="btnClear" name="btnClear" class="btn btn-default">Limpar</button>
+                <a href="@Url.Action("List", "ProfileTypes")" class=" btn btn-default">Voltar</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section scripts {
+    <script>
+        var URL_SAVE_PROFILE_TYPE = '@Url.Action("Save", "ProfileTypes")';
+        var TASKS_ARRAY = @(Json.Serialize(Model.TasksByProfileType));
+    </script>
+
+    <script src="~/js/my-scripts/profile-types/detail.js"></script>
+}

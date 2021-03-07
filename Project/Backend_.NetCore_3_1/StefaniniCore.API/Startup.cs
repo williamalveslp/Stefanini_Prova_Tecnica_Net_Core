@@ -27,7 +27,6 @@ namespace StefaniniCore.API
                     options.JsonSerializerOptions.WriteIndented = true;
                 });
 
-
             // SQLServer DbContext.
             services.AddDbContextSQLServer(Configuration);
 

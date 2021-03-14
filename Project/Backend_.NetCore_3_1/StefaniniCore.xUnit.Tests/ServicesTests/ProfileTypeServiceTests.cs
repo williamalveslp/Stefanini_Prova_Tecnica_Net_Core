@@ -33,8 +33,6 @@ namespace StefaniniCore.xUnit.Tests.ServicesTests
             mockExpectedProfileType.SetupGet(f => f.Id).Returns(id);
             mockExpectedProfileType.SetupGet(f => f.Name).Returns(name);
             mockExpectedProfileType.SetupGet(f => f.IsActive).Returns(isActive);
-            mockExpectedProfileType.SetupGet(f => f.Date_Created).Returns(DateTime.Now);
-            mockExpectedProfileType.SetupGet(f => f.Date_Updated).Returns(DateTime.Now);
 
             _mockRepository.Setup(f => f.Insert(It.IsAny<ProfileType>())).Returns(mockExpectedProfileType.Object);
            
@@ -70,9 +68,6 @@ namespace StefaniniCore.xUnit.Tests.ServicesTests
             Mock<ProfileType> mockProfileType = new Mock<ProfileType>();
             mockProfileType.SetupGet(f => f.Id).Returns(id);
             mockProfileType.SetupGet(f => f.Name).Returns("some name 4");
-            mockProfileType.SetupGet(f => f.IsActive).Returns(true);
-            mockProfileType.SetupGet(f => f.Date_Created).Returns(DateTime.Now);
-            mockProfileType.SetupGet(f => f.Date_Updated).Returns(DateTime.Now);
 
             _mockRepository.Setup(x => x.GetById(It.IsAny<int>())).Returns(mockProfileType.Object);
 

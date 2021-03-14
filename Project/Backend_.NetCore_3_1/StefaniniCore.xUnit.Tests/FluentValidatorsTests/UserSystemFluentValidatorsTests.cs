@@ -14,7 +14,7 @@ namespace StefaniniCore.xUnit.Tests.FluentValidatorsTests
             _userSystemInputModelValidator = new UserSystemInputModelValidator();
         }
 
-        #region .: FIELDSC BY FIELD :.
+        #region .: FIELDS BY FIELD :.
 
         [Theory(DisplayName = "FluentValidator UserSystem - UserName Required")]
         [InlineData(null)]
@@ -27,7 +27,6 @@ namespace StefaniniCore.xUnit.Tests.FluentValidatorsTests
 
         [Theory(DisplayName = "FluentValidator UserSystem - UserSystem Size Exceeded")]
         [InlineData(31)]
-        [InlineData(50)]
         [InlineData(150)]
         [InlineData(2)]
         [InlineData(0)]
@@ -48,7 +47,6 @@ namespace StefaniniCore.xUnit.Tests.FluentValidatorsTests
 
         [Theory(DisplayName = "FluentValidator UserSystem - Password Size Exceeded")]
         [InlineData(31)]
-        [InlineData(50)]
         [InlineData(150)]
         [InlineData(2)]
         [InlineData(0)]

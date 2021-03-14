@@ -10,7 +10,9 @@ namespace StefaniniCore.Infra.DataStore.SQLServer.Repositories
     {
         public ProfileTypeTaskRepository(StefDbContext ctx) : base(ctx) { }
 
-        public IList<ProfileTypeTask> GetByProfileTypeId(int profileTypeId) =>
-            ctx.ProfileTypeTask.Where(f => f.ProfileTypeId == profileTypeId).ToList();
+        public IList<ProfileTypeTask> GetByProfileTypeId(int profileTypeId)
+        {
+            return ctx.ProfileTypeTask.Where(f => f.ProfileTypeId == profileTypeId).ToList();
+        }
     }
 }

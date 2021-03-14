@@ -10,11 +10,15 @@ namespace StefaniniCore.Infra.DataStore.SQLServer.Repositories
     {
         public UserSystemRepository(StefDbContext ctx) : base(ctx) { }
 
-        public IList<UserSystem> GetByProfileTypeId(int profileTypeId) =>
-            ctx.UserSystem.Where(f => f.ProfileTypeId == profileTypeId).ToList();
+        public IList<UserSystem> GetByProfileTypeId(int profileTypeId)
+        {
+            return ctx.UserSystem.Where(f => f.ProfileTypeId == profileTypeId).ToList();
+        }
 
-        public IList<UserSystem> GetOnlyActives() =>
-            ctx.UserSystem.Where(f => f.IsActive).OrderBy(f => f.Id).ToList();
+        public IList<UserSystem> GetOnlyActives()
+        {
+            return ctx.UserSystem.Where(f => f.IsActive).OrderBy(f => f.Id).ToList();
+        }
 
         public UserSystem GetSignIn(string userName, string password)
         {

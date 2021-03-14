@@ -35,8 +35,6 @@ namespace StefaniniCore.xUnit.Tests.ServicesTests
             mockTask.SetupGet(f => f.Name).Returns(name);
             mockTask.SetupGet(f => f.Description).Returns(description);
             mockTask.SetupGet(f => f.IsActive).Returns(isActive);
-            mockTask.SetupGet(f => f.Date_Created).Returns(DateTime.Now);
-            mockTask.SetupGet(f => f.Date_Updated).Returns(DateTime.Now);
 
             _mockRepository.Setup(f => f.Insert(It.IsAny<Task>())).Returns(mockTask.Object);
 
@@ -74,8 +72,6 @@ namespace StefaniniCore.xUnit.Tests.ServicesTests
             mockTask.SetupGet(f => f.Name).Returns("some name 4");
             mockTask.SetupGet(f => f.Description).Returns("some description 4");
             mockTask.SetupGet(f => f.IsActive).Returns(true);
-            mockTask.SetupGet(f => f.Date_Created).Returns(DateTime.Now);
-            mockTask.SetupGet(f => f.Date_Updated).Returns(DateTime.Now);
 
             _mockRepository.Setup(x => x.GetById(It.IsAny<int>())).Returns(mockTask.Object);
 

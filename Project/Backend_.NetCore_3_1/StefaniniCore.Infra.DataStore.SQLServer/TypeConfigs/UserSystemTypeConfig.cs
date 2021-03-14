@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using StefaniniCore.Domain.Entities;
+using System;
 
 namespace StefaniniCore.Infra.DataStore.SQLServer.TypeConfigs
 {
@@ -18,11 +19,11 @@ namespace StefaniniCore.Infra.DataStore.SQLServer.TypeConfigs
 
             _ = builder.Property(g => g.Date_Created)
                                 .HasColumnName("Date_Created")
-                                .HasColumnType("datetime").IsRequired();
+                                .HasColumnType((nameof(DateTime)).ToLower()).IsRequired();
 
             _ = builder.Property(g => g.Date_Updated)
                                 .HasColumnName("Date_Updated")
-                                .HasColumnType("datetime").IsRequired();
+                                .HasColumnType((nameof(DateTime)).ToLower()).IsRequired();
 
             _ = builder.HasOne(d => d.ProfileType)
                                 .WithMany(p => p.UserSystem)

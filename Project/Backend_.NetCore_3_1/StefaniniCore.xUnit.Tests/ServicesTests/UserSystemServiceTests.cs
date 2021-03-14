@@ -21,10 +21,10 @@ namespace StefaniniCore.xUnit.Tests.ServicesTests
         }
 
         [Theory(DisplayName = "Insert UserSystem Service - Success")]
-        [InlineData(1, true)]
-        [InlineData(5, false)]
-        [InlineData(7, true)]
-        public void Insert_UserSystem_Service_Success(int profileTypeId, bool isActive)
+        [InlineData(1)]
+        [InlineData(5)]
+        [InlineData(7)]
+        public void Insert_UserSystem_Service_Success(int profileTypeId)
         {
             // Arrange
             int id = 0;
@@ -35,10 +35,6 @@ namespace StefaniniCore.xUnit.Tests.ServicesTests
             mockExpectedProfileType.SetupGet(f => f.Id).Returns(id);
             mockExpectedProfileType.SetupGet(f => f.UserName).Returns(userName);
             mockExpectedProfileType.SetupGet(f => f.Password).Returns(password);
-            mockExpectedProfileType.SetupGet(f => f.ProfileTypeId).Returns(profileTypeId);
-            mockExpectedProfileType.SetupGet(f => f.IsActive).Returns(isActive);
-            mockExpectedProfileType.SetupGet(f => f.Date_Created).Returns(DateTime.Now);
-            mockExpectedProfileType.SetupGet(f => f.Date_Updated).Returns(DateTime.Now);
 
             _mockRepository.Setup(f => f.Insert(It.IsAny<UserSystem>())).Returns(mockExpectedProfileType.Object);
 
@@ -71,16 +67,8 @@ namespace StefaniniCore.xUnit.Tests.ServicesTests
             // Arrange
             int id = 123;
 
-            Mock<UserSystem> mockUserSystem = new Mock<UserSystem>();
-            mockUserSystem.SetupGet(f => f.Id).Returns(id);
-            mockUserSystem.SetupGet(f => f.UserName).Returns($"some userName 4");
-            mockUserSystem.SetupGet(f => f.Password).Returns($"some password 4");
-            mockUserSystem.SetupGet(f => f.ProfileTypeId).Returns(4);
-            mockUserSystem.SetupGet(f => f.IsActive).Returns(true);
-            mockUserSystem.SetupGet(f => f.Date_Created).Returns(DateTime.Now);
-            mockUserSystem.SetupGet(f => f.Date_Updated).Returns(DateTime.Now);
-
-            _mockRepository.Setup(x => x.GetById(It.IsAny<int>())).Returns(mockUserSystem.Object);
+            UserSystem user = new UserSystem("some user name", "some pas$word", 1);
+            _mockRepository.Setup(x => x.GetById(It.IsAny<int>())).Returns(user);
 
             // Action
             var profileType = _service.GetById(id);

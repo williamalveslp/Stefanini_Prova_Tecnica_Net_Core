@@ -17,11 +17,11 @@ namespace StefaniniCore.Infra.DataStore.SQLServer.TypeConfigs
 
             _ = builder.Property(e => e.Date_Created)
                                 .HasColumnName("Date_Created")
-                                .HasColumnType("datetime").IsRequired();
+                                .HasColumnType((nameof(DateTime)).ToLower()).IsRequired();
 
             _ = builder.Property(e => e.Date_Updated)
                                 .HasColumnName("Date_Updated")
-                                .HasColumnType("datetime").IsRequired();
+                                .HasColumnType((nameof(DateTime)).ToLower()).IsRequired();
 
             _ = builder.HasIndex(g => g.Name).IsUnique();
         }

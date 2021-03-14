@@ -34,7 +34,6 @@ namespace StefaniniCore.xUnit.Tests.FluentValidatorsTests
 
         [Theory(DisplayName = "FluentValidator ProfileType - Name Size Exceeded")]
         [InlineData(31)]
-        [InlineData(50)]
         [InlineData(150)]
         [InlineData(2)]
         [InlineData(0)]

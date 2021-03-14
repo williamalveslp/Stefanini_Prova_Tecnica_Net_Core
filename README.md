@@ -10,13 +10,17 @@ Inicialmente, este projeto foi uma prova Técnica para Stefanini IT Solutions da
 Aplicações em <b>.Net 3.1</b>: <b>Web</b> (Razor Pages, em *Presentation*) e aplicação <b>REST API</b> (integrado com Swagger e Health Checks, em *Service*).<br/>
 Contemplam Testes Unitários com <b>xUnit</b> e Mocks.
 
+## Testes Cobertos
+- Testes de Unidade
+- Testes de Integração
+
 ## Instruções
 
 Após fazer o clone do repositório, siga os seguintes passos abaixo:
 
 1 - Acesse a pasta ***Database_Scripts***, e execute todos scripts em banco ***SQL Server***.
 
-2 - Substituindo a connection string: acesse o projeto que está dentro da pasta ***Project***, e localize a classe ***StefDbContext.cs*** (camada de Infra), sendo localizada em: ***/StefaniniCore.Infra.DataStore.SQLServer/Context/StefDbContext.cs***. Basta substituir a connection string pela sua em que executou os scripts de banco de dados.
+2 - Para informar a ConnectionString na aplicação, basta encontrar o arquivo "appsettings.json", que está tanto na raiz da aplicação API quanto a Web, e substituir as variáveis ***ConnectionString*** e ***DatabaseName***, pela sua ConnectionsString e nome do banco de dados criado.
 
 Pronto, está configurado sua aplicação para ser executada.
 

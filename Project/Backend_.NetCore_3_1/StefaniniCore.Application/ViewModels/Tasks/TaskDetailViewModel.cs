@@ -4,7 +4,7 @@ namespace StefaniniCore.Application.ViewModels
 {
     public class TaskDetailViewModel : ViewModelBase
     {
-        public virtual Task Task { get; private set; }
+        public virtual Task Task { get; set; }
 
         public void Load(Task task)
         {

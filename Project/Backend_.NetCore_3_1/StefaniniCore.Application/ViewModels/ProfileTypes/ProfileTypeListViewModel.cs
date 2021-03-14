@@ -5,9 +5,9 @@ namespace StefaniniCore.Application.ViewModels
 {
     public class ProfileTypeListViewModel : ViewModelBase
     {
-        public virtual IList<ProfileType> ProfileTypes { get; private set; }
+        public virtual IList<ProfileType> ProfileTypes { get; set; }
 
-        public virtual int TotalRecords { get; private set; }
+        public virtual int TotalRecords { get; set; }
 
         public void Load(IList<ProfileType> profileTypes)
         {

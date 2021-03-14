@@ -4,6 +4,99 @@
     "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.xUnit.Tests\\StefaniniCore.xUnit.Tests.csproj": {}
   },
   "projects": {
+    "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.API\\StefaniniCore.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.API\\StefaniniCore.API.csproj",
+        "projectName": "StefaniniCore.API",
+        "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.API\\StefaniniCore.API.csproj",
+        "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
+        "outputPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\NupkgesLocal": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Application\\StefaniniCore.Application.csproj": {
+                "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Application\\StefaniniCore.Application.csproj"
+              },
+              "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Domain\\StefaniniCore.Domain.csproj": {
+                "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Domain\\StefaniniCore.Domain.csproj"
+              },
+              "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.CrossCutting.Configs\\StefaniniCore.Infra.CrossCutting.Configs.csproj": {
+                "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.CrossCutting.Configs\\StefaniniCore.Infra.CrossCutting.Configs.csproj"
+              },
+              "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.CrossCutting.IoC\\StefaniniCore.Infra.CrossCutting.IoC.csproj": {
+                "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.CrossCutting.IoC\\StefaniniCore.Infra.CrossCutting.IoC.csproj"
+              },
+              "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.CrossCutting\\StefaniniCore.Infra.CrossCutting.csproj": {
+                "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.CrossCutting\\StefaniniCore.Infra.CrossCutting.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.ApplicationInsights.AspNetCore": {
+              "target": "Package",
+              "version": "[2.14.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Application\\StefaniniCore.Application.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -68,11 +161,14 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.4.20258.7\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -132,7 +228,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.4.20258.7\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -188,7 +284,190 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.4.20258.7\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.CrossCutting.Configs\\StefaniniCore.Infra.CrossCutting.Configs.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.CrossCutting.Configs\\StefaniniCore.Infra.CrossCutting.Configs.csproj",
+        "projectName": "StefaniniCore.Infra.CrossCutting.Configs",
+        "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.CrossCutting.Configs\\StefaniniCore.Infra.CrossCutting.Configs.csproj",
+        "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
+        "outputPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.CrossCutting.Configs\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\NupkgesLocal": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.DataStore.SQLServer\\StefaniniCore.Infra.DataStore.SQLServer.csproj": {
+                "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.DataStore.SQLServer\\StefaniniCore.Infra.DataStore.SQLServer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AspNetCore.HealthChecks.Publisher.ApplicationInsights": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "AspNetCore.HealthChecks.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "AspNetCore.HealthChecks.UI": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "AspNetCore.HealthChecks.UI.Client": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "AspNetCore.HealthChecks.UI.InMemory.Storage": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "AspNetCore.HealthChecks.Uris": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.CrossCutting.IoC\\StefaniniCore.Infra.CrossCutting.IoC.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.CrossCutting.IoC\\StefaniniCore.Infra.CrossCutting.IoC.csproj",
+        "projectName": "StefaniniCore.Infra.CrossCutting.IoC",
+        "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.CrossCutting.IoC\\StefaniniCore.Infra.CrossCutting.IoC.csproj",
+        "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
+        "outputPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.CrossCutting.IoC\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\NupkgesLocal": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Application\\StefaniniCore.Application.csproj": {
+                "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Application\\StefaniniCore.Application.csproj"
+              },
+              "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Domain.Service\\StefaniniCore.Domain.Service.csproj": {
+                "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Domain.Service\\StefaniniCore.Domain.Service.csproj"
+              },
+              "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Domain\\StefaniniCore.Domain.csproj": {
+                "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Domain\\StefaniniCore.Domain.csproj"
+              },
+              "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.DataStore.SQLServer\\StefaniniCore.Infra.DataStore.SQLServer.csproj": {
+                "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.DataStore.SQLServer\\StefaniniCore.Infra.DataStore.SQLServer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -250,11 +529,104 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.4.20258.7\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.DataStore.SQLServer\\StefaniniCore.Infra.DataStore.SQLServer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.DataStore.SQLServer\\StefaniniCore.Infra.DataStore.SQLServer.csproj",
+        "projectName": "StefaniniCore.Infra.DataStore.SQLServer",
+        "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.DataStore.SQLServer\\StefaniniCore.Infra.DataStore.SQLServer.csproj",
+        "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
+        "outputPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.DataStore.SQLServer\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\NupkgesLocal": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Domain\\StefaniniCore.Domain.csproj": {
+                "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Domain\\StefaniniCore.Domain.csproj"
+              },
+              "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.CrossCutting\\StefaniniCore.Infra.CrossCutting.csproj": {
+                "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Infra.CrossCutting\\StefaniniCore.Infra.CrossCutting.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -285,6 +657,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.API\\StefaniniCore.API.csproj": {
+                "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.API\\StefaniniCore.API.csproj"
+              },
               "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Application\\StefaniniCore.Application.csproj": {
                 "projectPath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Application\\StefaniniCore.Application.csproj"
               },
@@ -306,6 +681,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.5.0, )"
@@ -346,11 +725,14 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.4.20258.7\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

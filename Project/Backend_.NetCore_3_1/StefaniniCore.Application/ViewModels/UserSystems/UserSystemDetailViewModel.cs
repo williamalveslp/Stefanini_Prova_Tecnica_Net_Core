@@ -5,15 +5,15 @@ namespace StefaniniCore.Application.ViewModels
 {
     public class UserSystemDetailViewModel : ViewModelBase
     {
-        public virtual int Id { get; private set; }
+        public virtual int Id { get; set; }
 
-        public virtual string UserName { get; private set; }
+        public virtual string UserName { get; set; }
 
-        public virtual string Password { get; private set; }
+        public virtual string Password { get; set; }
 
-        public virtual int ProfileTypeId { get; private set; }
+        public virtual int ProfileTypeId { get; set; }
 
-        public virtual IList<ProfileType> ProfileTypes { get; private set; }
+        public virtual IList<ProfileType> ProfileTypes { get; set; }
 
         public UserSystemDetailViewModel()
         {

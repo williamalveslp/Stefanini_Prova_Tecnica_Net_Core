@@ -704,10 +704,10 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Routing.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNetCore.TestHost/3.1.7": {
+      "Microsoft.AspNetCore.TestHost/3.1.13": {
         "type": "package",
         "dependencies": {
-          "System.IO.Pipelines": "4.7.1"
+          "System.IO.Pipelines": "4.7.4"
         },
         "compile": {
           "lib/netcoreapp3.1/Microsoft.AspNetCore.TestHost.dll": {}
@@ -2909,7 +2909,7 @@
           "lib/netstandard1.3/System.IO.FileSystem.Primitives.dll": {}
         }
       },
-      "System.IO.Pipelines/4.7.1": {
+      "System.IO.Pipelines/4.7.4": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/System.IO.Pipelines.dll": {}
@@ -4117,7 +4117,10 @@
         },
         "runtime": {
           "bin/placeholder/StefaniniCore.Application.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "StefaniniCore.Domain/1.0.0": {
         "type": "project",
@@ -4154,7 +4157,10 @@
         },
         "runtime": {
           "bin/placeholder/StefaniniCore.Infra.CrossCutting.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "StefaniniCore.Infra.CrossCutting.Configs/1.0.0": {
         "type": "project",
@@ -4177,7 +4183,10 @@
         },
         "runtime": {
           "bin/placeholder/StefaniniCore.Infra.CrossCutting.Configs.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "StefaniniCore.Infra.CrossCutting.IoC/1.0.0": {
         "type": "project",
@@ -4194,7 +4203,10 @@
         },
         "runtime": {
           "bin/placeholder/StefaniniCore.Infra.CrossCutting.IoC.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "StefaniniCore.Infra.DataStore.SQLServer/1.0.0": {
         "type": "project",
@@ -4212,7 +4224,10 @@
         },
         "runtime": {
           "bin/placeholder/StefaniniCore.Infra.DataStore.SQLServer.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -4937,10 +4952,10 @@
         "microsoft.aspnetcore.routing.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.TestHost/3.1.7": {
-      "sha512": "NyYXhaKwMDFYhTCwuRC9uFTK1lHH2lbjSBSY0ZbmOkM6xk3CIyZggTS+tIB3235GcqmWXt5NIdGveKanMflAxQ==",
+    "Microsoft.AspNetCore.TestHost/3.1.13": {
+      "sha512": "mbvpGUpV8Q2HlT1BH9lP7REqPtiYjPTJhpKrrqm7DFjEmn9kRbobl5Ehrpblp8Rk8mU6ZDtL+cRe33j+qcgTbA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.testhost/3.1.7",
+      "path": "microsoft.aspnetcore.testhost/3.1.13",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4948,7 +4963,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netcoreapp3.1/Microsoft.AspNetCore.TestHost.dll",
         "lib/netcoreapp3.1/Microsoft.AspNetCore.TestHost.xml",
-        "microsoft.aspnetcore.testhost.3.1.7.nupkg.sha512",
+        "microsoft.aspnetcore.testhost.3.1.13.nupkg.sha512",
         "microsoft.aspnetcore.testhost.nuspec"
       ]
     },
@@ -8725,25 +8740,29 @@
         "system.io.filesystem.primitives.nuspec"
       ]
     },
-    "System.IO.Pipelines/4.7.1": {
-      "sha512": "TyMTasnXQt7U4k13RQ7tA3CrfWEkvWjR635SFfnKVwwMOgClLE5mdHSkG2D13BLIdNwbPTGVQnhQB8Rk7f53Rg==",
+    "System.IO.Pipelines/4.7.4": {
+      "sha512": "TQqNjDcTVu6eTDB2S0vjSUhn0udEugL93D9zgsOsSiJO1kv1UWDM2o0+79H95I5X+S0VPEzm4ihj6KPwhNEb7g==",
       "type": "package",
-      "path": "system.io.pipelines/4.7.1",
+      "path": "system.io.pipelines/4.7.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.IO.Pipelines.dll",
+        "lib/net461/System.IO.Pipelines.xml",
         "lib/netcoreapp3.0/System.IO.Pipelines.dll",
         "lib/netcoreapp3.0/System.IO.Pipelines.xml",
         "lib/netstandard1.3/System.IO.Pipelines.dll",
         "lib/netstandard1.3/System.IO.Pipelines.xml",
         "lib/netstandard2.0/System.IO.Pipelines.dll",
         "lib/netstandard2.0/System.IO.Pipelines.xml",
+        "ref/net461/System.IO.Pipelines.dll",
+        "ref/net461/System.IO.Pipelines.xml",
         "ref/netcoreapp2.0/System.IO.Pipelines.dll",
         "ref/netcoreapp2.0/System.IO.Pipelines.xml",
-        "system.io.pipelines.4.7.1.nupkg.sha512",
+        "system.io.pipelines.4.7.4.nupkg.sha512",
         "system.io.pipelines.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -11918,7 +11937,7 @@
       "FluentAssertions >= 5.10.3",
       "Microsoft.AspNet.WebApi.Client >= 5.2.7",
       "Microsoft.AspNetCore.Mvc.Testing >= 3.1.7",
-      "Microsoft.AspNetCore.TestHost >= 3.1.7",
+      "Microsoft.AspNetCore.TestHost >= 3.1.13",
       "Microsoft.EntityFrameworkCore.InMemory >= 3.1.7",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "RESTFulSense >= 1.6.0",
@@ -11987,7 +12006,7 @@
           },
           "Microsoft.AspNetCore.TestHost": {
             "target": "Package",
-            "version": "[3.1.7, )"
+            "version": "[3.1.13, )"
           },
           "Microsoft.EntityFrameworkCore.InMemory": {
             "target": "Package",
@@ -12021,11 +12040,14 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.4.20258.7\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

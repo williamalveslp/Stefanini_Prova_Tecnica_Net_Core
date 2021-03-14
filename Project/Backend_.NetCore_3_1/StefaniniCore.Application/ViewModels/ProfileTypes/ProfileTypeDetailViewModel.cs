@@ -5,13 +5,13 @@ namespace StefaniniCore.Application.ViewModels
 {
     public class ProfileTypeDetailViewModel : ViewModelBase
     {
-        public virtual int Id { get; private set; }
+        public virtual int Id { get; set; }
 
-        public virtual string Name { get; private set; }
+        public virtual string Name { get; set; }
 
-        public virtual IList<Task> Tasks { get; private set; }
+        public virtual IList<Task> Tasks { get; set; }
 
-        public virtual IList<Task> TasksByProfileType { get; private set; }
+        public virtual IList<Task> TasksByProfileType { get; set; }
 
         public ProfileTypeDetailViewModel()
         {

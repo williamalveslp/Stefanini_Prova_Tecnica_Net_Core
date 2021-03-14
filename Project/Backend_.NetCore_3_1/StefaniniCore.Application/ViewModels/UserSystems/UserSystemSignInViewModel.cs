@@ -2,9 +2,9 @@
 {
     public class UserSystemSignInViewModel : ViewModelBase
     {
-        public virtual string UserName { get; private set; }
+        public virtual string UserName { get; set; }
 
-        public virtual string Password { get; private set; }
+        public virtual string Password { get; set; }
 
         public void Load(string userName, string password)
         {

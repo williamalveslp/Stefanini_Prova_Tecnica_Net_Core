@@ -3,7 +3,6 @@ using Microsoft.Extensions.Logging;
 using StefaniniCore.API.Controllers.Base;
 using StefaniniCore.Application.AppInterfaces;
 using StefaniniCore.Application.Responses;
-using StefaniniCore.Application.Responses.ProfileTypes;
 using StefaniniCore.Application.ViewModels;
 using System;
 using System.Net;
@@ -38,7 +37,7 @@ namespace StefaniniCore.API.Controllers
         {
             try
             {
-                return Ok(_appService.GetById(id));
+                return ResponseOk(_appService.GetById(id));
             }
             catch (Exception ex)
             {
@@ -52,7 +51,7 @@ namespace StefaniniCore.API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [ProducesResponseType(typeof(ProfileTypeListResponse), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(ProfileTypeListViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> Get()
         {
@@ -80,7 +79,7 @@ namespace StefaniniCore.API.Controllers
             try
             {
                 _appService.DeleteById(id);
-                return Ok();
+                return ResponseOkEmpty();
             }
             catch (Exception ex)
             {

@@ -22,6 +22,11 @@ namespace StefaniniCore.API.Controllers.Base
             return Ok(new ResponseData<T>(entity));
         }
 
+        protected IActionResult ResponseOkEmpty()
+        {
+            return Ok(new ResponseData<HttpStatusCode>(HttpStatusCode.OK));
+        }
+
         /// <summary>
         /// User for BadRequest.
         /// </summary>
@@ -77,7 +82,7 @@ namespace StefaniniCore.API.Controllers.Base
 
     public class ResponseData<T>
     {
-        public T Data { get; private set; }
+        public T Data { get; set; }
 
         public ResponseData(T data)
         {

@@ -54,7 +54,7 @@ namespace StefaniniCore.API.Controllers
         /// <param name="inputModel"></param>
         /// <returns></returns>
         [HttpPost]
-        [ProducesResponseType(typeof(TaskDetailResponse), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(TaskDetailViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> Insert([FromBody] TaskInputModel inputModel)
         {
@@ -75,7 +75,7 @@ namespace StefaniniCore.API.Controllers
         /// <param name="inputModel"></param>
         /// <returns></returns>
         [HttpPut]
-        [ProducesResponseType(typeof(TaskDetailResponse), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(TaskDetailViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> Update([FromBody] TaskInputModel inputModel)
         {
@@ -95,7 +95,7 @@ namespace StefaniniCore.API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [ProducesResponseType(typeof(TaskListResponse), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(TaskListViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> Get()
         {
@@ -123,7 +123,7 @@ namespace StefaniniCore.API.Controllers
             try
             {
                 _appService.DeleteById(id);
-                return Ok();
+                return ResponseOkEmpty();
             }
             catch (Exception ex)
             {

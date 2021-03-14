@@ -16,20 +16,20 @@ using Xunit;
 
 namespace StefaniniCore.xUnit.Tests.IntegrationsTests
 {
-    public class ProfileTypesTests : IClassFixture<WebApplicationFactory<Startup>>
+    public class ProfileTypesIntegrationTests : IClassFixture<WebApplicationFactory<Startup>>
     {
         private readonly HttpClient _client;
-        private readonly Mock<IProfileTypeAppService> mockAppService;
+        private readonly Mock<IProfileTypeAppService> _mockAppService;
         private readonly ProfileTypesController _controller;
 
-        public ProfileTypesTests(WebApplicationFactory<Startup> factory)
+        public ProfileTypesIntegrationTests(WebApplicationFactory<Startup> factory)
         {
             // Mock the Dependencies of Controller.
             var mockLogger = new Mock<ILogger<ProfileTypesController>>();
-            mockAppService = new Mock<IProfileTypeAppService>();
+            _mockAppService = new Mock<IProfileTypeAppService>();
 
             // Build the Controller with Mock data.
-            _controller = new ProfileTypesController(mockLogger.Object, mockAppService.Object);
+            _controller = new ProfileTypesController(mockLogger.Object, _mockAppService.Object);
 
             _client = factory.CreateClient();
         }
@@ -59,7 +59,7 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
         {
             // Arrange
             var mockDataList = GetMockDataList();
-            mockAppService.Setup(f => f.GetAll()).Returns(mockDataList);
+            _mockAppService.Setup(f => f.GetAll()).Returns(mockDataList);
 
             // Action
             var response = await _controller.Get();
@@ -87,7 +87,7 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
             mockViewModel.SetupGet(f => f.Name).Returns($"Test {expectedId}");
 
             // Arrange
-            mockAppService.Setup(f => f.GetById(expectedId)).Returns(mockViewModel.Object);
+            _mockAppService.Setup(f => f.GetById(expectedId)).Returns(mockViewModel.Object);
 
             // Action
             var response = await _controller.GetById(expectedId);

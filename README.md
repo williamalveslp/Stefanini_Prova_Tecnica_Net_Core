@@ -20,10 +20,10 @@ Após fazer o clone do repositório, siga os seguintes passos abaixo:
 
 1 - Acesse a pasta ***Database_Scripts***, e execute todos scripts em banco ***SQL Server***.
 
-2 - Para informar a ConnectionString na aplicação, basta encontrar o arquivo "appsettings.json", que está tanto na raiz da aplicação API quanto a Web, e substituir as variáveis ***ConnectionString*** e ***DatabaseName***, pela sua ConnectionsString e nome do banco de dados criado.
+2 - Para informar dados referente ao banco criado no passo anterior, basta encontrar o arquivo "appsettings.json" que está na raiz da aplicação tanto API quanto Web (sufixo "UI"), e substituir as variáveis ***ConnectionString*** e ***DatabaseName*** pelos dados do seu banco criado.
 
 Pronto, está configurado sua aplicação para ser executada.
 
-* Você pode realizar login utilizando algum dos usuários pré-cadastrados da tabela ***User_System***, ou crie um usuário novo pela aplicação.
+* Você pode realizar login utilizando algum dos usuários pré-cadastrados (do arquivo de scripts) da tabela ***User_System***, ou crie um usuário novo pela aplicação.
 
  @williamalveslp

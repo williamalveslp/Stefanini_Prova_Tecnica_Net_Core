@@ -592,8 +592,8 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\Stefa
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.xUnit.Tests.csprojAssemblyReference.cache
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.xUnit.Tests.AssemblyInfoInputs.cache
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.xUnit.Tests.AssemblyInfo.cs
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.xUnit.Tests.csproj.CoreCompileInputs.cache
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.xUnit.Tests.csproj.CopyComplete
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.xUnit.Tests.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.xUnit.Tests.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.xUnit.Tests.genruntimeconfig.cache
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.xUnit.Tests.csproj.CoreCompileInputs.cache

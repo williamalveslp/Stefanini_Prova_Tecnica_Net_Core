@@ -6,6 +6,7 @@ using StefaniniCore.API.Controllers.Base;
 using StefaniniCore.Application.AppInterfaces;
 using StefaniniCore.Application.InputModels.Tasks;
 using StefaniniCore.Application.ViewModels;
+using System.Net;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -62,6 +63,25 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
 
             Assert.NotNull(responseValue.Data?.Task);
             Assert.Equal(expectedName, responseValue.Data.Task.Name);
+        }
+
+        [Fact]
+        public async Task DeleteById()
+        {
+            // Arrange
+            _mockAppService.Setup(f => f.DeleteById(It.IsAny<int>()));
+
+            // Action
+            var response = await _controller.Delete(It.IsAny<int>());
+
+            // Assert
+            Assert.NotNull(response);
+
+            var responseObject = response as OkObjectResult;
+            Assert.NotNull(responseObject);
+
+            var responseValue = responseObject.Value as ResponseData<HttpStatusCode>;
+            Assert.Equal(HttpStatusCode.OK, responseValue.Data);
         }
     }
 }

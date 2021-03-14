@@ -18,7 +18,7 @@ Contemplam Testes Unitários com <b>xUnit</b> e Mocks.
 
 Após fazer o clone do repositório, siga os seguintes passos abaixo:
 
-1 - Acesse a pasta ***Database_Scripts***, e execute todos scripts em banco ***SQL Server***.
+1 - Acesse a pasta ***Database_Scripts***, e execute todos scripts em banco de dados ***SQL Server***.
 
 2 - Para informar dados referente ao banco criado no passo anterior, basta encontrar o arquivo "appsettings.json" que está na raiz da aplicação tanto API quanto Web (sufixo "UI"), e substituir as variáveis ***ConnectionString*** e ***DatabaseName*** pelos dados do seu banco criado.
 

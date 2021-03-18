@@ -13,7 +13,7 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- script: dotnet build '**/*.sln*'
+- script: dotnet build StefaniniCore.sln --configuration Debug
 
 - task: NuGetCommand@2
   inputs:

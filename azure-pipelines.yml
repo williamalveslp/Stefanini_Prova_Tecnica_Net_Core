@@ -16,17 +16,17 @@ steps:
 - task: UseDotNet@2
   inputs:
     packageType: 'sdk'
-    version: '3.1.x'
-    
-- task: MSBuild@1
-  inputs:
-    solution: '**/*.sln'
+    version: '3.1.x'  
       
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
     restoreSolution: '**/*.sln'
     feedsToUse: 'select'
+
+- task: MSBuild@1
+  inputs:
+    solution: '**/*.sln'
 
 - task: VSTest@2
   inputs:

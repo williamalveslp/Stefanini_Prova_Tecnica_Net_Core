@@ -14,4 +14,13 @@ variables:
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
+
+- task: VSTest@2
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
   displayName: 'dotnet build $(buildConfiguration)'

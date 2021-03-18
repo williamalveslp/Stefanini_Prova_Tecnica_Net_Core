@@ -17,7 +17,6 @@ steps:
   inputs:
     command: 'build'
     projects: 'StefaniniCore.sln'
-- script: dotnet build StefaniniCore.sln --configuration Debug
 
 - task: NuGetCommand@2
   inputs:

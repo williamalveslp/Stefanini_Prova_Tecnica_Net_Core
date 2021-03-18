@@ -13,7 +13,7 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- script: dotnet build '**/*.sn*'
+- script: dotnet build '**/*.sln*'
 
 - task: NuGetCommand@2
   inputs:

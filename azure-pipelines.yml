@@ -41,6 +41,7 @@ steps:
       !**\xunit.runner.visualstudio.dotnetcore.testadapter.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
+    codeCoverageEnabled: true
   displayName: 'dotnet build $(buildConfiguration)'
 
 # Run Tests.

@@ -37,9 +37,9 @@ steps:
     testAssemblyVer2: |
       **\*test*.dll
       !**\*TestAdapter.dll
+      !**\obj\**
       !**\xunit.runner.visualstudio.testadapter.dll
       !**\xunit.runner.visualstudio.dotnetcore.testadapter.dll
-      !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
     codeCoverageEnabled: true
   displayName: 'dotnet build $(buildConfiguration)'

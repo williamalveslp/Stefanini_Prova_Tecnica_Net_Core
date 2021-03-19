@@ -14,7 +14,7 @@ variables:
 
 steps:
 - task: UseDotNet@2
-  displayName: 'Install SDK .Net Core'
+  displayName: 'Install SDK .Net Core 3.1.x'
   inputs:
     packageType: 'sdk'
     version: '3.1.x'  
@@ -39,7 +39,7 @@ steps:
 #    arguments: '--configuration $(BuildConfiguration)'
 
 - task: VSTest@2
-  displayName: 'Run Tests as $(BuildConfiguration)'
+  displayName: 'Run Tests as "$(BuildConfiguration)"'
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
@@ -59,7 +59,7 @@ steps:
 #    searchFolder: '$(Build.StagingDirectory)'
 
 - task: CopyFiles@2
-  displayName: 'Copying Files'
+  displayName: 'Copying Files from "$(Build.SourcesDirectory)" to "$(Build.ArtifactStagingDirectory)"'
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
     #Contents: '**\*.*'
@@ -67,7 +67,7 @@ steps:
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
-  displayName: 'Generate Artifacts'
+  displayName: 'Generate Artifacts to "$(Build.ArtifactStagingDirectory)"'
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'

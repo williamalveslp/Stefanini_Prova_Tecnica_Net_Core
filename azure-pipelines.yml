@@ -13,45 +13,43 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-# Install SDK .Net Core.
 - task: UseDotNet@2
+  displayName: 'Install SDK .Net Core 3.1.x'
   inputs:
     packageType: 'sdk'
     version: '3.1.x'  
       
-# Restore Nuget Packages.
 - task: NuGetCommand@2
+  displayName: 'Restore Nuget Packages'
   inputs:
     command: 'restore'
     restoreSolution: '**/*.sln'
     feedsToUse: 'select'
 
-# Build Solution.
 - task: MSBuild@1
+  displayName: 'Build Solution'
   inputs:
     solution: '**/*.sln'
-  displayName: 'Build Solution'
 
 # DotNet Test
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'test'
-    projects: '**/*[Tt]est/*.csproj'
-    arguments: '--configuration $(BuildConfiguration)'
-
-# Run Tests.
-#- task: VSTest@2
+#- task: DotNetCoreCLI@2
 #  inputs:
-#    testSelector: 'testAssemblies'
-#    testAssemblyVer2: |
-#      **\*[Tt]est*.dll
-#      !**\*TestAdapter.dll
-#      !**\obj\**
-#      !**\xunit.runner.visualstudio.testadapter.dll
-#      !**\xunit.runner.visualstudio.dotnetcore.testadapter.dll
-#    searchFolder: '$(System.DefaultWorkingDirectory)'
-#    codeCoverageEnabled: true
-#  displayName: 'dotnet build $(buildConfiguration)'
+#    command: 'test'
+#    projects: '**/*[Tt]est/*.csproj'
+#    arguments: '--configuration $(BuildConfiguration)'
+
+- task: VSTest@2
+  displayName: 'Run Tests as $(BuildConfiguration)'
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*[Tt]est*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+      !**\xunit.runner.visualstudio.testadapter.dll
+      !**\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    codeCoverageEnabled: true
 
 # Run Tests.
 #- task: VSTest@2
@@ -62,16 +60,16 @@ steps:
 #      !**\obj\**
 #    searchFolder: '$(Build.StagingDirectory)'
 
-# Copy Files.
 - task: CopyFiles@2
+  displayName: 'Coping Files'
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
     #Contents: '**\*.*'
     Contents: 'Project\Backend_.NetCore_3_1\*.*'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
-# Generate Artifacts.
 - task: PublishBuildArtifacts@1
+  displayName: 'Generate Artifacts'
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'

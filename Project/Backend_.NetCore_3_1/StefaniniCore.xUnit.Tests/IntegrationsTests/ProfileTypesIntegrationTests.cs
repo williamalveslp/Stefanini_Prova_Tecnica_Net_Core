@@ -34,8 +34,10 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
             _client = factory.CreateClient();
         }
 
+#if DEBUG
         // It's testing the endpoint only (data not mocked).
-        /*[Theory]
+        // It's like #DEBUG, because on AzureDevops we have no permission with localhost PORT 8080.
+        [Theory]
         [InlineData("/ProfileTypes")]
         public async System.Threading.Tasks.Task GetAll_NotMocked(string url)
         {
@@ -52,7 +54,8 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
             var responseValue = JsonConvert.DeserializeObject<ResponseData<ProfileTypeListViewModel>>(responseString);
             Assert.NotNull(responseValue.Data?.ProfileTypes);
             Assert.NotEmpty(responseValue.Data.ProfileTypes);
-        } */
+    }
+#endif
 
         [Fact]
         public async System.Threading.Tasks.Task GetAll()

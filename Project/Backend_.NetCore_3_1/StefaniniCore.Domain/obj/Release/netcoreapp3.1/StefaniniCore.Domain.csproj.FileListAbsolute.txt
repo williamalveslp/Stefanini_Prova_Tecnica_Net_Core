@@ -6,3 +6,4 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\Stefa
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain\obj\Release\netcoreapp3.1\StefaniniCore.Domain.csproj.CoreCompileInputs.cache
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain\obj\Release\netcoreapp3.1\StefaniniCore.Domain.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain\obj\Release\netcoreapp3.1\StefaniniCore.Domain.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain\obj\Release\netcoreapp3.1\StefaniniCore.Domain.csprojAssemblyReference.cache

@@ -54,8 +54,7 @@ steps:
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      **\*[Tt]est*.dll
-      !**\*TestAdapter.dll
+      Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\bin\Release\netcoreapp3.1\StefaniniCore.MSTest.Tests.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
     codeCoverageEnabled: true

@@ -31,11 +31,11 @@ steps:
   inputs:
     solution: '**/*.sln'
 
-- task: VisualStudioTestPlatformInstaller@1
-  displayName: Install VSTest
-  inputs:
-    packageFeedSelector: 'nugetOrg'
-    versionSelector: 'latestStable'
+#- task: VisualStudioTestPlatformInstaller@1
+#  displayName: Install VSTest
+#  inputs:
+#    packageFeedSelector: 'nugetOrg'
+#    versionSelector: 'latestStable'
 
 - task: CmdLine@2
   displayName: Run MSTest with CommandLine

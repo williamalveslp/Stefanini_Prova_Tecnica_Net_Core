@@ -4,14 +4,6 @@
         <name>StefaniniCore.Infra.CrossCutting.Configs</name>
     </assembly>
     <members>
-        <member name="M:StefaniniCore.Infra.CrossCutting.Configs.ApplicationBuilders.HealthChecksAppBuilder.WriteResponse(Microsoft.AspNetCore.Http.HttpContext,Microsoft.Extensions.Diagnostics.HealthChecks.HealthReport)">
-            <summary>
-            Response from Health Checks.
-            </summary>
-            <param name="httpContext"></param>
-            <param name="result"></param>
-            <returns></returns>
-        </member>
         <member name="M:StefaniniCore.Infra.CrossCutting.Configs.ConfigurationTransfer.GetObject``1(Microsoft.Extensions.Configuration.IConfiguration,System.String)">
             <summary>
             Convert Configuration application to object.
@@ -20,6 +12,26 @@
             <param name="configuration"></param>
             <param name="customObjectPath">Custom path used to sub-paths. Example: "MyObject.MySubObject.Title"</param>
             <returns></returns>
+        </member>
+        <member name="M:StefaniniCore.Infra.CrossCutting.Configs.ApplicationBuilders.HealthChecksAppBuilder.WriteResponse(Microsoft.AspNetCore.Http.HttpContext,Microsoft.Extensions.Diagnostics.HealthChecks.HealthReport)">
+            <summary>
+            Response from Health Checks.
+            </summary>
+            <param name="httpContext"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="T:StefaniniCore.Infra.CrossCutting.Configs.StartupConfigs.ServicesCollection.AuthenticationBearerJwt.AuthenticationBearerJwtCollection">
+            <summary>
+            Authentication and Authorization with Bearer JWT Token.
+            </summary>
+        </member>
+        <member name="M:StefaniniCore.Infra.CrossCutting.Configs.StartupConfigs.ServicesCollection.AuthenticationBearerJwt.AuthenticationBearerJwtCollection.AddAuthenticationJwt(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Add the Authentication and Authorization with Bearer JWT Token.
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
         </member>
         <member name="M:StefaniniCore.Infra.CrossCutting.Configs.ServicesCollection.CorsCollection.AddCorsSettings(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
@@ -43,6 +55,18 @@
             <param name="failureStatus"></param>
             <param name="tags"></param>
             <param name="thresholdInBytes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:StefaniniCore.Infra.CrossCutting.Configs.TokenBearerJwt.TokenBearerJwtConfig">
+            <summary>
+            Token Bearer configurations.
+            </summary>
+        </member>
+        <member name="M:StefaniniCore.Infra.CrossCutting.Configs.TokenBearerJwt.TokenBearerJwtConfig.GenerateToken(StefaniniCore.Infra.CrossCutting.Configs.TokenBearerJwt.Models.UserJwt)">
+            <summary>
+            Generate the Token as Bearer JWT.
+            </summary>
+            <param name="userJwt"></param>
             <returns></returns>
         </member>
     </members>

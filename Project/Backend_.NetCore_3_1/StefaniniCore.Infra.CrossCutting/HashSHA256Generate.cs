@@ -4,7 +4,10 @@ using System.Text;
 
 namespace StefaniniCore.Infra.CrossCutting
 {
-    public static class HashSHA256Generate
+    /// <summary>
+    /// Funcionalities related to Hash.
+    /// </summary>
+    public static class HashSha256Generate
     {
         /// <summary>
         /// Compare the source text if has the same hash to compared.
@@ -38,6 +41,7 @@ namespace StefaniniCore.Infra.CrossCutting
             }
         }
 
+        #region .: PRIVATE METHODS :.
         private static string GetHash(HashAlgorithm hashAlgorithm, string input)
         {
             // Convert the input string to a byte array and compute the hash.
@@ -69,5 +73,6 @@ namespace StefaniniCore.Infra.CrossCutting
 
             return comparer.Compare(hashOfInput, hash) == 0;
         }
+        #endregion
     }
 }

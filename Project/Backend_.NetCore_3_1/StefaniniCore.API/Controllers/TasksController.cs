@@ -4,7 +4,6 @@ using StefaniniCore.API.Controllers.Base;
 using StefaniniCore.Application.AppInterfaces;
 using StefaniniCore.Application.InputModels.Tasks;
 using StefaniniCore.Application.Responses;
-using StefaniniCore.Application.Responses.Tasks;
 using StefaniniCore.Application.ViewModels;
 using System;
 using System.Net;

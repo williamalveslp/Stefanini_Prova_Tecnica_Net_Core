@@ -14,8 +14,4 @@
     <ProjectReference Include="..\StefaniniCore.Infra.CrossCutting\StefaniniCore.Infra.CrossCutting.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Responses\UserSystems\" />
-  </ItemGroup>
-
 </Project>

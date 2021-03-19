@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using StefaniniCore.Infra.CrossCutting.IoC;
 using StefaniniCore.Infra.CrossCutting.Configs.ServicesCollection;
 using StefaniniCore.Infra.CrossCutting.Configs.ApplicationBuilders;
+using StefaniniCore.Infra.CrossCutting.Configs.StartupConfigs.ServicesCollection.AuthenticationBearerJwt;
 
 namespace StefaniniCore.API
 {
@@ -41,6 +42,9 @@ namespace StefaniniCore.API
 
             // Health Checks.
             services.AddHealthChecks(Configuration);
+
+            // Bearer JWT Token.
+            services.AddAuthenticationJwt(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,7 +60,10 @@ namespace StefaniniCore.API
             // Cors.
             app.UseCors(Configuration);
 
-            // Are you allowed?  
+            // Who are you? (Required for Bearer Jwt Token).
+            app.UseAuthentication();
+
+            // Are you allowed? (Required for Bearer Jwt Token).
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

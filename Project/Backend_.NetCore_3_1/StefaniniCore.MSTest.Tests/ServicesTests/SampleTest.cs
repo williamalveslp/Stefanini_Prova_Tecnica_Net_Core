@@ -8,7 +8,7 @@ namespace StefaniniCore.MSTest.Tests.ServicesTests
         [TestMethod]
         public void SumNumbers()
         {
-            Assert.AreEqual(1, 1);
+            Assert.AreEqual(1, 0);
         }
     }
 }

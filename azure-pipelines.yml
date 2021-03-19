@@ -31,32 +31,33 @@ steps:
   inputs:
     solution: '**/*.sln'
 
-#- task: VSTest@2
-#  inputs:
-#    testSelector: 'testAssemblies'
-#    testAssemblyVer2: |
-#      **\*test*.dll
-#      !**\*TestAdapter.dll
-#      !**\obj\**
-#    searchFolder: '$(System.DefaultWorkingDirectory)'
-#  displayName: 'dotnet build $(buildConfiguration)'
-
-# Run Tests.
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      $(Build.StagingDirectory)\*test*.dll
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\*xUnit*.dll
       !**\obj\**
-    searchFolder: '$(Build.StagingDirectory)'
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+  displayName: 'dotnet build $(buildConfiguration)'
+
+# Run Tests.
+#- task: VSTest@2
+#  inputs:
+#   testSelector: 'testAssemblies'
+#    testAssemblyVer2: |
+#      $(Build.StagingDirectory)\*test*.dll
+#      !**\obj\**
+#    searchFolder: '$(Build.StagingDirectory)'
 
 # Copy Files.
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
-    Contents: '**\*.*'
+    #Contents: '**\*.*'
+    Contents: 'Project\Backend_.NetCore_3_1\*.*'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
-
 
 # Generate Artifacts.
 - task: PublishBuildArtifacts@1

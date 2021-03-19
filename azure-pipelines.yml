@@ -38,7 +38,7 @@ steps:
 #    versionSelector: 'latestStable'
 
 - task: CmdLine@2
-  displayName: Run MSTest with CommandLine
+  displayName: Run MSTest by VSTest.Console
   inputs:
     script: '$(VSTestConsole) **\StefaniniCore.MSTest.Tests.dll /EnableCodeCoverage /Settings:Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\RunSettings.runsettings'
 

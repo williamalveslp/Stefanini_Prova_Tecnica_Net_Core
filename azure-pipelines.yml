@@ -47,6 +47,8 @@ steps:
       !**\*TestAdapter.dll
       !**\StefaniniCore.xUnit.Tests.dll
       !**\obj\**
+      !**\xunit.runner.visualstudio.testadapter.dll
+      !**\xunit.runner.visualstudio.dotnetcore.testadapter.dll
     searchFolder: '$(System.DefaultWorkingDirectory)'
     codeCoverageEnabled: true
 

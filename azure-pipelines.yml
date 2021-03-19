@@ -36,9 +36,9 @@ steps:
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\bin\$(BuildConfiguration)\netcoreapp3.1\StefaniniCore.MSTest.Tests.dll
-      !Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\$(BuildConfiguration)\netcoreapp3.1\StefaniniCore.xUnit.Tests.dll
-      !Project\Backend_.NetCore_3_1\StefaniniCore.Specflow.Tests\bin\$(BuildConfiguration)\netcoreapp3.1\StefaniniCore.Specflow.Tests.dll
+      Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\$(BuildConfiguration)\netcoreapp3.1\StefaniniCore.xUnit.Tests.dll
+      Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\bin\$(BuildConfiguration)\netcoreapp3.1\StefaniniCore.MSTest.Tests.dll      
+      Project\Backend_.NetCore_3_1\StefaniniCore.Specflow.Tests\bin\$(BuildConfiguration)\netcoreapp3.1\StefaniniCore.Specflow.Tests.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
     codeCoverageEnabled: true

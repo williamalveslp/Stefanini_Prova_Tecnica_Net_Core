@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="a84f9ccc-0350-46b7-9b32-d74543e2e1ce" name="willi@DESKTOP-PK5H4AO 2021-03-19 12:11:17" runUser="DESKTOP-PK5H4AO\willi" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2021-03-19T12:11:17.3146561-03:00" queuing="2021-03-19T12:11:17.3146561-03:00" start="2021-03-19T12:11:07.3026093-03:00" finish="2021-03-19T12:13:10.2277344-03:00" />
-  <TestSettings name="default" id="cb5529fa-3cf8-4631-9eff-ea22285c3174">
-    <Deployment runDeploymentRoot="willi_DESKTOP-PK5H4AO_2021-03-19_12_11_17" />
+<TestRun id="0c8de648-5fdd-4546-a5c4-eb0e356e24dc" name="willi@DESKTOP-PK5H4AO 2021-03-19 12:28:13" runUser="DESKTOP-PK5H4AO\willi" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2021-03-19T12:28:13.7353875-03:00" queuing="2021-03-19T12:28:13.7353875-03:00" start="2021-03-19T12:28:03.8210777-03:00" finish="2021-03-19T12:29:56.7000366-03:00" />
+  <TestSettings name="default" id="a651f274-b10f-49b8-a2cc-93e0938e090c">
+    <Deployment runDeploymentRoot="willi_DESKTOP-PK5H4AO_2021-03-19_12_28_13" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="cd420022-0d99-47b4-b821-2c314b394bad" testId="f2e8a989-9d34-c946-35ae-66a3ee10147c" testName="SumNumbersFailed" computerName="DESKTOP-PK5H4AO" duration="00:00:00.2681716" startTime="2021-03-19T12:11:15.3516266-03:00" endTime="2021-03-19T12:11:16.1282975-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cd420022-0d99-47b4-b821-2c314b394bad">
+    <UnitTestResult executionId="4547fa10-749d-4406-a353-f0a54a9da97c" testId="f2e8a989-9d34-c946-35ae-66a3ee10147c" testName="SumNumbersFailed" computerName="DESKTOP-PK5H4AO" duration="00:00:00.5751247" startTime="2021-03-19T12:28:11.8424497-03:00" endTime="2021-03-19T12:28:12.5684705-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4547fa10-749d-4406-a353-f0a54a9da97c">
       <Output>
         <ErrorInfo>
           <Message>Assert.AreEqual failed. Expected:&lt;1&gt;. Actual:&lt;0&gt;. </Message>
@@ -17,24 +17,24 @@
         <Collector agentName="DESKTOP-PK5H4AO" uri="datacollector://microsoft/VideoRecorder/1.0" collectorDisplayName="Screen and Voice Recorder">
           <UriAttachments>
             <UriAttachment>
-              <A href="DESKTOP-PK5H4AO\ScreenCapture.wmv">Screen capture video</A>
+              <A href="DESKTOP-PK5H4AO\RecordedMedia.trmx"></A>
             </UriAttachment>
             <UriAttachment>
-              <A href="DESKTOP-PK5H4AO\RecordedMedia.trmx"></A>
+              <A href="DESKTOP-PK5H4AO\ScreenCapture.wmv">Screen capture video</A>
             </UriAttachment>
           </UriAttachments>
         </Collector>
       </CollectorDataEntries>
     </UnitTestResult>
-    <UnitTestResult executionId="ce5a1e73-373b-4b36-9a72-c48590597df1" testId="fb67738a-d79a-4d5a-3f2d-0a09ce72dda6" testName="SumNumbersPassed" computerName="DESKTOP-PK5H4AO" duration="00:00:00.0003587" startTime="2021-03-19T12:11:19.8065361-03:00" endTime="2021-03-19T12:11:19.8086703-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ce5a1e73-373b-4b36-9a72-c48590597df1">
+    <UnitTestResult executionId="87e7f1aa-f5de-4a36-a159-7db207b7e901" testId="fb67738a-d79a-4d5a-3f2d-0a09ce72dda6" testName="SumNumbersPassed" computerName="DESKTOP-PK5H4AO" duration="00:00:00.0003526" startTime="2021-03-19T12:28:15.5151469-03:00" endTime="2021-03-19T12:28:15.5171951-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="87e7f1aa-f5de-4a36-a159-7db207b7e901">
       <CollectorDataEntries>
         <Collector agentName="DESKTOP-PK5H4AO" uri="datacollector://microsoft/VideoRecorder/1.0" collectorDisplayName="Screen and Voice Recorder">
           <UriAttachments>
             <UriAttachment>
-              <A href="DESKTOP-PK5H4AO\ScreenCapture.wmv">Screen capture video</A>
+              <A href="DESKTOP-PK5H4AO\RecordedMedia.trmx"></A>
             </UriAttachment>
             <UriAttachment>
-              <A href="DESKTOP-PK5H4AO\RecordedMedia.trmx"></A>
+              <A href="DESKTOP-PK5H4AO\ScreenCapture.wmv">Screen capture video</A>
             </UriAttachment>
           </UriAttachments>
         </Collector>
@@ -42,18 +42,18 @@
     </UnitTestResult>
   </Results>
   <TestDefinitions>
-    <UnitTest name="SumNumbersFailed" storage="c:\git_repos\stefanini_prova_tecnica_net_core\project\backend_.netcore_3_1/stefaninicore.mstest.tests/bin/release/netcoreapp3.1/stefaninicore.mstest.tests.dll" id="f2e8a989-9d34-c946-35ae-66a3ee10147c">
-      <Execution id="cd420022-0d99-47b4-b821-2c314b394bad" />
-      <TestMethod codeBase="C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1/StefaniniCore.MSTest.Tests/bin/Release/netcoreapp3.1/StefaniniCore.MSTest.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="StefaniniCore.MSTest.Tests.ServicesTests.SampleTest" name="SumNumbersFailed" />
+    <UnitTest name="SumNumbersFailed" storage="c:\git_repos\stefanini_prova_tecnica_net_core\project/backend_.netcore_3_1/stefaninicore.mstest.tests/bin/release/netcoreapp3.1/stefaninicore.mstest.tests.dll" id="f2e8a989-9d34-c946-35ae-66a3ee10147c">
+      <Execution id="4547fa10-749d-4406-a353-f0a54a9da97c" />
+      <TestMethod codeBase="C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project/Backend_.NetCore_3_1/StefaniniCore.MSTest.Tests/bin/Release/netcoreapp3.1/StefaniniCore.MSTest.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="StefaniniCore.MSTest.Tests.ServicesTests.SampleTest" name="SumNumbersFailed" />
     </UnitTest>
-    <UnitTest name="SumNumbersPassed" storage="c:\git_repos\stefanini_prova_tecnica_net_core\project\backend_.netcore_3_1/stefaninicore.mstest.tests/bin/release/netcoreapp3.1/stefaninicore.mstest.tests.dll" id="fb67738a-d79a-4d5a-3f2d-0a09ce72dda6">
-      <Execution id="ce5a1e73-373b-4b36-9a72-c48590597df1" />
-      <TestMethod codeBase="C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1/StefaniniCore.MSTest.Tests/bin/Release/netcoreapp3.1/StefaniniCore.MSTest.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="StefaniniCore.MSTest.Tests.ServicesTests.SampleTest" name="SumNumbersPassed" />
+    <UnitTest name="SumNumbersPassed" storage="c:\git_repos\stefanini_prova_tecnica_net_core\project/backend_.netcore_3_1/stefaninicore.mstest.tests/bin/release/netcoreapp3.1/stefaninicore.mstest.tests.dll" id="fb67738a-d79a-4d5a-3f2d-0a09ce72dda6">
+      <Execution id="87e7f1aa-f5de-4a36-a159-7db207b7e901" />
+      <TestMethod codeBase="C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project/Backend_.NetCore_3_1/StefaniniCore.MSTest.Tests/bin/Release/netcoreapp3.1/StefaniniCore.MSTest.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="StefaniniCore.MSTest.Tests.ServicesTests.SampleTest" name="SumNumbersPassed" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="f2e8a989-9d34-c946-35ae-66a3ee10147c" executionId="cd420022-0d99-47b4-b821-2c314b394bad" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="fb67738a-d79a-4d5a-3f2d-0a09ce72dda6" executionId="ce5a1e73-373b-4b36-9a72-c48590597df1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f2e8a989-9d34-c946-35ae-66a3ee10147c" executionId="4547fa10-749d-4406-a353-f0a54a9da97c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fb67738a-d79a-4d5a-3f2d-0a09ce72dda6" executionId="87e7f1aa-f5de-4a36-a159-7db207b7e901" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Resultados que não estão em uma lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
@@ -62,19 +62,19 @@
   <ResultSummary outcome="Failed">
     <Counters total="2" executed="2" passed="1" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
     <RunInfos>
-      <RunInfo computerName="DESKTOP-PK5H4AO" outcome="Warning" timestamp="2021-03-19T12:11:10.8799109-03:00">
+      <RunInfo computerName="DESKTOP-PK5H4AO" outcome="Warning" timestamp="2021-03-19T12:28:07.3746321-03:00">
         <Text>Coletor de dados 'Code Coverage' mensagem: Cannot find CodeCoverage.exe..</Text>
       </RunInfo>
-      <RunInfo computerName="DESKTOP-PK5H4AO" outcome="Warning" timestamp="2021-03-19T12:11:20.5196040-03:00">
+      <RunInfo computerName="DESKTOP-PK5H4AO" outcome="Warning" timestamp="2021-03-19T12:28:16.9406644-03:00">
         <Text>Coletor de dados 'Screen and Voice Recorder' mensagem: The computer 'DESKTOP-PK5H4AO' has more than one display. By default, only the screen from the primary display will be recorded. Run your application in this display. To know the primary display, you can use the Screen Resolution applet in Control Panel..</Text>
       </RunInfo>
-      <RunInfo computerName="DESKTOP-PK5H4AO" outcome="Warning" timestamp="2021-03-19T12:11:20.5196040-03:00">
+      <RunInfo computerName="DESKTOP-PK5H4AO" outcome="Warning" timestamp="2021-03-19T12:28:16.9406644-03:00">
         <Text>Coletor de dados 'Screen and Voice Recorder' mensagem: The computer 'DESKTOP-PK5H4AO' has more than one display. By default, only the screen from the primary display will be recorded. Run your application in this display. To know the primary display, you can use the Screen Resolution applet in Control Panel..</Text>
       </RunInfo>
-      <RunInfo computerName="DESKTOP-PK5H4AO" outcome="Warning" timestamp="2021-03-19T12:11:27.4612753-03:00">
+      <RunInfo computerName="DESKTOP-PK5H4AO" outcome="Warning" timestamp="2021-03-19T12:28:26.5684872-03:00">
         <Text>Coletor de dados 'Code Coverage' mensagem: Cannot find CodeCoverage.exe..</Text>
       </RunInfo>
-      <RunInfo computerName="DESKTOP-PK5H4AO" outcome="Error" timestamp="2021-03-19T12:13:10.1307950-03:00">
+      <RunInfo computerName="DESKTOP-PK5H4AO" outcome="Error" timestamp="2021-03-19T12:28:26.6124592-03:00">
         <Text>Não foi possível localizar C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\obj\Release\netcoreapp3.1\StefaniniCore.MSTest.Tests.deps.json. Certifique-se de que o projeto de teste tem uma referência nuget do pacote "Microsoft.NET.Test.Sdk".</Text>
       </RunInfo>
     </RunInfos>

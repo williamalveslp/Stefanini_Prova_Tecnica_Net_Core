@@ -50,7 +50,7 @@ steps:
 #    arguments: '--configuration $(BuildConfiguration)'
 
 - task: VSTest@2
-  displayName: 'Run MSTests as "$(BuildConfiguration)"'
+  displayName: 'Run MSTests'
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |

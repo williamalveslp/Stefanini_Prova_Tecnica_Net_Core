@@ -58,7 +58,6 @@ steps:
       !**\*TestAdapter.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
-    runSettingsFile: '**\StefaniniCore.MSTest.Tests\RunSettings.runsettings'
     codeCoverageEnabled: true
 
 #- task: VSTest@2

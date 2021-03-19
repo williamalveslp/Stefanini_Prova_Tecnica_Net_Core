@@ -31,10 +31,16 @@ steps:
   inputs:
     solution: '**/*.sln'
 
+- task: VisualStudioTestPlatformInstaller@1
+  displayName: Install VSTest
+  inputs:
+    packageFeedSelector: 'nugetOrg'
+    versionSelector: 'latestStable'
+
 - task: CmdLine@2
   displayName: Run MSTest with CommandLine
   inputs:
-    script: 'VSTest.Console.exe **\StefaniniCore.MSTest.Tests.dll /EnableCodeCoverage /Settings:**\StefaniniCore.MSTest.Tests\RunSettings.runsettings'
+    script: 'VSTest.Console.exe **\StefaniniCore.MSTest.Tests.dll /EnableCodeCoverage /Settings:Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\RunSettings.runsettings'
 
 # DotNet Test
 #- task: DotNetCoreCLI@2
@@ -43,28 +49,28 @@ steps:
 #    projects: '**/*[Tt]est/*.csproj'
 #    arguments: '--configuration $(BuildConfiguration)'
 
-- task: VSTest@2
-  displayName: 'Run MSTests as "$(BuildConfiguration)"'
-  inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*test*.dll
-      !**\*TestAdapter.dll
-      !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)'
-    codeCoverageEnabled: true
+#- task: VSTest@2
+#  displayName: 'Run MSTests as "$(BuildConfiguration)"'
+#  inputs:
+#    testSelector: 'testAssemblies'
+#    testAssemblyVer2: |
+#      **\*test*.dll
+#      !**\*TestAdapter.dll
+#      !**\obj\**
+#    searchFolder: '$(System.DefaultWorkingDirectory)'
+#    codeCoverageEnabled: true
 
-- task: VSTest@2
-  displayName: 'Run xUnit as "$(BuildConfiguration)"'
-  inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*[Tt]est.dll
-      !**\*TestAdapter.dll
-      !**\obj\**
-      !**\*xunit.*.dll
-    searchFolder: '$(System.DefaultWorkingDirectory)'
-    codeCoverageEnabled: true
+#- task: VSTest@2
+#  displayName: 'Run xUnit as "$(BuildConfiguration)"'
+#  inputs:
+#    testSelector: 'testAssemblies'
+#    testAssemblyVer2: |
+#      **\*[Tt]est.dll
+#      !**\*TestAdapter.dll
+#      !**\obj\**
+#      !**\*xunit.*.dll
+#    searchFolder: '$(System.DefaultWorkingDirectory)'
+#    codeCoverageEnabled: true
 
 # Run Tests.
 #- task: VSTest@2

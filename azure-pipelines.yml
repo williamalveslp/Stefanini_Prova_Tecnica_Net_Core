@@ -39,7 +39,18 @@ steps:
 #    arguments: '--configuration $(BuildConfiguration)'
 
 - task: VSTest@2
-  displayName: 'Run Tests as "$(BuildConfiguration)"'
+  displayName: 'Run MSTests as "$(BuildConfiguration)"'
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    codeCoverageEnabled: true
+
+- task: VSTest@2
+  displayName: 'Run xUnit Tests as "$(BuildConfiguration)"'
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |

@@ -34,7 +34,6 @@
           "coverlet.collector": "3.0.3",
           "coverlet.msbuild": "3.0.3",
           "xunit": "2.4.1",
-          "xunit.runner.console": "2.4.1",
           "xunit.runner.visualstudio": "2.4.3",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "3.1.0.0",
@@ -3395,7 +3394,6 @@
           "lib/netstandard1.1/xunit.execution.dotnet.dll": {}
         }
       },
-      "xunit.runner.console/2.4.1": {},
       "xunit.runner.visualstudio/2.4.3": {},
       "YamlDotNet/6.0.0": {
         "runtime": {
@@ -6762,13 +6760,6 @@
       "sha512": "sha512-7e/1jqBpcb7frLkB6XDrHCGXAbKN4Rtdb88epYxCSRQuZDRW8UtTfdTEVpdTl8s4T56e07hOBVd4G0OdCxIY2A==",
       "path": "xunit.extensibility.execution/2.4.1",
       "hashPath": "xunit.extensibility.execution.2.4.1.nupkg.sha512"
-    },
-    "xunit.runner.console/2.4.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-6yGe+Vx250m1zG/nV8FH1XlftJFoidCThpRdWEIwIFE/rc/lYSuL0M+D1gMDNmZgERAR/sHR18Q/etqd6lxaNA==",
-      "path": "xunit.runner.console/2.4.1",
-      "hashPath": "xunit.runner.console.2.4.1.nupkg.sha512"
     },
     "xunit.runner.visualstudio/2.4.3": {
       "type": "package",

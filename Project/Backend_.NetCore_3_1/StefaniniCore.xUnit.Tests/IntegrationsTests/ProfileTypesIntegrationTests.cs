@@ -35,7 +35,7 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
         }
 
         // It's testing the endpoint only (data not mocked).
-        [Theory]
+        /*[Theory]
         [InlineData("/ProfileTypes")]
         public async System.Threading.Tasks.Task GetAll_NotMocked(string url)
         {
@@ -52,7 +52,7 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
             var responseValue = JsonConvert.DeserializeObject<ResponseData<ProfileTypeListViewModel>>(responseString);
             Assert.NotNull(responseValue.Data?.ProfileTypes);
             Assert.NotEmpty(responseValue.Data.ProfileTypes);
-        }
+        } */
 
         [Fact]
         public async System.Threading.Tasks.Task GetAll()

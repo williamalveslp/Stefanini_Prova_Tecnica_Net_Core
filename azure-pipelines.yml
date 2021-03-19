@@ -30,19 +30,28 @@ steps:
 - task: MSBuild@1
   inputs:
     solution: '**/*.sln'
+  displayName: 'Build Solution'
 
-- task: VSTest@2
+# DotNet Test
+- task: DotNetCoreCLI@2
   inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*test*.dll
-      !**\*TestAdapter.dll
-      !**\obj\**
-      !**\xunit.runner.visualstudio.testadapter.dll
-      !**\xunit.runner.visualstudio.dotnetcore.testadapter.dll
-    searchFolder: '$(System.DefaultWorkingDirectory)'
-    codeCoverageEnabled: true
-  displayName: 'dotnet build $(buildConfiguration)'
+    command: 'test'
+    projects: '**/*[Tt]est/*.csproj'
+    arguments: '--configuration $(BuildConfiguration)'
+
+# Run Tests.
+#- task: VSTest@2
+#  inputs:
+#    testSelector: 'testAssemblies'
+#    testAssemblyVer2: |
+#      **\*[Tt]est*.dll
+#      !**\*TestAdapter.dll
+#      !**\obj\**
+#      !**\xunit.runner.visualstudio.testadapter.dll
+#      !**\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+#    searchFolder: '$(System.DefaultWorkingDirectory)'
+#    codeCoverageEnabled: true
+#  displayName: 'dotnet build $(buildConfiguration)'
 
 # Run Tests.
 #- task: VSTest@2

@@ -14,7 +14,7 @@ variables:
 
 steps:
 - task: UseDotNet@2
-  displayName: 'Install SDK .Net Core 3.1.x'
+  displayName: 'Install SDK .Net Core'
   inputs:
     packageType: 'sdk'
     version: '3.1.x'  

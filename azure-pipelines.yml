@@ -43,11 +43,9 @@ steps:
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      **\*[Tt]est*.dll
-      !**\*TestAdapter.dll
+      **\*[Tt]est.dll
+      !**\*[Tt]ests.dll
       !**\obj\**
-      !**\xunit.runner.visualstudio.testadapter.dll
-      !**\xunit.runner.visualstudio.dotnetcore.testadapter.dll
     searchFolder: '$(System.DefaultWorkingDirectory)'
     codeCoverageEnabled: true
 

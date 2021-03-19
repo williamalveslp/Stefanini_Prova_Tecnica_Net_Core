@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cF7IdKXpW1pQcaHAbuLolUdXgInQ5B1e8bh4D+LM6TC9ON1GWHuJ2NwoeO5ndVm4Yc79n/Wetmx5gYeuIW5PtA==",
+  "dgSpecHash": "2S52HblKpSCe0EzijW0ry0naCREgOWFeHmkZFWyLV8/Dr2FQFpI5xoI57k2NHq5g5HvIdNwxjFSc1q0qLFi2Wg==",
   "success": true,
   "projectFilePath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.xUnit.Tests\\StefaniniCore.xUnit.Tests.csproj",
   "expectedPackageFiles": [
@@ -253,7 +253,6 @@
     "C:\\Users\\willi\\.nuget\\packages\\xunit.core\\2.4.1\\xunit.core.2.4.1.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\xunit.extensibility.core\\2.4.1\\xunit.extensibility.core.2.4.1.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\xunit.extensibility.execution\\2.4.1\\xunit.extensibility.execution.2.4.1.nupkg.sha512",
-    "C:\\Users\\willi\\.nuget\\packages\\xunit.runner.console\\2.4.1\\xunit.runner.console.2.4.1.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\yamldotnet\\6.0.0\\yamldotnet.6.0.0.nupkg.sha512"
   ],

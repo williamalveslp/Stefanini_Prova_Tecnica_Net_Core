@@ -61,7 +61,7 @@ steps:
 #    searchFolder: '$(Build.StagingDirectory)'
 
 - task: CopyFiles@2
-  displayName: 'Coping Files'
+  displayName: 'Copying Files'
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
     #Contents: '**\*.*'

@@ -50,16 +50,14 @@ steps:
     codeCoverageEnabled: true
 
 - task: VSTest@2
-  displayName: 'Run xUnit Tests as "$(BuildConfiguration)"'
+  displayName: 'Run xUnit as "$(BuildConfiguration)"'
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
       **\*[Tt]est.dll
       !**\*TestAdapter.dll
-      !**\StefaniniCore.xUnit.Tests.dll
       !**\obj\**
-      !**\xunit.runner.visualstudio.testadapter.dll
-      !**\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+      !**\*xunit.*.dll
     searchFolder: '$(System.DefaultWorkingDirectory)'
     codeCoverageEnabled: true
 
@@ -73,15 +71,15 @@ steps:
 #    searchFolder: '$(Build.StagingDirectory)'
 
 - task: CopyFiles@2
-  displayName: 'Copying Files from "$(Build.SourcesDirectory)" to "$(Build.ArtifactStagingDirectory)"'
+  displayName: 'Copying Files'
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
     #Contents: '**\*.*'
-    Contents: 'Project\Backend_.NetCore_3_1\*.*'
+    Contents: '**\Project\Backend_.NetCore_3_1\*.*'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
-  displayName: 'Generate Artifacts to "$(Build.ArtifactStagingDirectory)"'
+  displayName: 'Generate Artifacts'
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'

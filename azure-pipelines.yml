@@ -13,31 +13,52 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+# Install SDK .Net Core.
 - task: UseDotNet@2
   inputs:
     packageType: 'sdk'
     version: '3.1.x'  
       
+# Restore Nuget Packages.
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
     restoreSolution: '**/*.sln'
     feedsToUse: 'select'
 
+# Build Solution.
 - task: MSBuild@1
   inputs:
     solution: '**/*.sln'
 
+#- task: VSTest@2
+#  inputs:
+#    testSelector: 'testAssemblies'
+#    testAssemblyVer2: |
+#      **\*test*.dll
+#      !**\*TestAdapter.dll
+#      !**\obj\**
+#    searchFolder: '$(System.DefaultWorkingDirectory)'
+#  displayName: 'dotnet build $(buildConfiguration)'
+
+# Run Tests.
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      **\*test*.dll
-      !**\*TestAdapter.dll
+      $(Build.StagingDirectory)\*test*.dll
       !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)'
-  displayName: 'dotnet build $(buildConfiguration)'
+    searchFolder: '$(Build.StagingDirectory)'
 
+# Copy Files.
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)'
+    Contents: '**\*.*'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+
+# Generate Artifacts.
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'

@@ -82,7 +82,7 @@
       </Logger>
       <Logger friendlyName="trx" enabled="True">
         <Configuration>
-          <LogFileName>MyTRXFile.trx</LogFileName>
+          <LogFileName>TRX_xUnit.trx</LogFileName>
         </Configuration>
       </Logger>
       <Logger friendlyName="html" enabled="True">

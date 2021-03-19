@@ -41,6 +41,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StefaniniCore.Domain.Servic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StefaniniCore.Infra.CrossCutting.Configs", "StefaniniCore.Infra.CrossCutting.Configs\StefaniniCore.Infra.CrossCutting.Configs.csproj", "{7542BA24-A537-4AC6-8728-14562D1DCCA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StefaniniCore.MSTest.Tests", "StefaniniCore.MSTest.Tests\StefaniniCore.MSTest.Tests.csproj", "{82E29404-3C0A-4AD0-9EDF-8238B626236D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{7542BA24-A537-4AC6-8728-14562D1DCCA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7542BA24-A537-4AC6-8728-14562D1DCCA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7542BA24-A537-4AC6-8728-14562D1DCCA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82E29404-3C0A-4AD0-9EDF-8238B626236D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82E29404-3C0A-4AD0-9EDF-8238B626236D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82E29404-3C0A-4AD0-9EDF-8238B626236D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82E29404-3C0A-4AD0-9EDF-8238B626236D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -109,6 +115,7 @@ Global
 		{D1E15417-E622-45DB-86FC-31C46ED575CC} = {0A9B9128-F960-41D2-8BC6-BC769C712C3A}
 		{C421EB6B-04D5-4681-B66A-A70AF7495947} = {4C1FD93C-104A-431C-8DAA-26CAFB63D7B7}
 		{7542BA24-A537-4AC6-8728-14562D1DCCA9} = {8393B042-23D0-4D2F-BFDF-EF23D1A25C5B}
+		{82E29404-3C0A-4AD0-9EDF-8238B626236D} = {0A9B9128-F960-41D2-8BC6-BC769C712C3A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB479D63-2D78-4A64-8565-E91B0E3607CA}

@@ -1,0 +1,16 @@
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Application\bin\Release\netcoreapp3.1\StefaniniCore.Application.deps.json
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Application\bin\Release\netcoreapp3.1\StefaniniCore.Application.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Application\bin\Release\netcoreapp3.1\StefaniniCore.Application.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Application\bin\Release\netcoreapp3.1\StefaniniCore.Domain.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Application\bin\Release\netcoreapp3.1\StefaniniCore.Domain.Service.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Application\bin\Release\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Application\bin\Release\netcoreapp3.1\StefaniniCore.Domain.Service.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Application\bin\Release\netcoreapp3.1\StefaniniCore.Domain.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Application\bin\Release\netcoreapp3.1\StefaniniCore.Infra.CrossCutting.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Application\obj\Release\netcoreapp3.1\StefaniniCore.Application.csprojAssemblyReference.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Application\obj\Release\netcoreapp3.1\StefaniniCore.Application.AssemblyInfoInputs.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Application\obj\Release\netcoreapp3.1\StefaniniCore.Application.AssemblyInfo.cs
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Application\obj\Release\netcoreapp3.1\StefaniniCore.Application.csproj.CoreCompileInputs.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Application\obj\Release\netcoreapp3.1\StefaniniCore.Application.csproj.CopyComplete
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Application\obj\Release\netcoreapp3.1\StefaniniCore.Application.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Application\obj\Release\netcoreapp3.1\StefaniniCore.Application.pdb

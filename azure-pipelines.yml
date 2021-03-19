@@ -27,7 +27,7 @@ steps:
     feedsToUse: 'select'
 
 - task: MSBuild@1
-  displayName: 'Build Solution'
+  displayName: 'Build Solution as "$(BuildConfiguration)"'
   inputs:
     solution: '**/*.sln'
 
@@ -44,7 +44,8 @@ steps:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
       **\*[Tt]est.dll
-      !**\*[Tt]ests.dll
+      !**\*TestAdapter.dll
+      !**\StefaniniCore.xUnit.Tests.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
     codeCoverageEnabled: true

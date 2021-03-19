@@ -6,9 +6,15 @@ namespace StefaniniCore.MSTest.Tests.ServicesTests
     public class SampleTest
     {
         [TestMethod]
-        public void SumNumbers()
+        public void SumNumbersFailed()
         {
             Assert.AreEqual(1, 0);
+        }
+
+        [TestMethod]
+        public void SumNumbersPassed()
+        {
+            Assert.AreEqual(5, 5);
         }
     }
 }

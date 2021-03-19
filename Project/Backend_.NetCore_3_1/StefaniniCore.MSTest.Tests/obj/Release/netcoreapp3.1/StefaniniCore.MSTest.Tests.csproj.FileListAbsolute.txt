@@ -84,7 +84,6 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\Stefa
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\obj\Release\netcoreapp3.1\StefaniniCore.MSTest.Tests.csprojAssemblyReference.cache
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\obj\Release\netcoreapp3.1\StefaniniCore.MSTest.Tests.AssemblyInfoInputs.cache
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\obj\Release\netcoreapp3.1\StefaniniCore.MSTest.Tests.AssemblyInfo.cs
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\obj\Release\netcoreapp3.1\StefaniniCore.MSTest.Tests.csproj.CoreCompileInputs.cache
@@ -92,3 +91,4 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\Stefa
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\obj\Release\netcoreapp3.1\StefaniniCore.MSTest.Tests.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\obj\Release\netcoreapp3.1\StefaniniCore.MSTest.Tests.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\obj\Release\netcoreapp3.1\StefaniniCore.MSTest.Tests.genruntimeconfig.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\obj\Release\netcoreapp3.1\StefaniniCore.MSTest.Tests.csprojAssemblyReference.cache

@@ -11,9 +11,15 @@ Aplicações em <b>.Net Core 3.1</b>:
 - <b>REST API</b>: Com Swagger e Health Checks.
 - <b>Web</b>: Em Razor Pages.
 
+## Code Metrics
+![](/Images_Stack_Templates/About_Code/CodeMetrics.JPG)
+
 ## Testes Cobertos
 - Testes de Unidade
 - Testes de Integração
+
+## Code Coverage
+![](/Images_Stack_Templates/About_Code/CodeCoverage.JPG)
 
 ## Instruções
 

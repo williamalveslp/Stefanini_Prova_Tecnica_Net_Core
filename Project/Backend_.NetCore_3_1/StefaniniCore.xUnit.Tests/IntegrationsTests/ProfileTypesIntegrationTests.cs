@@ -106,6 +106,25 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
             Assert.Equal(expectedId, responseValue.Data.Id);
         }
 
+        [Fact]
+        public async System.Threading.Tasks.Task Delete()
+        {
+            // Arrange
+            _mockAppService.Setup(f => f.DeleteById(It.IsAny<int>()));
+
+            // Action
+            var response = await _controller.Delete(It.IsAny<int>());
+
+            // Assert
+            Assert.NotNull(response);
+
+            var responseObject = response as OkObjectResult;
+            Assert.Equal((int)HttpStatusCode.OK, responseObject.StatusCode);
+
+            var responseValue = responseObject.Value as ResponseData<HttpStatusCode>;
+            Assert.Equal(HttpStatusCode.OK, responseValue.Data);
+        }
+
         #region .: PRIVATE METHODS :.
         public ProfileTypeListViewModel GetMockDataList()
         {

@@ -21,6 +21,10 @@ Aplicações em <b>.Net Core 3.1</b>:
 ## Code Coverage
 ![](/Images_Stack_Templates/About_Code/CodeCoverage.JPG)
 
+## Azure Pipelines
+![](/Images_Stack_Templates/About_Code/Build.JPG)
+![](/Images_Stack_Templates/About_Code/Build_Result.JPG)
+
 ## Instruções
 
 Após fazer o clone do repositório, siga os seguintes passos abaixo:

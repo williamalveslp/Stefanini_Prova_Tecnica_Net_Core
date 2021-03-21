@@ -29,7 +29,7 @@ steps:
 - task: MSBuild@1
   displayName: 'Build Solution as "$(BuildConfiguration)"'
   inputs:
-    solution: '**/*.sln'
+    solution: '$(Solution)'
 
 - task: VSTest@2
   displayName: 'Run Tests as "$(BuildConfiguration)"'
@@ -44,7 +44,7 @@ steps:
 - task: VSBuild@1
   displayName: Build with MSBuild
   inputs:
-    solution: '**\*.sln'
+    solution: '$(Solution)'
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(Build.ArtifactStagingDirectory)" /p:TransformWebConfigEnabled=false /p:AutoParameterizationWebConfigConnectionStrings=false /p:MarkWebConfigAssistFilesAsExclude=false /p:ProfileTransformWebConfigEnabled=false /p:IsTransformWebConfigDisabled=true'
     configuration: '$(BuildConfiguration)'
     clean: true

@@ -41,14 +41,6 @@ steps:
     searchFolder: '$(System.DefaultWorkingDirectory)'
     codeCoverageEnabled: true
 
-#- task: CopyFiles@2
-#  displayName: 'Copying Files'
-#  inputs:
-#    SourceFolder: '$(Build.SourcesDirectory)'
-#    #Contents: '**\*.*'
-#    Contents: '**\Project\Backend_.NetCore_3_1\*.*'
-#    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-
 - task: VSBuild@1
   displayName: Build with MSBuild
   inputs:

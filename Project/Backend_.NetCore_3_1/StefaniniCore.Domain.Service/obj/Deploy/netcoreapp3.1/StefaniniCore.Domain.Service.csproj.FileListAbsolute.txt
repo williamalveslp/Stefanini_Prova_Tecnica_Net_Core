@@ -1,0 +1,15 @@
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain.Service\bin\Deploy\netcoreapp3.1\StefaniniCore.Domain.Service.deps.json
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain.Service\bin\Deploy\netcoreapp3.1\StefaniniCore.Domain.Service.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain.Service\bin\Deploy\netcoreapp3.1\StefaniniCore.Domain.Service.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain.Service\bin\Deploy\netcoreapp3.1\StefaniniCore.Domain.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain.Service\bin\Deploy\netcoreapp3.1\StefaniniCore.Domain.pdb
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain.Service\obj\Deploy\netcoreapp3.1\StefaniniCore.Domain.Service.csprojAssemblyReference.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain.Service\obj\Deploy\netcoreapp3.1\StefaniniCore.Domain.Service.AssemblyInfoInputs.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain.Service\obj\Deploy\netcoreapp3.1\StefaniniCore.Domain.Service.AssemblyInfo.cs
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain.Service\obj\Deploy\netcoreapp3.1\StefaniniCore.Domain.Service.csproj.CoreCompileInputs.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain.Service\obj\Deploy\netcoreapp3.1\StefaniniCore.Domain.Service.csproj.CopyComplete
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain.Service\obj\Deploy\netcoreapp3.1\StefaniniCore.Domain.Service.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain.Service\obj\Deploy\netcoreapp3.1\StefaniniCore.Domain.Service.pdb
+C:\Users\willi\Desktop\Destino\StefaniniCore.Domain.Service.deps.json
+C:\Users\willi\Desktop\Destino\StefaniniCore.Domain.Service.dll
+C:\Users\willi\Desktop\Destino\StefaniniCore.Domain.Service.pdb

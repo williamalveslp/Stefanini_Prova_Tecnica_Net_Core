@@ -28,7 +28,7 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
         [Theory]
         [InlineData(1, "Test 1", "Description 1")]
         [InlineData(50, "Test 50", "Description 50")]
-        public async Task Insert(int id, string name, string description)
+        public void Insert(int id, string name, string description)
         {
             // Arrange
             Mock<Domain.Entities.Task> mockTask = new Mock<Domain.Entities.Task>();
@@ -68,7 +68,7 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
         [Theory]
         [InlineData(1, "Test 1", "Description 1")]
         [InlineData(50, "Test 50", "Description 50")]
-        public async Task Update(int id, string name, string description)
+        public void Update(int id, string name, string description)
         {
             // Arrange
             Mock<Domain.Entities.Task> mockTask = new Mock<Domain.Entities.Task>();
@@ -108,7 +108,7 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
 
         [Theory]
         [InlineData(5)]
-        public async System.Threading.Tasks.Task GetById(int expectedId)
+        public void GetById(int expectedId)
         {
             // Arrange
             Mock<Domain.Entities.Task> mockTask = new Mock<Domain.Entities.Task>();
@@ -137,7 +137,7 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
 
 
         [Fact]
-        public async Task DeleteById()
+        public void DeleteById()
         {
             // Arrange
             _mockAppService.Setup(f => f.DeleteById(It.IsAny<int>()));

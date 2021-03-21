@@ -54,11 +54,11 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
             var responseValue = JsonConvert.DeserializeObject<ResponseData<ProfileTypeListViewModel>>(responseString);
             Assert.NotNull(responseValue.Data?.ProfileTypes);
             Assert.NotEmpty(responseValue.Data.ProfileTypes);
-    }
+        }
 #endif
 
         [Fact]
-        public async System.Threading.Tasks.Task GetAll()
+        public void GetAll()
         {
             // Arrange
             var mockDataList = GetMockDataList();
@@ -82,7 +82,7 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
         [Theory]
         [InlineData(5)]
         [InlineData(10)]
-        public async System.Threading.Tasks.Task GetById(int expectedId)
+        public void GetById(int expectedId)
         {
             // Arrange
             Mock<ProfileTypeDetailViewModel> mockViewModel = new Mock<ProfileTypeDetailViewModel>();
@@ -107,7 +107,7 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
         }
 
         [Fact]
-        public async System.Threading.Tasks.Task Delete()
+        public void Delete()
         {
             // Arrange
             _mockAppService.Setup(f => f.DeleteById(It.IsAny<int>()));

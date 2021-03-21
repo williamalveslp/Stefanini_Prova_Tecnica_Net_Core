@@ -1,0 +1,32 @@
+﻿.linkMapPage {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    background-color: #e7e7e7;
+}
+
+.tableList {
+    margin-top: 10px;
+}
+
+.requiredFields {
+    color: red;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.requiredField {
+    color: red;
+}
+
+.textboxMaxWidth {
+    max-width: 100%;
+}
+
+.headerNoSignIn {
+    margin-bottom: 30px;
+}
+
+.textColorDeleteButton {
+    color: white !important;
+}

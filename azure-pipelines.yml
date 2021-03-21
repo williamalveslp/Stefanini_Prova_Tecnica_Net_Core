@@ -23,7 +23,7 @@ steps:
   displayName: 'Restore Nuget Packages'
   inputs:
     command: 'restore'
-    restoreSolution: '**/*.sln'
+    restoreSolution: '$(Solution)'
     feedsToUse: 'select'
 
 - task: MSBuild@1
@@ -42,10 +42,25 @@ steps:
     codeCoverageEnabled: true
 
 - task: VSBuild@1
-  displayName: Build with MSBuild
+  displayName: 'MSBuild Publish API'
   inputs:
-    solution: '$(Solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(Build.ArtifactStagingDirectory)" /p:TransformWebConfigEnabled=false /p:AutoParameterizationWebConfigConnectionStrings=false /p:MarkWebConfigAssistFilesAsExclude=false /p:ProfileTransformWebConfigEnabled=false /p:IsTransformWebConfigDisabled=true'
+    solution: '$(ProjectApi)'
+    msbuildArgs: |
+              /t:Publish 
+              /p:Configuration=Deploy 
+              /p:BuildingProject=true;OutDir=$(System.DefaultWorkingDirectory)\ProjectAPI'
+    configuration: '$(BuildConfiguration)'
+    clean: true
+    msbuildArchitecture: 'x64'
+
+- task: VSBuild@1
+  displayName: 'MSBuild Publish Web'
+  inputs:
+    solution: '$(ProjectWeb)'
+    msbuildArgs: |
+              /t:Publish 
+              /p:Configuration=Deploy 
+              /p:BuildingProject=true;OutDir=$(System.DefaultWorkingDirectory)\ProjectWeb'
     configuration: '$(BuildConfiguration)'
     clean: true
     msbuildArchitecture: 'x64'

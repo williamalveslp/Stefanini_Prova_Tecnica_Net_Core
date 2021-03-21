@@ -45,7 +45,7 @@ steps:
   displayName: 'MSBuild Publish API'
   inputs:
     solution: '$(ProjectApi)'
-    msbuildArgs: '/t:Publish  /p:Configuration=Deploy /p:BuildingProject=true;OutDir=$(System.DefaultWorkingDirectory)\ProjectAPI'
+    msbuildArgs: '/t:Publish  /p:Configuration=Deploy /p:BuildingProject=true;OutDir=$(Build.ArtifactStagingDirectory)\ProjectAPI'
     configuration: '$(BuildConfiguration)'
     clean: true
     msbuildArchitecture: 'x64'
@@ -54,7 +54,7 @@ steps:
   displayName: 'MSBuild Publish Web'
   inputs:
     solution: '$(ProjectWeb)'
-    msbuildArgs: '/t:Publish /p:Configuration=Deploy /p:BuildingProject=true;OutDir=$(System.DefaultWorkingDirectory)\ProjectWeb'
+    msbuildArgs: '/t:Publish /p:Configuration=Deploy /p:BuildingProject=true;OutDir=$(Build.ArtifactStagingDirectory)\ProjectWeb'
     configuration: '$(BuildConfiguration)'
     clean: true
     msbuildArchitecture: 'x64'

@@ -46,7 +46,8 @@ steps:
   inputs:
     folderPath: '$(System.DefaultWorkingDirectory)/Project/Backend_.NetCore_3_1/'
     fileType: 'json'
-    targetFiles: '-transform **\$(ProjectApiName)\appsettings.Production.json -json **\$(ProjectApiName)\appsettings.json'
+    targetFiles: '-transform $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\StefaniniCore.API\appsettings.Production.json -json $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\StefaniniCore.API\appsettings.json'
+    #targetFiles: '-transform **\$(ProjectApiName)\appsettings.Production.json -json **\$(ProjectApiName)\appsettings.json'
 
 - task: VSBuild@1
   displayName: 'MSBuild Publish API'

@@ -44,7 +44,7 @@ steps:
 - task: FileTransform@1
   displayName: Transform Configurations ($(ProjectApiName))
   inputs:
-    folderPath: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    folderPath: '$(System.DefaultWorkingDirectory)/**/Backend_.NetCore_3_1/'
     fileType: 'json'
     targetFiles: '-transform **\$(ProjectApiName)\appsettings.Production.json -json **\$(ProjectApiName)\appsettings.json'
 

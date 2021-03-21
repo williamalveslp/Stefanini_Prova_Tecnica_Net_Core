@@ -36,18 +36,27 @@ steps:
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      **\$(BuildConfiguration)\netcoreapp3.1\StefaniniCore.*.Tests.dll
+      **\$(BuildConfiguration)\**\StefaniniCore.*.Tests.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
     codeCoverageEnabled: true
 
-- task: CopyFiles@2
-  displayName: 'Copying Files'
+#- task: CopyFiles@2
+#  displayName: 'Copying Files'
+#  inputs:
+#    SourceFolder: '$(Build.SourcesDirectory)'
+#    #Contents: '**\*.*'
+#    Contents: '**\Project\Backend_.NetCore_3_1\*.*'
+#    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: VSBuild@1
+  displayName: Build with MSBuild
   inputs:
-    SourceFolder: '$(Build.SourcesDirectory)'
-    #Contents: '**\*.*'
-    Contents: '**\Project\Backend_.NetCore_3_1\*.*'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    solution: '**\*.sln'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(Build.ArtifactStagingDirectory)" /p:TransformWebConfigEnabled=false /p:AutoParameterizationWebConfigConnectionStrings=false /p:MarkWebConfigAssistFilesAsExclude=false /p:ProfileTransformWebConfigEnabled=false /p:IsTransformWebConfigDisabled=true'
+    configuration: '$(BuildConfiguration)'
+    clean: true
+    msbuildArchitecture: 'x64'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Generate Artifacts'

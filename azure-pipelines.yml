@@ -46,7 +46,7 @@ steps:
   inputs:
     folderPath: '$(System.DefaultWorkingDirectory)/**/*.zip'
     fileType: 'json'
-    targetFiles: '-transform **\$(ProjectApiName)\*.Development.json -json **\$(ProjectApiName)\*.json'
+    targetFiles: '-transform **\$(ProjectApiName)\appsettings.Development.json -json **\$(ProjectApiName)\appsettings.json'
 
 - task: VSBuild@1
   displayName: 'MSBuild Publish API'

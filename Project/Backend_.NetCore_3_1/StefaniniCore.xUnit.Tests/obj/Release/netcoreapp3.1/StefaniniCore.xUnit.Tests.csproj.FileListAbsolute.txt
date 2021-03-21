@@ -486,3 +486,5 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\Stefa
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\obj\Release\netcoreapp3.1\StefaniniCore.xUnit.Tests.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\obj\Release\netcoreapp3.1\StefaniniCore.xUnit.Tests.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\obj\Release\netcoreapp3.1\StefaniniCore.xUnit.Tests.genruntimeconfig.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Release\netcoreapp3.1\Swashbuckle.AspNetCore.Annotations.dll
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Release\netcoreapp3.1\appsettings.Production.json

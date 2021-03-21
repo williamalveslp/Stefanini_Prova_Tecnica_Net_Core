@@ -5,9 +5,9 @@ using StefaniniCore.Application.AppInterfaces;
 using StefaniniCore.Application.InputModels.Tasks;
 using StefaniniCore.Application.Responses;
 using StefaniniCore.Application.ViewModels;
+using Swashbuckle.AspNetCore.Annotations;
 using System;
 using System.Net;
-using System.Threading.Tasks;
 
 namespace StefaniniCore.API.Controllers
 {
@@ -25,16 +25,11 @@ namespace StefaniniCore.API.Controllers
             this._appService = appService;
         }
 
-        // api/Tasks/5
-        /// <summary>
-        /// List of Tasks by Id.
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
         [HttpGet("{id}")]
+        [SwaggerOperation(Summary = "List of Tasks by Id.")]
         [ProducesResponseType(typeof(TaskDetailViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> GetById(int id)
+        public IActionResult GetById(int id)
         {
             try
             {
@@ -46,16 +41,11 @@ namespace StefaniniCore.API.Controllers
             }
         }
 
-        // api/Tasks
-        /// <summary>
-        ///  Insert the Task.
-        /// </summary>
-        /// <param name="inputModel"></param>
-        /// <returns></returns>
         [HttpPost]
+        [SwaggerOperation(Summary = "Insert the Task.")]
         [ProducesResponseType(typeof(TaskDetailViewModel), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> Insert([FromBody] TaskInputModel inputModel)
+        [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]       
+        public IActionResult Insert([FromBody] TaskInputModel inputModel)
         {
             try
             {
@@ -67,16 +57,11 @@ namespace StefaniniCore.API.Controllers
             }
         }
 
-        // api/Tasks
-        /// <summary>
-        /// Update the Task.
-        /// </summary>
-        /// <param name="inputModel"></param>
-        /// <returns></returns>
         [HttpPut]
+        [SwaggerOperation(Summary = "Update the Task")]
         [ProducesResponseType(typeof(TaskDetailViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> Update([FromBody] TaskInputModel inputModel)
+        public IActionResult Update([FromBody] TaskInputModel inputModel)
         {
             try
             {
@@ -88,15 +73,11 @@ namespace StefaniniCore.API.Controllers
             }
         }
 
-        // api/Tasks
-        /// <summary>
-        /// List of Tasks.
-        /// </summary>
-        /// <returns></returns>
         [HttpGet]
+        [SwaggerOperation(Summary = "List of Tasks.")]
         [ProducesResponseType(typeof(TaskListViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> Get()
+        public IActionResult Get()
         {
             try
             {
@@ -108,16 +89,11 @@ namespace StefaniniCore.API.Controllers
             }
         }
 
-        // api/Tasks
-        /// <summary>
-        /// Delete the Task by Id.
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
         [HttpDelete("{id}")]
+        [SwaggerOperation(Summary = " Delete the Task by Id.")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> Delete(int id)
+        public IActionResult Delete(int id)
         {
             try
             {

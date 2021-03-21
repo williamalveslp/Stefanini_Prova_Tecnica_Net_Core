@@ -4,9 +4,9 @@ using StefaniniCore.API.Controllers.Base;
 using StefaniniCore.Application.AppInterfaces;
 using StefaniniCore.Application.Responses;
 using StefaniniCore.Application.ViewModels;
+using Swashbuckle.AspNetCore.Annotations;
 using System;
 using System.Net;
-using System.Threading.Tasks;
 
 namespace StefaniniCore.API.Controllers
 {
@@ -24,16 +24,11 @@ namespace StefaniniCore.API.Controllers
             this._appService = appService;
         }
 
-        // api/ProfileType/5
-        /// <summary>
-        /// List of ProfileType by Id.
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
         [HttpGet("{id}")]
+        [SwaggerOperation(Summary = "List of ProfileType by Id.")]
         [ProducesResponseType(typeof(ProfileTypeDetailViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> GetById(int id)
+        public IActionResult GetById(int id)
         {
             try
             {
@@ -45,15 +40,11 @@ namespace StefaniniCore.API.Controllers
             }
         }
 
-        // api/ProfileType
-        /// <summary>
-        /// List of ProfileTypes.
-        /// </summary>
-        /// <returns></returns>
         [HttpGet]
+        [SwaggerOperation(Summary = "List of ProfileTypes.")]
         [ProducesResponseType(typeof(ProfileTypeListViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> Get()
+        public IActionResult Get()
         {
             try
             {
@@ -65,16 +56,11 @@ namespace StefaniniCore.API.Controllers
             }
         }
 
-        // api/Tasks
-        /// <summary>
-        /// Delete the ProfileType by Id.
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
         [HttpDelete("{id}")]
+        [SwaggerOperation(Summary = "Delete the ProfileType by Id.")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> Delete(int id)
+        public IActionResult Delete(int id)
         {
             try
             {

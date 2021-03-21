@@ -42,9 +42,6 @@ namespace StefaniniCore.xUnit.Tests.ServicesTests
             // Assert
             _mockRepository.Verify(f => f.Insert(It.Is<ProfileType>(f => f.Name == name)), Times.Once);
 
-            // TEST TO FAILED.
-            //Assert.Null(result);
-
             Assert.NotNull(result);
         }
 

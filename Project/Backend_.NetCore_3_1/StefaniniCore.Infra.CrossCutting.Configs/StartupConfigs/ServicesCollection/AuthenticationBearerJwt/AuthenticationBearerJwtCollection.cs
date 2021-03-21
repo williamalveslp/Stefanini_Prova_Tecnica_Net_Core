@@ -8,9 +8,6 @@ using System.Text;
 
 namespace StefaniniCore.Infra.CrossCutting.Configs.StartupConfigs.ServicesCollection.AuthenticationBearerJwt
 {
-    /// <summary>
-    /// Authentication and Authorization with Bearer JWT Token.
-    /// </summary>
     public static class AuthenticationBearerJwtCollection
     {
         /// <summary>

@@ -50,7 +50,7 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
             };
 
             // Action
-            var response = await _controller.Insert(inputModel);
+            var response = _controller.Insert(inputModel);
 
             // Assert
             Assert.NotNull(response);
@@ -91,7 +91,7 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
             };
 
             // Action
-            var response = await _controller.Update(inputModel);
+            var response = _controller.Update(inputModel);
 
             // Assert
             Assert.NotNull(response);
@@ -122,7 +122,7 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
             _mockAppService.Setup(f => f.GetById(expectedId)).Returns(mockViewModel.Object);
 
             // Action
-            var response = await _controller.GetById(expectedId);
+            var response = _controller.GetById(expectedId);
 
             // Assert
             Assert.NotNull(response);
@@ -143,7 +143,7 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
             _mockAppService.Setup(f => f.DeleteById(It.IsAny<int>()));
 
             // Action
-            var response = await _controller.Delete(It.IsAny<int>());
+            var response = _controller.Delete(It.IsAny<int>());
 
             // Assert
             Assert.NotNull(response);

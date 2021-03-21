@@ -7,9 +7,6 @@ using System.Text;
 
 namespace StefaniniCore.Infra.CrossCutting.Configs.TokenBearerJwt
 {
-    /// <summary>
-    /// Token Bearer configurations.
-    /// </summary>
     public static class TokenBearerJwtConfig
     {
         /// <summary>

@@ -65,7 +65,7 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
             _mockAppService.Setup(f => f.GetAll()).Returns(mockDataList);
 
             // Action
-            var response = await _controller.Get();
+            var response = _controller.Get();
 
             // Assert
             Assert.NotNull(response);
@@ -93,7 +93,7 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
             _mockAppService.Setup(f => f.GetById(expectedId)).Returns(mockViewModel.Object);
 
             // Action
-            var response = await _controller.GetById(expectedId);
+            var response = _controller.GetById(expectedId);
 
             // Assert
             Assert.NotNull(response);
@@ -113,7 +113,7 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
             _mockAppService.Setup(f => f.DeleteById(It.IsAny<int>()));
 
             // Action
-            var response = await _controller.Delete(It.IsAny<int>());
+            var response = _controller.Delete(It.IsAny<int>());
 
             // Assert
             Assert.NotNull(response);

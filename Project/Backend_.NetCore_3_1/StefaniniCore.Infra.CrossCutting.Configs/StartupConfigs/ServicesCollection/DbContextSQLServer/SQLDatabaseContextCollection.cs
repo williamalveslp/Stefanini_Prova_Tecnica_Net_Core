@@ -5,7 +5,7 @@ using StefaniniCore.Infra.CrossCutting.Configs.DataTransfers;
 
 namespace StefaniniCore.Infra.CrossCutting.Configs.ServicesCollection
 {
-    public static class SQLDatabaseContextCollection
+    public static class SqlDatabaseContextCollection
     {
         public static void AddDbContextSQLServer(this IServiceCollection services, IConfiguration configuration)
         {

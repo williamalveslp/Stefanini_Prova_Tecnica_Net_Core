@@ -16,6 +16,8 @@ namespace StefaniniCore.Infra.CrossCutting.Configs.ServicesCollection
 
             _ = services.AddSwaggerGen(c =>
             {
+                c.EnableAnnotations();
+
                 c.SwaggerDoc(swaggerData.ServiceCollection.Version,
                     new OpenApiInfo
                     {
@@ -33,6 +35,9 @@ namespace StefaniniCore.Infra.CrossCutting.Configs.ServicesCollection
                 // Set the comments path for the Swagger JSON and UI (Properties > Build > set 'XML documentation file').
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+
+                if (!File.Exists(xmlPath)) return;
+
                 c.IncludeXmlComments(xmlPath);
             });
         }

@@ -221,3 +221,4 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\Stefa
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.UI\obj\Release\netcoreapp3.1\StefaniniCore.UI.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.UI\obj\Release\netcoreapp3.1\StefaniniCore.UI.pdb
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.UI\obj\Release\netcoreapp3.1\StefaniniCore.UI.genruntimeconfig.cache
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.UI\bin\Release\netcoreapp3.1\Swashbuckle.AspNetCore.Annotations.dll

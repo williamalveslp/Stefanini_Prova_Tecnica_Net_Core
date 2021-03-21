@@ -42,7 +42,7 @@ steps:
     codeCoverageEnabled: true
 
 - task: FileTransform@1
-  displayName: Transform Configurations
+  displayName: Transform Configurations ($(ProjectApiName))
   inputs:
     folderPath: '$(System.DefaultWorkingDirectory)/**/*.zip'
     fileType: 'json'

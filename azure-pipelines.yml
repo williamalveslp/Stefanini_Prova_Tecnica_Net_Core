@@ -41,6 +41,13 @@ steps:
     searchFolder: '$(System.DefaultWorkingDirectory)'
     codeCoverageEnabled: true
 
+- task: FileTransform@1
+  displayName: Transform Configurations
+  inputs:
+    folderPath: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    fileType: 'json'
+    targetFiles: '-transform **\$(ProjectApiName)\*.Development.json -json **\$(ProjectApiName)\*.json'
+
 - task: VSBuild@1
   displayName: 'MSBuild Publish API'
   inputs:

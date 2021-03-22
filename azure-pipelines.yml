@@ -30,6 +30,7 @@ steps:
   displayName: 'Build Solution as "$(BuildConfiguration)"'
   inputs:
     solution: '$(Solution)'
+    msbuildArchitecture: 'x86'
 
 - task: VSTest@2
   displayName: 'Run Tests as "$(BuildConfiguration)"'

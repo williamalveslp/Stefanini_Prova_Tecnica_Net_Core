@@ -70,7 +70,7 @@ steps:
 - task: FileTransform@1
   displayName: Transform Configurations ($(ProjectApiName))
   inputs:
-    folderPath: '$(Build.ArtifactStagingDirectory)/**/*.zip'
+    folderPath: '$(Build.ArtifactStagingDirectory)/drop.zip'
     #folderPath: '$(System.DefaultWorkingDirectory)/**/$(ProjectApiArtifact).zip'
     fileType: 'json'
     targetFiles: '-transform **/StefaniniCore.API/appsettings.Production.json -json **/StefaniniCore.API/appsettings.json'

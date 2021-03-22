@@ -42,8 +42,10 @@ steps:
     codeCoverageEnabled: true
 
 - task: FileTransform@1
+  displayName: 'File Transform ($(ProjectApiName))'
   inputs:
-    folderPath: '$(System.DefaultWorkingDirectory)/'
+    folderPath: '$(System.DefaultWorkingDirectory)/**/StefaniniCore.API/'
+    #folderPath: '$(System.DefaultWorkingDirectory)/'
     fileType: 'json'
     targetFiles: '**/appsettings.json'
 
@@ -71,14 +73,3 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-
-
-#- task: FileTransform@1
-#  displayName: Transform Configurations ($(ProjectApiName))
-#  inputs:
-#    folderPath: '$(Build.ArtifactStagingDirectory)/drop.zip'
-    #folderPath: '$(System.DefaultWorkingDirectory)/**/$(ProjectApiArtifact).zip'
-#    fileType: 'json'
-#    targetFiles: '-transform **/StefaniniCore.API/appsettings.Production.json -json **/StefaniniCore.API/appsettings.json'
-    #targetFiles: '-transform **\$(ProjectApiName)\appsettings.Production.json -json **\$(ProjectApiName)\appsettings.json'
-

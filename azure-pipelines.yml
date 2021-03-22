@@ -43,7 +43,7 @@ steps:
     codeCoverageEnabled: true
 
 - task: FileTransform@1
-  displayName: 'File Transform (API)'
+  displayName: 'File Transform API'
   inputs:
     folderPath: '$(System.DefaultWorkingDirectory)/Project/Backend_.NetCore_3_1/StefaniniCore.API/'
     fileType: 'json'

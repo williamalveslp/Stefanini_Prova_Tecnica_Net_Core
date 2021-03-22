@@ -45,7 +45,6 @@ steps:
   displayName: 'File Transform ($(ProjectApiName))'
   inputs:
     folderPath: '$(System.DefaultWorkingDirectory)/**/StefaniniCore.API/'
-    #folderPath: '$(System.DefaultWorkingDirectory)/'
     fileType: 'json'
     targetFiles: '**/appsettings.json'
 

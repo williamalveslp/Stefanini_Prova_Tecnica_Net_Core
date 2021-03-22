@@ -69,7 +69,8 @@ steps:
 - task: FileTransform@1
   displayName: Transform Configurations ($(ProjectApiName))
   inputs:
-    folderPath: '$(System.DefaultWorkingDirectory)/**/$(ProjectApiArtifact).zip'
+    folderPath: '$(Build.ArtifactStagingDirectory)/**/$(ProjectApiArtifact).zip'
+    #folderPath: '$(System.DefaultWorkingDirectory)/**/$(ProjectApiArtifact).zip'
     fileType: 'json'
     #targetFiles: '-transform $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\StefaniniCore.API\appsettings.Production.json -json $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\StefaniniCore.API\appsettings.json'
     targetFiles: '-transform **\$(ProjectApiName)\appsettings.Production.json -json **\$(ProjectApiName)\appsettings.json'

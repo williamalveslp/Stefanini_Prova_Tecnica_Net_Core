@@ -42,17 +42,18 @@ steps:
     codeCoverageEnabled: true
 
 - task: FileTransform@1
-  displayName: Transform Configurations ($(ProjectApiName))
+  displayName: 'File Transform ($(ProjectApiName))'
   inputs:
-    folderPath: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    folderPath: '$(System.DefaultWorkingDirectory)/**/StefaniniCore.API/'
+    #folderPath: '$(System.DefaultWorkingDirectory)/'
     fileType: 'json'
-    targetFiles: '-transform **\$(ProjectApiName)\appsettings.Production.json -json **\$(ProjectApiName)\appsettings.json'
+    targetFiles: '**/appsettings.json'
 
 - task: VSBuild@1
   displayName: 'MSBuild Publish API'
   inputs:
     solution: '$(ProjectApi)'
-    msbuildArgs: '/t:Publish  /p:Configuration=Deploy /p:BuildingProject=true;OutDir=$(Build.ArtifactStagingDirectory)\ProjectAPI'
+    msbuildArgs: '/t:Publish  /p:Configuration=Deploy /p:BuildingProject=true;OutDir=$(Build.ArtifactStagingDirectory)\$(ProjectApiArtifact)'
     configuration: '$(BuildConfiguration)'
     clean: true
     msbuildArchitecture: 'x64'
@@ -61,7 +62,7 @@ steps:
   displayName: 'MSBuild Publish Web'
   inputs:
     solution: '$(ProjectWeb)'
-    msbuildArgs: '/t:Publish /p:Configuration=Deploy /p:BuildingProject=true;OutDir=$(Build.ArtifactStagingDirectory)\ProjectWeb'
+    msbuildArgs: '/t:Publish /p:Configuration=Deploy /p:BuildingProject=true;OutDir=$(Build.ArtifactStagingDirectory)\$(ProjectWebArtifact)'
     configuration: '$(BuildConfiguration)'
     clean: true
     msbuildArchitecture: 'x64'

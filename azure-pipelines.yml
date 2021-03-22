@@ -30,7 +30,7 @@ steps:
   displayName: 'Build Solution as "$(BuildConfiguration)"'
   inputs:
     solution: '$(Solution)'
-    msbuildArchitecture: 'x86'
+    msbuildArchitecture: 'x86' 
 
 - task: VSTest@2
   displayName: 'Run Tests as "$(BuildConfiguration)"'
@@ -56,7 +56,7 @@ steps:
     msbuildArgs: '/t:Publish  /p:Configuration=Deploy /p:BuildingProject=true;OutDir=$(Build.ArtifactStagingDirectory)\$(ProjectApiArtifact)'
     configuration: '$(BuildConfiguration)'
     clean: true
-    msbuildArchitecture: 'x64'
+    msbuildArchitecture: 'x86'
 
 - task: VSBuild@1
   displayName: 'MSBuild Publish Web'
@@ -65,7 +65,7 @@ steps:
     msbuildArgs: '/t:Publish /p:Configuration=Deploy /p:BuildingProject=true;OutDir=$(Build.ArtifactStagingDirectory)\$(ProjectWebArtifact)'
     configuration: '$(BuildConfiguration)'
     clean: true
-    msbuildArchitecture: 'x64'
+    msbuildArchitecture: 'x86'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Generate Artifacts'

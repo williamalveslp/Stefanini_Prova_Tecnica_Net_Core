@@ -41,19 +41,11 @@ steps:
     searchFolder: '$(System.DefaultWorkingDirectory)'
     codeCoverageEnabled: true
 
-- task: FileTransform@1
-  displayName: Transform Configurations ($(ProjectApiName))
-  inputs:
-    folderPath: '$(System.DefaultWorkingDirectory)/Project/Backend_.NetCore_3_1/'
-    fileType: 'json'
-    targetFiles: '-transform $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\StefaniniCore.API\appsettings.Production.json -json $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\StefaniniCore.API\appsettings.json'
-    #targetFiles: '-transform **\$(ProjectApiName)\appsettings.Production.json -json **\$(ProjectApiName)\appsettings.json'
-
 - task: VSBuild@1
   displayName: 'MSBuild Publish API'
   inputs:
     solution: '$(ProjectApi)'
-    msbuildArgs: '/t:Publish  /p:Configuration=Deploy /p:BuildingProject=true;OutDir=$(Build.ArtifactStagingDirectory)\ProjectAPI'
+    msbuildArgs: '/t:Publish  /p:Configuration=Deploy /p:BuildingProject=true;OutDir=$(Build.ArtifactStagingDirectory)\$(ProjectApiArtifact)'
     configuration: '$(BuildConfiguration)'
     clean: true
     msbuildArchitecture: 'x64'
@@ -62,7 +54,7 @@ steps:
   displayName: 'MSBuild Publish Web'
   inputs:
     solution: '$(ProjectWeb)'
-    msbuildArgs: '/t:Publish /p:Configuration=Deploy /p:BuildingProject=true;OutDir=$(Build.ArtifactStagingDirectory)\ProjectWeb'
+    msbuildArgs: '/t:Publish /p:Configuration=Deploy /p:BuildingProject=true;OutDir=$(Build.ArtifactStagingDirectory)\$(ProjectWebArtifact)'
     configuration: '$(BuildConfiguration)'
     clean: true
     msbuildArchitecture: 'x64'
@@ -73,3 +65,12 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+
+- task: FileTransform@1
+  displayName: Transform Configurations ($(ProjectApiName))
+  inputs:
+    folderPath: '$(System.DefaultWorkingDirectory)/**/$(ProjectApiArtifact).zip'
+    fileType: 'json'
+    #targetFiles: '-transform $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\StefaniniCore.API\appsettings.Production.json -json $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\StefaniniCore.API\appsettings.json'
+    targetFiles: '-transform **\$(ProjectApiName)\appsettings.Production.json -json **\$(ProjectApiName)\appsettings.json'
+

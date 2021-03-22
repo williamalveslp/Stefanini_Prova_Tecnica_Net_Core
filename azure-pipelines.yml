@@ -41,6 +41,12 @@ steps:
     searchFolder: '$(System.DefaultWorkingDirectory)'
     codeCoverageEnabled: true
 
+- task: FileTransform@1
+  inputs:
+    folderPath: '$(System.DefaultWorkingDirectory)/'
+    fileType: 'json'
+    targetFiles: '**/appsettings.json'
+
 - task: VSBuild@1
   displayName: 'MSBuild Publish API'
   inputs:
@@ -67,12 +73,12 @@ steps:
     publishLocation: 'Container'
 
 
-- task: FileTransform@1
-  displayName: Transform Configurations ($(ProjectApiName))
-  inputs:
-    folderPath: '$(Build.ArtifactStagingDirectory)/drop.zip'
+#- task: FileTransform@1
+#  displayName: Transform Configurations ($(ProjectApiName))
+#  inputs:
+#    folderPath: '$(Build.ArtifactStagingDirectory)/drop.zip'
     #folderPath: '$(System.DefaultWorkingDirectory)/**/$(ProjectApiArtifact).zip'
-    fileType: 'json'
-    targetFiles: '-transform **/StefaniniCore.API/appsettings.Production.json -json **/StefaniniCore.API/appsettings.json'
+#    fileType: 'json'
+#    targetFiles: '-transform **/StefaniniCore.API/appsettings.Production.json -json **/StefaniniCore.API/appsettings.json'
     #targetFiles: '-transform **\$(ProjectApiName)\appsettings.Production.json -json **\$(ProjectApiName)\appsettings.json'
 

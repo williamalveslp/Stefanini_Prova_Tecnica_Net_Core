@@ -37,14 +37,14 @@ steps:
     solution: '$(Solution)'
     msbuildArchitecture: 'x86' 
 
-- script: dotnet test Project\Backend_.NetCore_3_1\StefaniniCore.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=TestResults\Coverage.xml
+- script: dotnet test Project\Backend_.NetCore_3_1\StefaniniCore.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=Project\Backend_.NetCore_3_1\TestResults\Coverage.xml
   displayName: 'Run Tests with Coverage'
   condition: always()
 
 # Way 1.1.
 - script: |
-    cd Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\TestResults
-    reportgenerator '-reports:Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\CodeReports\' -reporttype:Html
+    cd Project\Backend_.NetCore_3_1\TestResults
+    reportgenerator '-reports:Coverage.xml' '-targetdir:Project\Backend_.NetCore_3_1\TestResults\CodeReports\' -reporttype:Html
   displayName: 'Run Report Generator'
   condition: always()
 
@@ -96,6 +96,6 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Generate Artifacts Report Coverage'
   inputs:
-    PathtoPublish: '$(System.DefaultWorkingDirectory)\CodeReports'
+    PathtoPublish: 'Project\Backend_.NetCore_3_1\TestResults\CodeReports'
     ArtifactName: 'drop/ReportCoverage'
     publishLocation: 'Container'

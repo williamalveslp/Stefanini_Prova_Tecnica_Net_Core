@@ -32,15 +32,30 @@ steps:
     solution: '$(Solution)'
     msbuildArchitecture: 'x86' 
 
-- task: VSTest@2
-  displayName: 'Run Tests as "$(BuildConfiguration)"'
-  inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\$(BuildConfiguration)\**\StefaniniCore.*.Tests.dll
-      !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)'
-    codeCoverageEnabled: true
+# Way 1: Run tests with Report Generator
+- script: dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
+  displayName: 'Install Report Generator'
+  condition: always()
+
+# Way 1.1.
+- script: |
+    cd $(PathTestResults)
+    ls
+    cs $(ls -d */|head -n 1)
+    reportgenerator '-reports:coverage.cobertura.xml' '-targetdir:coveragereport' -reporttype:Html
+  displayName: Run Report Generator
+  condition: always()
+
+# Way 2: Run tests.
+#- task: VSTest@2
+#  displayName: 'Run Tests as "$(BuildConfiguration)"'
+#  inputs:
+#    testSelector: 'testAssemblies'
+#    testAssemblyVer2: |
+#      **\$(BuildConfiguration)\**\StefaniniCore.*.Tests.dll
+#      !**\obj\**
+#    searchFolder: '$(System.DefaultWorkingDirectory)'
+#    codeCoverageEnabled: true
 
 - task: FileTransform@1
   displayName: 'File Transform API'
@@ -68,8 +83,17 @@ steps:
     msbuildArchitecture: 'x86'
 
 - task: PublishBuildArtifacts@1
-  displayName: 'Generate Artifacts'
+  displayName: 'Generate Artifacts Publishes'
+  condition: always()
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
+    ArtifactName: 'drop/Publishes'
+    publishLocation: 'Container'
+
+# Way 1.2.
+- task: PublishBuildArtifacts@1
+  displayName: 'Generate Artifacts Report Coverage'
+  inputs:
+    PathtoPublish: '$(PathTestResults)'
+    ArtifactName: 'drop/ReportCoverage'
     publishLocation: 'Container'

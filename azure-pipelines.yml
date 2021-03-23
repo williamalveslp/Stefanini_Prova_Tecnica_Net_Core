@@ -30,7 +30,7 @@ steps:
       dotnet tool install dotnet-reportgenerator-globaltool --tool-path tools --version 4.8.6
       dotnet new tool-manifest
       dotnet tool install dotnet-reportgenerator-globaltool --version --version 4.8.6
-  displayName: 'Install Report Generator (Many)'
+  displayName: 'Install Report Generator'
   condition: always()
   continueOnError: true
 
@@ -48,31 +48,25 @@ steps:
     configuration: $(BuildConfiguration)
     msbuildArchitecture: 'x86' 
 
-- script: dotnet test Project\Backend_.NetCore_3_1\StefaniniCore.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=Project\Backend_.NetCore_3_1\TestResults\Coverage.xml
+- script: dotnet test Project\Backend_.NetCore_3_1\StefaniniCore.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=$(System.DefaultWorkingDirectory)\Project\TestResults\Coverage.xml
   displayName: 'Run Tests with Coverage'
   condition: always()
   continueOnError: true
   
-- script: |
-      cd $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults
-      mkdir CodeReports
-  displayName: 'Create Folder'
-  continueOnError: true
-
-- script: reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports" -reporttype:Html
+- script: reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\TestResults\CodeReports" -reporttype:Html
   displayName: 'Run Report Generator 1'
   continueOnError: true
 
-- script: reportgenerator "-reports:Project\Backend_.NetCore_3_1\TestResults\Coverage.xml" "-targetdir:Project\Backend_.NetCore_3_1\TestResults\CodeReports" -reporttype:Html
-  displayName: 'Run Report Generator 2'
-  continueOnError: true
+#- script: reportgenerator "-reports:Project\Backend_.NetCore_3_1\TestResults\Coverage.xml" "-targetdir:Project\Backend_.NetCore_3_1\TestResults\CodeReports" -reporttype:Html
+#  displayName: 'Run Report Generator 2'
+#  continueOnError: true
 
 - task: CmdLine@2
   displayName: 'Run Report Generator 3'
   inputs:
     script: |
       echo Generating Report Generator from Coverage 
-      reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports" -reporttype:Html
+      reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\TestResults\CodeReports" -reporttype:Html
   continueOnError: true
 
 # ReportGenerator must be performed by NuGetCLI.
@@ -88,13 +82,14 @@ steps:
   displayName: Show directories for 'NuGetCommand@2'
   inputs:
     script: |
-      echo 'Show directories in "Project\Backend_.NetCore_3_1\TestResults\"':
-      cd $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\
+      echo 'Show directories in "Project\TestResults\"':
+      cd $(System.DefaultWorkingDirectory)\Project\TestResults\
       dir
-      echo 'Show directories in "$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports"':
-      cd $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports
+      echo 'Show directories in "$(System.DefaultWorkingDirectory)\Project\TestResults\CodeReports"':
+      cd $(System.DefaultWorkingDirectory)\Project\TestResults\CodeReports
       dir
-
+  continueOnError: true
+  
 # Way 1.1.
 - script: dotnet reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports" -reporttype:Html
   displayName: 'Run Report Generator 1'

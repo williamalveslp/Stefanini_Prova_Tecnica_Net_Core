@@ -37,7 +37,7 @@ steps:
     solution: '$(Solution)'
     msbuildArchitecture: 'x86' 
 
-- script: dotnet test $(ProjectFilePathxUnitTests) /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=TestResults\Coverage.xml
+- script: dotnet test $(Solution) /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=TestResults\Coverage.xml
   displayName: 'Run Tests with Coverage'
   condition: always()
 

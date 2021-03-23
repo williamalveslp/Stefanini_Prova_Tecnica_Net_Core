@@ -54,8 +54,8 @@ steps:
   continueOnError: true
   
 - script: |
-      cd $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1
-      mkdir TestResults
+      cd $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults
+      mkdir CodeReports
   displayName: 'Create Folder'
   continueOnError: true
 

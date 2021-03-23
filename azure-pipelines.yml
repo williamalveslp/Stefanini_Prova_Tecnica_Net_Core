@@ -14,15 +14,14 @@ variables:
 
 steps:
 - task: UseDotNet@2
-  displayName: 'Install SDK .Net Core 5.x'
+  displayName: 'Install SDK .Net Core 3.1.x'
   inputs:
     packageType: 'sdk'
-    version: '5.x'  
-   # version: '3.1.x'  
+    version: '3.1.x'  
 
  # Way 1: Run tests with Report Generator
 - script: dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
-  displayName: 'Install Report Generator TEST'
+  displayName: 'Install Report Generator'
   condition: always()
   continueOnError: true
 

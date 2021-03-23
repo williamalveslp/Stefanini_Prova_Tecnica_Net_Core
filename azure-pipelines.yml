@@ -57,7 +57,7 @@ steps:
 #  condition: always()
   
 # Way 1.1.
-- script: dotnet reportgenerator '-reports:$(System.DefaultWorkingDirectory)/Project/Backend_.NetCore_3_1/TestResults/Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)/Project/Backend_.NetCore_3_1/TestResults/CodeReports' -reporttype:Html
+- script: dotnet reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports' -reporttype:Html
   displayName: 'Run Report Generator'
   condition: always()
   continueOnError: true

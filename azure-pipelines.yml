@@ -53,8 +53,16 @@ steps:
   condition: always()
   continueOnError: true
   
+- script: |
+      cd $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1
+      mk dir TestResults
+  displayName: 'Create Folder'
+
 - script: reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports" -reporttype:Html
-  displayName: 'Run Report Generator'
+  displayName: 'Run Report Generator 1'
+
+- script: reportgenerator "-reports:Project\Backend_.NetCore_3_1\TestResults\Coverage.xml" "-targetdir:Project\Backend_.NetCore_3_1\TestResults\CodeReports" -reporttype:Html
+  displayName: 'Run Report Generator 2'
 
 # ReportGenerator must be performed by NuGetCLI.
 #- task: NuGetCommand@2
@@ -70,7 +78,7 @@ steps:
   inputs:
     script: |
       echo 'Show directories in "Project\Backend_.NetCore_3_1\TestResults\"':
-      cd Project\Backend_.NetCore_3_1\TestResults\
+      cd $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\
       dir
       echo 'Show directories in "$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports"':
       cd $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports
@@ -87,7 +95,7 @@ steps:
   inputs:
     script: |
       echo 'Show directories in "Project\Backend_.NetCore_3_1\TestResults\"':
-      cd Project\Backend_.NetCore_3_1\TestResults\
+      cd $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\
       dir
       echo 'Show directories in "$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports"':
       cd $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports

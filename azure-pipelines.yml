@@ -41,7 +41,7 @@ steps:
 - script: |
     cd $(PathTestResults)
     ls
-    cs $(ls -d */|head -n 1)
+    cd $(ls -d */|head -n 1)
     reportgenerator '-reports:coverage.cobertura.xml' '-targetdir:coveragereport' -reporttype:Html
   displayName: Run Report Generator
   condition: always()

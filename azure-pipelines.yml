@@ -42,7 +42,7 @@ steps:
   condition: always()
 
 # Way 1.1.
-- script: reportgenerator '-reports:Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:Project\Backend_.NetCore_3_1\TestResults\CodeReports\' -reporttype:Html
+- script: reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports\' -reporttype:Html
   displayName: 'Run Report Generator'
   condition: always()
 

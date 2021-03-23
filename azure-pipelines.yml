@@ -20,8 +20,17 @@ steps:
     version: '3.1.x'  
 
  # Way 1: Run tests with Report Generator
-- script: dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
-  displayName: 'Install Report Generator'
+#- script: dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
+#  displayName: 'Install Report Generator'
+#  condition: always()
+#  continueOnError: true
+
+- script: |
+      dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
+      dotnet tool install dotnet-reportgenerator-globaltool --tool-path tools --version 4.8.6
+      dotnet new tool-manifest
+      dotnet tool install dotnet-reportgenerator-globaltool --version --version 4.8.6
+  displayName: 'Install Report Generator (Many)'
   condition: always()
   continueOnError: true
 
@@ -45,18 +54,41 @@ steps:
   continueOnError: true
   
 # ReportGenerator must be performed by NuGetCLI.
-#- task: NuGetCommand@2
-#  displayName: 'Run Report Generator'
-#  inputs:
-#    command: 'custom'
-#    arguments: reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports\' -reporttype:Html
-#  condition: always()
-  
+- task: NuGetCommand@2
+  displayName: 'Run Report Generator'
+  inputs:
+    command: 'custom'
+    arguments: reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports' -reporttype:Html
+  condition: always()
+  continueOnError: true
+
+- task: CmdLine@2
+  displayName: Show directories for 'NuGetCommand@2'
+  inputs:
+    script: |
+      echo 'Show directories in "$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\"':
+      cd $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\
+      dir
+      echo 'Show directories in "$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports"':
+      cd $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports
+      dir
+
 # Way 1.1.
 - script: dotnet reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports' -reporttype:Html
   displayName: 'Run Report Generator 1'
   condition: always()
   continueOnError: true
+
+- task: CmdLine@2
+  displayName: Show directories for 'dotnet reportgenerator'
+  inputs:
+    script: |
+      echo 'Show directories in "$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\"':
+      cd $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\
+      dir
+      echo 'Show directories in "$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports"':
+      cd $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports
+      dir
 
 - task: DotNetCoreCLI@2
   displayName: 'Run Report Generator 2'

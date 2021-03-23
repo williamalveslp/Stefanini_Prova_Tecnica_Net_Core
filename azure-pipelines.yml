@@ -41,10 +41,16 @@ steps:
   displayName: 'Run Tests with Coverage'
   condition: always()
 
-# Way 1.1.
-- script: reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports\' -reporttype:Html
+- task: NuGetCommand@2
   displayName: 'Run Report Generator'
-  condition: always()
+  inputs:
+    command: 'custom'
+    arguments: reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports\' -reporttype:Html
+
+# Way 1.1.
+#- script: reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports\' -reporttype:Html
+#  displayName: 'Run Report Generator'
+#  condition: always()
 
 # Way 2: Run tests.
 #- task: VSTest@2
@@ -94,6 +100,6 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Generate Artifacts Report Coverage'
   inputs:
-    PathtoPublish: 'Project\Backend_.NetCore_3_1\TestResults\CodeReports'
+    PathtoPublish: '$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports'
     ArtifactName: 'drop/ReportCoverage'
     publishLocation: 'Container'

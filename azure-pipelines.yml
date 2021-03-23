@@ -55,14 +55,25 @@ steps:
   
 - script: |
       cd $(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1
-      mk dir TestResults
+      mkdir TestResults
   displayName: 'Create Folder'
+  continueOnError: true
 
 - script: reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports" -reporttype:Html
   displayName: 'Run Report Generator 1'
+  continueOnError: true
 
 - script: reportgenerator "-reports:Project\Backend_.NetCore_3_1\TestResults\Coverage.xml" "-targetdir:Project\Backend_.NetCore_3_1\TestResults\CodeReports" -reporttype:Html
   displayName: 'Run Report Generator 2'
+  continueOnError: true
+
+- task: CmdLine@2
+  displayName: 'Run Report Generator 3'
+  inputs:
+    script: |
+      echo Generating Report Generator from Coverage 
+      reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports" -reporttype:Html
+  continueOnError: true
 
 # ReportGenerator must be performed by NuGetCLI.
 #- task: NuGetCommand@2

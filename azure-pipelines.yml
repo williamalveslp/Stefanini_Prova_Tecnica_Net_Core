@@ -41,12 +41,14 @@ steps:
   displayName: 'Run Tests with Coverage'
   condition: always()
 
+# ReportGenerator must be performed by NuGetCLI.
 - task: NuGetCommand@2
   displayName: 'Run Report Generator'
   inputs:
     command: 'custom'
     arguments: reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports\' -reporttype:Html
-
+  condition: always()
+  
 # Way 1.1.
 #- script: reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports\' -reporttype:Html
 #  displayName: 'Run Report Generator'

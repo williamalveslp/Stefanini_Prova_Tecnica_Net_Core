@@ -44,11 +44,6 @@ steps:
   condition: always()
   continueOnError: true
   
-#- script: dotnet test Project/Backend_.NetCore_3_1/StefaniniCore.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=Project/Backend_.NetCore_3_1/TestResults_2/Coverage.xml
-#  displayName: 'Run Tests with Coverage 2 (SLASH INVERTED)'
-#  condition: always()
-#  continueOnError: true
-
 # ReportGenerator must be performed by NuGetCLI.
 #- task: NuGetCommand@2
 #  displayName: 'Run Report Generator'
@@ -59,7 +54,23 @@ steps:
   
 # Way 1.1.
 - script: dotnet reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports' -reporttype:Html
-  displayName: 'Run Report Generator'
+  displayName: 'Run Report Generator 1'
+  condition: always()
+  continueOnError: true
+
+- task: DotNetCoreCLI@2
+  displayName: 'Run Report Generator 2'
+  inputs:
+    command: 'custom'
+    arguments: dotnet reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports' -reporttype:Html
+  condition: always()
+  continueOnError: true
+
+- task: DotNetCoreCLI@2
+  displayName: 'Run Report Generator 3'
+  inputs:
+    command: 'custom'
+    arguments: reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports' -reporttype:Html
   condition: always()
   continueOnError: true
 

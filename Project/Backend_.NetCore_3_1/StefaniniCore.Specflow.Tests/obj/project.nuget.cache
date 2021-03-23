@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TfVb4r5Q9+jf7qJKrg3vXiyauinw0zZ0lV7hGHcC4oFQD02fXNP+EtzEpNXWID7r1ek2hl7uS8plxs2hrpASRw==",
+  "dgSpecHash": "ovMJFMiN3QYy1kQUDAKkyby4OVfMBb3LzINA4J3YGz9ApNMlRMN4xi7iI3Uh2BwB2NR1U86feA1/bYJAxcdlEg==",
   "success": true,
   "projectFilePath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.Specflow.Tests\\StefaniniCore.Specflow.Tests.csproj",
   "expectedPackageFiles": [

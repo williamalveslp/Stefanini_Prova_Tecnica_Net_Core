@@ -34,28 +34,28 @@ namespace StefaniniCore.xUnit.Tests.IntegrationsTests
             _client = factory.CreateClient();
         }
 
-#if DEBUG
-        // It's testing the endpoint only (data not mocked).
-        // It's like #DEBUG, because on AzureDevops we have no permission with localhost PORT 8080.
-        [Theory]
-        [InlineData("/ProfileTypes")]
-        public async System.Threading.Tasks.Task GetAll_NotMocked(string url)
-        {
-            // Action
-            var response = await _client.GetAsync(url);
+//#if DEBUG
+//        // It's testing the endpoint only (data not mocked).
+//        // It's like #DEBUG, because on AzureDevops we have no permission with localhost PORT 8080.
+//        [Theory]
+//        [InlineData("/ProfileTypes")]
+//        public async System.Threading.Tasks.Task GetAll_NotMocked(string url)
+//        {
+//            // Action
+//            var response = await _client.GetAsync(url);
 
-            // Assert
-            response.EnsureSuccessStatusCode(); // 200 - 299.
-            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+//            // Assert
+//            response.EnsureSuccessStatusCode(); // 200 - 299.
+//            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            string responseString = await response.Content.ReadAsStringAsync();
-            Assert.NotNull(responseString);
+//            string responseString = await response.Content.ReadAsStringAsync();
+//            Assert.NotNull(responseString);
 
-            var responseValue = JsonConvert.DeserializeObject<ResponseData<ProfileTypeListViewModel>>(responseString);
-            Assert.NotNull(responseValue.Data?.ProfileTypes);
-            Assert.NotEmpty(responseValue.Data.ProfileTypes);
-        }
-#endif
+//            var responseValue = JsonConvert.DeserializeObject<ResponseData<ProfileTypeListViewModel>>(responseString);
+//            Assert.NotNull(responseValue.Data?.ProfileTypes);
+//            Assert.NotEmpty(responseValue.Data.ProfileTypes);
+//        }
+//#endif
 
         [Fact]
         public void GetAll()

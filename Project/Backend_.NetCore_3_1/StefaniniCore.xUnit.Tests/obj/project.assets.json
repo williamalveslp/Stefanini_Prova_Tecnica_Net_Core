@@ -4014,10 +4014,7 @@
         },
         "runtime": {
           "bin/placeholder/StefaniniCore.Application.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "StefaniniCore.Domain/1.0.0": {
         "type": "project",
@@ -4054,10 +4051,7 @@
         },
         "runtime": {
           "bin/placeholder/StefaniniCore.Infra.CrossCutting.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "StefaniniCore.Infra.CrossCutting.Configs/1.0.0": {
         "type": "project",
@@ -4081,10 +4075,7 @@
         },
         "runtime": {
           "bin/placeholder/StefaniniCore.Infra.CrossCutting.Configs.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "StefaniniCore.Infra.CrossCutting.IoC/1.0.0": {
         "type": "project",
@@ -4101,10 +4092,7 @@
         },
         "runtime": {
           "bin/placeholder/StefaniniCore.Infra.CrossCutting.IoC.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "StefaniniCore.Infra.DataStore.SQLServer/1.0.0": {
         "type": "project",
@@ -4122,10 +4110,7 @@
         },
         "runtime": {
           "bin/placeholder/StefaniniCore.Infra.DataStore.SQLServer.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
@@ -11929,14 +11914,11 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.4.20258.7\\RuntimeIdentifierGraph.json"
       }
     }
   }

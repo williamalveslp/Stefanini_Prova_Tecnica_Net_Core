@@ -216,7 +216,6 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\Stefa
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\Microsoft.VisualBasic.Core.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\Microsoft.VisualBasic.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\Microsoft.Win32.Primitives.dll
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\Microsoft.Win32.Registry.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\mscorlib.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\netstandard.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.AppContext.dll
@@ -239,7 +238,6 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\Stefa
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Data.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Contracts.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Debug.dll
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.EventLog.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.FileVersionInfo.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Process.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.StackTrace.dll
@@ -320,19 +318,14 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\Stefa
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Json.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Primitives.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Xml.dll
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Security.AccessControl.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Security.Claims.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Algorithms.dll
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Cng.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Csp.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Encoding.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Primitives.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.X509Certificates.dll
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Xml.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Security.dll
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Security.Permissions.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Security.Principal.dll
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Security.Principal.Windows.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Security.SecureString.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.ServiceModel.Web.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.ServiceProcess.dll
@@ -357,7 +350,6 @@ C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\Stefa
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Web.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Web.HttpUtility.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Windows.dll
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Windows.Extensions.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Xml.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Xml.Linq.dll
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\bin\Debug\netcoreapp3.1\refs\System.Xml.ReaderWriter.dll

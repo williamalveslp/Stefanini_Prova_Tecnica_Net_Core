@@ -25,11 +25,6 @@ steps:
   condition: always()
   continueOnError: true
 
-# Adding Environment Variable
-- script: echo "##vso[task.prependpath]$HOME/.dotnet/tools"
-  displayName: 'Adding Environment Variable'
-  continueOnError: true
-
 - task: NuGetCommand@2
   displayName: 'Restore Nuget Packages'
   inputs:

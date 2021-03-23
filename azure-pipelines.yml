@@ -41,11 +41,7 @@ steps:
 - script: dotnet test Project\Backend_.NetCore_3_1\StefaniniCore.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=Project\Backend_.NetCore_3_1\TestResults\Coverage.xml
   displayName: 'Run Tests with Coverage'
   condition: always()
-
-- script: |
-    cd Project\Backend_.NetCore_3_1\TestResults
-    dir
-  displayName: List TestResults 
+  continueOnError: true
   
 #- script: dotnet test Project/Backend_.NetCore_3_1/StefaniniCore.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=Project/Backend_.NetCore_3_1/TestResults_2/Coverage.xml
 #  displayName: 'Run Tests with Coverage 2 (SLASH INVERTED)'

@@ -46,7 +46,7 @@ steps:
     cd Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\TestResults
     ls
     cd $(ls -d */|head -n 1)
-    reportgenerator '-reports:Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\TestResults\Coverage.xml' '-targetdir:coveragereport' -reporttype:Html
+    reportgenerator '-reports:Coverage.xml' '-targetdir:coveragereport' -reporttype:Html
   displayName: 'Run Report Generator'
   condition: always()
 

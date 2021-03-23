@@ -53,7 +53,7 @@ steps:
   condition: always()
   continueOnError: true
   
-- script: reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports' -reporttype:Html
+- script: reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports" -reporttype:Html
   displayName: 'Run Report Generator'
 
 # ReportGenerator must be performed by NuGetCLI.
@@ -77,7 +77,7 @@ steps:
       dir
 
 # Way 1.1.
-- script: dotnet reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports' -reporttype:Html
+- script: dotnet reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports" -reporttype:Html
   displayName: 'Run Report Generator 1'
   condition: always()
   continueOnError: true
@@ -97,7 +97,7 @@ steps:
   displayName: 'Run Report Generator 2'
   inputs:
     command: 'custom'
-    arguments: dotnet reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports' -reporttype:Html
+    arguments: dotnet reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports" -reporttype:Html
   condition: always()
   continueOnError: true
 
@@ -105,7 +105,7 @@ steps:
   displayName: 'Run Report Generator 3'
   inputs:
     command: 'custom'
-    arguments: reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports' -reporttype:Html
+    arguments: reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports" -reporttype:Html
   condition: always()
   continueOnError: true
 

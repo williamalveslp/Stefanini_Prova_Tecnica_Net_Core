@@ -36,6 +36,7 @@ steps:
   displayName: 'Build Solution as "$(BuildConfiguration)"'
   inputs:
     solution: '$(Solution)'
+    configuration: $(BuildConfiguration)
     msbuildArchitecture: 'x86' 
 
 - script: dotnet test Project\Backend_.NetCore_3_1\StefaniniCore.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=Project\Backend_.NetCore_3_1\TestResults\Coverage.xml

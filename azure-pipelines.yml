@@ -44,13 +44,13 @@ steps:
     msbuildArchitecture: 'x86' 
 
 - script: dotnet test Project\Backend_.NetCore_3_1\StefaniniCore.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=Project\Backend_.NetCore_3_1\TestResults\Coverage.xml
-  displayName: 'Run Tests with Coverage TEST 1'
+  displayName: 'Run Tests with Coverage'
   condition: always()
 
-- script: dotnet test Project/Backend_.NetCore_3_1/StefaniniCore.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=Project/Backend_.NetCore_3_1/TestResults_2/Coverage.xml
-  displayName: 'Run Tests with Coverage 2 (SLASH INVERTED)'
-  condition: always()
-  continueOnError: true
+#- script: dotnet test Project/Backend_.NetCore_3_1/StefaniniCore.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=Project/Backend_.NetCore_3_1/TestResults_2/Coverage.xml
+#  displayName: 'Run Tests with Coverage 2 (SLASH INVERTED)'
+#  condition: always()
+#  continueOnError: true
 
 # ReportGenerator must be performed by NuGetCLI.
 #- task: NuGetCommand@2
@@ -61,8 +61,8 @@ steps:
 #  condition: always()
   
 # Way 1.1.
-- script: ./tools/reportgenerator '-reports:$(System.DefaultWorkingDirectory)/Project/Backend_.NetCore_3_1/TestResults/Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)/Project/Backend_.NetCore_3_1/TestResults/CodeReports' -reporttype:Html
-  displayName: 'Run Report Generator TEST 1'
+- script: reportgenerator '-reports:$(System.DefaultWorkingDirectory)/Project/Backend_.NetCore_3_1/TestResults/Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)/Project/Backend_.NetCore_3_1/TestResults/CodeReports' -reporttype:Html
+  displayName: 'Run Report Generator'
   condition: always()
   continueOnError: true
 

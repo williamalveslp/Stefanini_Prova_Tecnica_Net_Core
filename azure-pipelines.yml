@@ -21,8 +21,14 @@ steps:
 
  # Way 1: Run tests with Report Generator
 - script: dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
-  displayName: 'Install Report Generator'
+  displayName: 'Install Report Generator TEST'
   condition: always()
+  continueOnError: true
+
+# Adding Environment Variable
+- script: echo "##vso[task.prependpath]$HOME/.dotnet/tools"
+  displayName: 'Adding Environment Variable'
+  continueOnError: true
 
 - task: NuGetCommand@2
   displayName: 'Restore Nuget Packages'
@@ -38,21 +44,27 @@ steps:
     msbuildArchitecture: 'x86' 
 
 - script: dotnet test Project\Backend_.NetCore_3_1\StefaniniCore.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=Project\Backend_.NetCore_3_1\TestResults\Coverage.xml
-  displayName: 'Run Tests with Coverage'
+  displayName: 'Run Tests with Coverage TEST 1'
   condition: always()
 
-# ReportGenerator must be performed by NuGetCLI.
-- task: NuGetCommand@2
-  displayName: 'Run Report Generator'
-  inputs:
-    command: 'custom'
-    arguments: reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports\' -reporttype:Html
+- script: dotnet test Project/Backend_.NetCore_3_1/StefaniniCore.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=Project/Backend_.NetCore_3_1/TestResults_2/Coverage.xml
+  displayName: 'Run Tests with Coverage 2 (SLASH INVERTED)'
   condition: always()
+  continueOnError: true
+
+# ReportGenerator must be performed by NuGetCLI.
+#- task: NuGetCommand@2
+#  displayName: 'Run Report Generator'
+#  inputs:
+#    command: 'custom'
+#    arguments: reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports\' -reporttype:Html
+#  condition: always()
   
 # Way 1.1.
-#- script: reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports\' -reporttype:Html
-#  displayName: 'Run Report Generator'
-#  condition: always()
+- script: ./tools/reportgenerator '-reports:$(System.DefaultWorkingDirectory)/Project/Backend_.NetCore_3_1/TestResults/Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)/Project/Backend_.NetCore_3_1/TestResults/CodeReports' -reporttype:Html
+  displayName: 'Run Report Generator TEST 1'
+  condition: always()
+  continueOnError: true
 
 # Way 2: Run tests.
 #- task: VSTest@2
@@ -105,3 +117,4 @@ steps:
     PathtoPublish: '$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports'
     ArtifactName: 'drop/ReportCoverage'
     publishLocation: 'Container'
+  continueOnError: true

@@ -18,18 +18,18 @@ steps:
   inputs:
     packageType: 'sdk'
     version: '3.1.x'  
-      
+
+ # Way 1: Run tests with Report Generator
+- script: dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
+  displayName: 'Install Report Generator'
+  condition: always()
+
 - task: NuGetCommand@2
   displayName: 'Restore Nuget Packages'
   inputs:
     command: 'restore'
     restoreSolution: '$(Solution)'
     feedsToUse: 'select'
-
-# Way 1: Run tests with Report Generator
-- script: dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
-  displayName: 'Install Report Generator'
-  condition: always()
 
 - task: MSBuild@1
   displayName: 'Build Solution as "$(BuildConfiguration)"'
@@ -43,7 +43,7 @@ steps:
 
 # Way 1.1.
 - script: |
-    cd $(PathTestResults)
+    cd Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\TestResults
     ls
     cd $(ls -d */|head -n 1)
     reportgenerator '-reports:Project\Backend_.NetCore_3_1\StefaniniCore.MSTest.Tests\TestResults\Coverage.xml' '-targetdir:coveragereport' -reporttype:Html

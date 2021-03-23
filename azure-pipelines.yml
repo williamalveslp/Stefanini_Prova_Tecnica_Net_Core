@@ -26,15 +26,19 @@ steps:
     restoreSolution: '$(Solution)'
     feedsToUse: 'select'
 
+# Way 1: Run tests with Report Generator
+- script: dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
+  displayName: 'Install Report Generator'
+  condition: always()
+
 - task: MSBuild@1
   displayName: 'Build Solution as "$(BuildConfiguration)"'
   inputs:
     solution: '$(Solution)'
     msbuildArchitecture: 'x86' 
 
-# Way 1: Run tests with Report Generator
-- script: dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
-  displayName: 'Install Report Generator'
+- script: dotnet test $(ProjectFilePathxUnitTests) /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput="$(PathTestResults)\$(CodeCoverageFile)"
+  displayName: 'Run Tests with Coverage'
   condition: always()
 
 # Way 1.1.
@@ -42,8 +46,8 @@ steps:
     cd $(PathTestResults)
     ls
     cd $(ls -d */|head -n 1)
-    reportgenerator '-reports:coverage.cobertura.xml' '-targetdir:coveragereport' -reporttype:Html
-  displayName: Run Report Generator
+    reportgenerator '-reports:$(CodeCoverageFile)' '-targetdir:coveragereport' -reporttype:Html
+  displayName: 'Run Report Generator'
   condition: always()
 
 # Way 2: Run tests.

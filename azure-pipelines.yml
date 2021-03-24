@@ -19,12 +19,6 @@ steps:
     packageType: 'sdk'
     version: '3.1.x'  
 
- # Way 1: Run tests with Report Generator
-#- script: dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
-#  displayName: 'Install Report Generator'
-#  condition: always()
-#  continueOnError: true
-
 - script: |
       dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
       dotnet tool install dotnet-reportgenerator-globaltool --tool-path tools --version 4.8.6
@@ -57,7 +51,7 @@ steps:
   displayName: 'Run Report Generator'
   continueOnError: true
 
-# Also Works.
+# Also works with CmdLine@2
 #- task: CmdLine@2
 #  displayName: 'Run Report Generator'
 #  inputs:
@@ -66,44 +60,7 @@ steps:
 #      reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\TestResults\CodeReports" -reporttype:Html
 #  continueOnError: true
 
-# ReportGenerator must be performed by NuGetCLI.
-#- task: NuGetCommand@2
-#  displayName: 'Run Report Generator'
-#  inputs:
-#    command: 'custom'
-#    arguments: reportgenerator '-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml' '-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports' -reporttype:Html
-#  condition: always()
-#  continueOnError: true
-
-#- task: CmdLine@2
-#  displayName: Show directories for 'NuGetCommand@2'
-#  inputs:
-#    script: |
-#      echo 'Show directories in "Project\TestResults\"':
-#      cd $(System.DefaultWorkingDirectory)\Project\TestResults\
-#      dir
-#      echo 'Show directories in "$(System.DefaultWorkingDirectory)\Project\TestResults\CodeReports"':
-#      cd $(System.DefaultWorkingDirectory)\Project\TestResults\CodeReports
-#      dir
-#  continueOnError: true
-  
-#- task: DotNetCoreCLI@2
-#  displayName: 'Run Report Generator 2'
-#  inputs:
-#    command: 'custom'
-#    arguments: dotnet reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports" -reporttype:Html
-#  condition: always()
-#  continueOnError: true
-
-#- task: DotNetCoreCLI@2
-#  displayName: 'Run Report Generator 3'
-#  inputs:
-#    command: 'custom'
-#    arguments: reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\Backend_.NetCore_3_1\TestResults\CodeReports" -reporttype:Html
-#  condition: always()
-#  continueOnError: true
-
-# Way 2: Run tests.
+# Run tests with VSTestConsole.
 #- task: VSTest@2
 #  displayName: 'Run Tests as "$(BuildConfiguration)"'
 #  inputs:
@@ -147,7 +104,6 @@ steps:
     ArtifactName: 'drop/Publishes'
     publishLocation: 'Container'
 
-# Way 1.2.
 - task: PublishBuildArtifacts@1
   displayName: 'Generate Artifacts Report Coverage'
   inputs:

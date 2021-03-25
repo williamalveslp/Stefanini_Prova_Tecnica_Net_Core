@@ -42,17 +42,6 @@ steps:
     configuration: $(BuildConfiguration)
     msbuildArchitecture: 'x86' 
 
-# Run tests with VSTestConsole.
-#- task: VSTest@2
-#  displayName: 'Run Tests as "$(BuildConfiguration)"'
-#  inputs:
-#    testSelector: 'testAssemblies'
-#    testAssemblyVer2: |
-#      **\$(BuildConfiguration)\**\StefaniniCore.*.Tests.dll
-#      !**\obj\**
-#    searchFolder: '$(System.DefaultWorkingDirectory)'
-#    codeCoverageEnabled: true
-
 - task: VSTest@2
   displayName: 'Run Tests as "$(BuildConfiguration)"'
   inputs:
@@ -64,7 +53,7 @@ steps:
     codeCoverageEnabled: true
     configuration: '$(BuildConfiguration)'
 
-- script: dotnet test Project\Backend_.NetCore_3_1\StefaniniCore.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=$(System.DefaultWorkingDirectory)\Project\TestResults\Coverage.xml
+- script: dotnet test $(SolutionPathAndFile) /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=$(System.DefaultWorkingDirectory)\Project\TestResults\Coverage.xml
   displayName: 'Generate Coverage'
   condition: always()
   continueOnError: true

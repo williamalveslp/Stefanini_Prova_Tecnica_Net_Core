@@ -42,24 +42,6 @@ steps:
     configuration: $(BuildConfiguration)
     msbuildArchitecture: 'x86' 
 
-- script: dotnet test Project\Backend_.NetCore_3_1\StefaniniCore.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=$(System.DefaultWorkingDirectory)\Project\TestResults\Coverage.xml
-  displayName: 'Run Tests with Coverage'
-  condition: always()
-  continueOnError: true
-  
-- script: reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\TestResults\CodeReports" -reporttype:Html
-  displayName: 'Run Report Generator'
-  continueOnError: true
-
-# Also works with CmdLine@2
-#- task: CmdLine@2
-#  displayName: 'Run Report Generator'
-#  inputs:
-#    script: |
-#      echo Generating Report Generator from Coverage...
-#      reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\TestResults\CodeReports" -reporttype:Html
-#  continueOnError: true
-
 # Run tests with VSTestConsole.
 #- task: VSTest@2
 #  displayName: 'Run Tests as "$(BuildConfiguration)"'
@@ -70,6 +52,35 @@ steps:
 #      !**\obj\**
 #    searchFolder: '$(System.DefaultWorkingDirectory)'
 #    codeCoverageEnabled: true
+
+- task: VSTest@2
+  displayName: 'Run Tests as "$(BuildConfiguration)"'
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\$(BuildConfiguration)\**\StefaniniCore.*.Tests.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    codeCoverageEnabled: true
+    configuration: '$(BuildConfiguration)'
+
+- script: dotnet test Project\Backend_.NetCore_3_1\StefaniniCore.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=$(System.DefaultWorkingDirectory)\Project\TestResults\Coverage.xml
+  displayName: 'Generate Coverage'
+  condition: always()
+  continueOnError: true
+  
+- script: reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\TestResults\CodeReports" -reporttype:Html
+  displayName: 'Generate Report Generator'
+  continueOnError: true
+
+# Also works with CmdLine@2
+#- task: CmdLine@2
+#  displayName: 'Run Report Generator'
+#  inputs:
+#    script: |
+#      echo Generating Report Generator from Coverage...
+#      reportgenerator "-reports:$(System.DefaultWorkingDirectory)\Project\TestResults\Coverage.xml" "-targetdir:$(System.DefaultWorkingDirectory)\Project\TestResults\CodeReports" -reporttype:Html
+#  continueOnError: true
 
 - task: FileTransform@1
   displayName: 'File Transform API'

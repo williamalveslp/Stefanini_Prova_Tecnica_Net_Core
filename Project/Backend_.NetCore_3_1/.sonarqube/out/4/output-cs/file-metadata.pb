@@ -1,0 +1,13 @@
+ï
+ãC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.DataStore.SQLServer\Context\StefDbContext.csutf-8†
+ñC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.DataStore.SQLServer\Repositories\Base\RepositoryBase.csutf-8¢
+òC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.DataStore.SQLServer\Repositories\ProfileTypeRepository.csutf-8¶
+úC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.DataStore.SQLServer\Repositories\ProfileTypeTaskRepository.csutf-8õ
+ëC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.DataStore.SQLServer\Repositories\TaskRepository.csutf-8°
+óC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.DataStore.SQLServer\Repositories\UserSystemRepository.csutf-8®
+ûC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.DataStore.SQLServer\TypeConfigs\ProfileTypeProfileTypeConfig.csutf-8•
+õC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.DataStore.SQLServer\TypeConfigs\ProfileTypeTaskTypeConfig.csutf-8ö
+êC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.DataStore.SQLServer\TypeConfigs\TaskTypeConfig.csutf-8†
+ñC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.DataStore.SQLServer\TypeConfigs\UserSystemTypeConfig.csutf-8≈
+πC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.DataStore.SQLServer\obj\Debug\netcoreapp3.1\.NETCoreApp,Version=v3.1.AssemblyAttributes.csutf-8Œ
+¬C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.DataStore.SQLServer\obj\Debug\netcoreapp3.1\StefaniniCore.Infra.DataStore.SQLServer.AssemblyInfo.csutf-8

@@ -1,0 +1,13 @@
+®
+ûC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\FluentValidatorsTests\ProfileTypeFluentValidatorsTests.csutf-8°
+óC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\FluentValidatorsTests\TaskFluentValidatorsTests.csutf-8ß
+ùC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\FluentValidatorsTests\UserSystemFluentValidatorsTests.csutf-8†
+ñC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\IntegrationsTests\ProfileTypesIntegrationTests.csutf-8ô
+èC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\IntegrationsTests\TasksIntegrationTests.csutf-8û
+îC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\RepositoriesTests\ProfileTypeRepositoryTests.csutf-8ó
+çC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\ServicesTests\ProfileTypeServiceTests.csutf-8ê
+ÜC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\ServicesTests\TaskServiceTests.csutf-8ñ
+åC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\ServicesTests\UserSystemServiceTests.csutf-8}
+rC:\Users\willi\.nuget\packages\microsoft.net.test.sdk\16.5.0\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.Program.csutf-8∑
+´C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\obj\Debug\netcoreapp3.1\.NETCoreApp,Version=v3.1.AssemblyAttributes.csutf-8≤
+¶C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.xUnit.Tests\obj\Debug\netcoreapp3.1\StefaniniCore.xUnit.Tests.AssemblyInfo.csutf-8

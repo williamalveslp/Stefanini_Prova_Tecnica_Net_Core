@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wg0x0v9nyEhv9ltLY/j40ZNi686kX5QBL98zuC44jX4/fT7zmhmZpxa+dkMT3ozdi0pAZAGY+MyiIVAMOpWAWw==",
+  "dgSpecHash": "/amo8GlrGjwXuklHnOOVEjXnG/1f3XbPhu2pwv8M6uW3bP3Idj/iFVeu9jR3/HaDgTlt/peT5w+zbXRQuQ6qEQ==",
   "success": true,
   "projectFilePath": "C:\\Git_Repos\\Stefanini_Prova_Tecnica_Net_Core\\Project\\Backend_.NetCore_3_1\\StefaniniCore.UI\\StefaniniCore.UI.csproj",
   "expectedPackageFiles": [
@@ -227,7 +227,8 @@
     "C:\\Users\\willi\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\willi\\.nuget\\packages\\yamldotnet\\6.0.0\\yamldotnet.6.0.0.nupkg.sha512"
+    "C:\\Users\\willi\\.nuget\\packages\\yamldotnet\\6.0.0\\yamldotnet.6.0.0.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.2\\microsoft.netcore.app.host.win-x64.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }

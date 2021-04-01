@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using StefaniniCore.Domain.Entities;
 using StefaniniCore.Infra.DataStore.SQLServer.TypeConfigs;
-using Microsoft.Extensions.Logging;
 
 namespace StefaniniCore.Infra.DataStore.SQLServer
 {
@@ -14,9 +13,7 @@ namespace StefaniniCore.Infra.DataStore.SQLServer
         private static DbContextOptions GetOptions(string connectionString)
         {
             return (SqlServerDbContextOptionsExtensions
-                   .UseSqlServer(new DbContextOptionsBuilder(), connectionString)
-                        .UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()))
-                   ).Options;
+                   .UseSqlServer(new DbContextOptionsBuilder(), connectionString)).Options;
         }
 
         #region .: OLD WAY :.

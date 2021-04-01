@@ -4,21 +4,17 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <!-- Exclude the project from analysis -->
+    <SonarQubeExclude>true</SonarQubeExclude>
+  </PropertyGroup>
+  
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     <PackageReference Include="Moq" Version="4.14.1" />
-
-    
-
-    
-
-    
-
-    
     <PackageReference Include="SpecFlow.MsTest" Version="3.3.57" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
-    <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />
-    
+    <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />    
   </ItemGroup>
 
   <ItemGroup>

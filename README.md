@@ -1,7 +1,7 @@
 # Stefanini_Prova_Tecnica_Net_Core
 
 ## Objetivo
-Inicialmente, este projeto foi uma prova Técnica para Stefanini IT Solutions da filial de Brasília. Após o envio, continuo trabalhando neste repositório efetuando melhorias com o intuito de ser um projeto modelo/consulta para outros novos projetos com estratégias de mercado.
+Inicialmente, este projeto foi uma prova Técnica para Stefanini IT Solutions da filial de Brasília. Após o envio, continuo trabalhando neste repositório efetuando estratégias de mercado para estudo.
 
 ## Stack Utilizada
 

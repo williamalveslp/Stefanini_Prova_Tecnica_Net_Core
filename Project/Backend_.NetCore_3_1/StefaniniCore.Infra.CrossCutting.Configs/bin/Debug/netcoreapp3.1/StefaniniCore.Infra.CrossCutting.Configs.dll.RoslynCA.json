@@ -12,6 +12,48 @@
       },
       "results": [
         {
+          "ruleId": "S1135",
+          "level": "warning",
+          "message": "Complete the task associated to this 'TODO' comment.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Git_Repos/Stefanini_Prova_Tecnica_Net_Core/Project/Backend_.NetCore_3_1/StefaniniCore.Infra.CrossCutting.Configs/TokenBearerJwt/TokenBearerJwtConfig.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 16,
+                  "endLine": 22,
+                  "endColumn": 20
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Git_Repos/Stefanini_Prova_Tecnica_Net_Core/Project/Backend_.NetCore_3_1/StefaniniCore.Infra.CrossCutting.Configs/TokenBearerJwt/TokenBearerJwtConfig.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 13,
+                  "endLine": 19,
+                  "endColumn": 64
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "S101",
           "level": "warning",
           "message": "Rename class 'SQLServerConnectionSettings' to match pascal case naming rules, consider using 'SqlServerConnectionSettings'.",
@@ -24,27 +66,6 @@
                   "startColumn": 18,
                   "endLine": 5,
                   "endColumn": 45
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4834",
-          "level": "warning",
-          "message": "Make sure controlling this permission is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Git_Repos/Stefanini_Prova_Tecnica_Net_Core/Project/Backend_.NetCore_3_1/StefaniniCore.Infra.CrossCutting.Configs/TokenBearerJwt/TokenBearerJwtConfig.cs",
-                "region": {
-                  "startLine": 24,
-                  "startColumn": 27,
-                  "endLine": 28,
-                  "endColumn": 19
                 }
               }
             }
@@ -72,20 +93,37 @@
             ]
           }
         },
-        "S4834": {
-          "id": "S4834",
-          "shortDescription": "Controlling permissions is security-sensitive",
-          "fullDescription": "The access control of an application must be properly implemented in order to restrict access to resources to authorized entities otherwise this could lead to vulnerabilities:",
+        "S1135": {
+          "id": "S1135",
+          "shortDescription": "Track uses of \"TODO\" tags",
+          "fullDescription": "TODO tags are commonly used to mark places where some more code is required, but which the developer wants to implement later.",
           "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4834",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1135",
           "properties": {
-            "category": "Minor Security Hotspot",
+            "category": "Info Code Smell",
             "isEnabledByDefault": true,
             "tags": [
               "C#",
               "SonarWay",
               "MainSourceScope",
-              "NotConfigurable"
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S125": {
+          "id": "S125",
+          "shortDescription": "Sections of code should not be commented out",
+          "fullDescription": "Programmers should not comment out code as it bloats programs and reduces readability.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-125",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
             ]
           }
         }

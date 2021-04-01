@@ -18,11 +18,11 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Git_Repos/Stefanini_Prova_Tecnica_Net_Core/Project/Backend_.NetCore_3_1/StefaniniCore.Domain/Interfaces/Services/Base/IServiceBase.cs",
+                "uri": "file:///C:/Git_Repos/Stefanini_Prova_Tecnica_Net_Core/Project/Backend_.NetCore_3_1/StefaniniCore.Domain/Interfaces/Repositories/Base/IRepositoryBase.cs",
                 "region": {
-                  "startLine": 43,
+                  "startLine": 19,
                   "startColumn": 14,
-                  "endLine": 43,
+                  "endLine": 19,
                   "endColumn": 21
                 }
               }
@@ -39,11 +39,11 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Git_Repos/Stefanini_Prova_Tecnica_Net_Core/Project/Backend_.NetCore_3_1/StefaniniCore.Domain/Interfaces/Repositories/Base/IRepositoryBase.cs",
+                "uri": "file:///C:/Git_Repos/Stefanini_Prova_Tecnica_Net_Core/Project/Backend_.NetCore_3_1/StefaniniCore.Domain/Interfaces/Services/Base/IServiceBase.cs",
                 "region": {
-                  "startLine": 19,
+                  "startLine": 43,
                   "startColumn": 14,
-                  "endLine": 19,
+                  "endLine": 43,
                   "endColumn": 21
                 }
               }

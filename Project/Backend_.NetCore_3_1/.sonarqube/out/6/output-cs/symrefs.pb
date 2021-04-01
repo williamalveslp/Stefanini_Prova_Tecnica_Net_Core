@@ -248,16 +248,13 @@
 
  
 
- ·
+ Á
 šC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.CrossCutting.Configs\TokenBearerJwt\TokenBearerJwtConfig.cs
 
 
 
  ,
 
- *
-3 :/ 6/ 6
-    $!! 
- U X
-   1 @
-   !!+ 0
+ *
+
+3 :

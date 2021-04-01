@@ -75,6 +75,27 @@
           }
         },
         {
+          "ruleId": "S3251",
+          "level": "warning",
+          "message": "Supply an implementation for this partial method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Git_Repos/Stefanini_Prova_Tecnica_Net_Core/Project/Backend_.NetCore_3_1/StefaniniCore.Infra.DataStore.SQLServer/Context/StefDbContext.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 9,
+                  "endLine": 51,
+                  "endColumn": 16
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "S3881",
           "level": "warning",
           "message": "Fix this implementation of 'IDisposable' to conform to the dispose pattern.",
@@ -121,27 +142,6 @@
               "0": "Provide 'protected' overridable implementation of 'Dispose(bool)' on 'RepositoryBase' or mark the type as 'sealed'.",
               "1": "'RepositoryBase.Dispose()' should also call 'Dispose(true)'."
             }
-          }
-        },
-        {
-          "ruleId": "S3251",
-          "level": "warning",
-          "message": "Supply an implementation for this partial method.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Git_Repos/Stefanini_Prova_Tecnica_Net_Core/Project/Backend_.NetCore_3_1/StefaniniCore.Infra.DataStore.SQLServer/Context/StefDbContext.cs",
-                "region": {
-                  "startLine": 51,
-                  "startColumn": 9,
-                  "endLine": 51,
-                  "endColumn": 16
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
           }
         },
         {

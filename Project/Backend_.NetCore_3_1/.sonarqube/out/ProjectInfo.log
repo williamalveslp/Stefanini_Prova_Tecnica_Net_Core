@@ -2,12 +2,12 @@ Product projects
 ---------------------------------------
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.CrossCutting\StefaniniCore.Infra.CrossCutting.csproj
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain\StefaniniCore.Domain.csproj
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.API\StefaniniCore.API.csproj
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Domain.Service\StefaniniCore.Domain.Service.csproj
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.DataStore.SQLServer\StefaniniCore.Infra.DataStore.SQLServer.csproj
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Application\StefaniniCore.Application.csproj
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.DataStore.SQLServer\StefaniniCore.Infra.DataStore.SQLServer.csproj
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.CrossCutting.Configs\StefaniniCore.Infra.CrossCutting.Configs.csproj
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.CrossCutting.IoC\StefaniniCore.Infra.CrossCutting.IoC.csproj
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.API\StefaniniCore.API.csproj
 
 
 Test projects
@@ -23,8 +23,8 @@ Invalid projects
 
 Skipped projects
 ---------------------------------------
-C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.UI\StefaniniCore.UI.csproj
 C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Specflow.Tests\StefaniniCore.Specflow.Tests.csproj
+C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.UI\StefaniniCore.UI.csproj
 
 
 Excluded projects

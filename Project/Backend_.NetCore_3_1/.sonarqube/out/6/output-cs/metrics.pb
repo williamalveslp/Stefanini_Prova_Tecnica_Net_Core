@@ -35,6 +35,6 @@
 ™C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.CrossCutting.Configs\TokenBearerJwt\Models\SecretConfig.cs 8r©
 ”C:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.CrossCutting.Configs\TokenBearerJwt\Models\UserJwt.cs 8r
 	
-Ö
-šC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.CrossCutting.Configs\TokenBearerJwt\TokenBearerJwtConfig.cs 8jr	
- !"#$‚ !
+Í
+šC:\Git_Repos\Stefanini_Prova_Tecnica_Net_Core\Project\Backend_.NetCore_3_1\StefaniniCore.Infra.CrossCutting.Configs\TokenBearerJwt\TokenBearerJwtConfig.cs 8j!"r	
+$%&'‚$

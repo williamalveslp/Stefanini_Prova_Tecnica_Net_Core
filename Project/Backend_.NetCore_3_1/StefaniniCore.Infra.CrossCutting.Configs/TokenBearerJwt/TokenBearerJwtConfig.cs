@@ -16,7 +16,8 @@ namespace StefaniniCore.Infra.CrossCutting.Configs.TokenBearerJwt
         /// <returns></returns>
         public static string GenerateToken(UserJwt userJwt)
         {
-            var tokenHandler = new JwtSecurityTokenHandler();
+            // Check Sonar Security here.
+            /*var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(SecretConfig.Secret);
 
             var tokenDescriptor = new SecurityTokenDescriptor
@@ -30,7 +31,9 @@ namespace StefaniniCore.Infra.CrossCutting.Configs.TokenBearerJwt
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
+            return tokenHandler.WriteToken(token); */
+
+            return null;
         }
     }
 }

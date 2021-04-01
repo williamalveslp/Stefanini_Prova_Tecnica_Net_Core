@@ -18,6 +18,69 @@
           "locations": [
             {
               "resultFile": {
+                "uri": "file:///C:/Git_Repos/Stefanini_Prova_Tecnica_Net_Core/Project/Backend_.NetCore_3_1/StefaniniCore.Application/AppServices/ProfileTypeAppService.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 23,
+                  "endLine": 35,
+                  "endColumn": 90
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.Exception' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Git_Repos/Stefanini_Prova_Tecnica_Net_Core/Project/Backend_.NetCore_3_1/StefaniniCore.Application/AppServices/TaskAppService.cs",
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 23,
+                  "endLine": 42,
+                  "endColumn": 70
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.Exception' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Git_Repos/Stefanini_Prova_Tecnica_Net_Core/Project/Backend_.NetCore_3_1/StefaniniCore.Application/AppServices/TaskAppService.cs",
+                "region": {
+                  "startLine": 77,
+                  "startColumn": 23,
+                  "endLine": 77,
+                  "endColumn": 83
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.Exception' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
                 "uri": "file:///C:/Git_Repos/Stefanini_Prova_Tecnica_Net_Core/Project/Backend_.NetCore_3_1/StefaniniCore.Application/AppServices/UserSystemAppService.cs",
                 "region": {
                   "startLine": 39,
@@ -65,69 +128,6 @@
                   "startLine": 83,
                   "startColumn": 23,
                   "endLine": 83,
-                  "endColumn": 83
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.Exception' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Git_Repos/Stefanini_Prova_Tecnica_Net_Core/Project/Backend_.NetCore_3_1/StefaniniCore.Application/AppServices/TaskAppService.cs",
-                "region": {
-                  "startLine": 42,
-                  "startColumn": 23,
-                  "endLine": 42,
-                  "endColumn": 70
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.Exception' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Git_Repos/Stefanini_Prova_Tecnica_Net_Core/Project/Backend_.NetCore_3_1/StefaniniCore.Application/AppServices/ProfileTypeAppService.cs",
-                "region": {
-                  "startLine": 35,
-                  "startColumn": 23,
-                  "endLine": 35,
-                  "endColumn": 90
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.Exception' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Git_Repos/Stefanini_Prova_Tecnica_Net_Core/Project/Backend_.NetCore_3_1/StefaniniCore.Application/AppServices/TaskAppService.cs",
-                "region": {
-                  "startLine": 77,
-                  "startColumn": 23,
-                  "endLine": 77,
                   "endColumn": 83
                 }
               }

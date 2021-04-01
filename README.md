@@ -25,6 +25,9 @@ Aplicações em <b>.Net Core 3.1</b>:
 ![](/Images_Stack_Templates/About_Code/Build.JPG)
 ![](/Images_Stack_Templates/About_Code/Build_Result.JPG)
 
+## SonarQube
+![](/Images_Stack_Templates/About_Code/Sonar_Print.JPG)
+
 ## Instruções
 
 Após fazer o clone do repositório, siga os seguintes passos abaixo:

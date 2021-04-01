@@ -23,7 +23,7 @@ steps:
       dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
       dotnet tool install dotnet-reportgenerator-globaltool --tool-path tools --version 4.8.6
       dotnet new tool-manifest
-      dotnet tool install dotnet-reportgenerator-globaltool --version --version 4.8.6
+      dotnet tool install dotnet-reportgenerator-globaltool --version 4.8.6
   displayName: 'Install Report Generator'
   condition: always()
   continueOnError: true

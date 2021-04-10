@@ -1,8 +1,7 @@
 # Projeto para estudo
 
 ## Objetivo
-Inicialmente, este projeto foi uma prova Técnica para Stefanini IT Solutions da filial de Brasília. Após o envio, continuo trabalhando neste repositório efetuando estratégias de mercado para estudo.
-
+Inicialmente, este projeto foi uma prova Técnica para Stefanini IT Solutions da filial de Brasília. Após o envio/entrega, continuo trabalhando neste repositório efetuando estratégias de mercado como facilitador de estudos.
 ## Stack Utilizada
 
 ![](/Images_Stack_Templates/Template.png)

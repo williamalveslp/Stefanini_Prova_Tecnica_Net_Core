@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="2.4" jmeter="4.0">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="002- Cenário de Usuários" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="002-Cenário de Usuários" enabled="true">
       <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.2.4.18. Please contact support@blazemeter.com for further support.</stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>

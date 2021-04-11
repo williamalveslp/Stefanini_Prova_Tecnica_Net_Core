@@ -4,8 +4,8 @@
 
 function save() {
 
-    var profileTypeId = $('#hddProfileTypeId').val();
-    var name = $('#txtName').val();
+    const profileTypeId = $('#hddProfileTypeId').val();
+    const name = $('#txtName').val();
 
     if (!TASKS_ARRAY || TASKS_ARRAY.length <= 0) {
         alert('Não foi selecionado "Funcionalidades" para o Perfil.');
@@ -17,7 +17,7 @@ function save() {
         return;
     }
 
-    var taskIds = [];
+    let taskIds = [];
 
     for (var i = 0; i < TASKS_ARRAY.length; i++) {
         taskIds.push(TASKS_ARRAY[i].id);
@@ -50,7 +50,7 @@ $('#btnClear').click(function () {
 
 function addTask(id, name) {
 
-    for (var i = TASKS_ARRAY.length - 1; i >= 0; i--) {
+    for (let i = TASKS_ARRAY.length - 1; i >= 0; i--) {
         if (TASKS_ARRAY[i].id === id) {
             alert('Funcionalidade já está adicionada.')
             return;
@@ -64,9 +64,9 @@ function addTask(id, name) {
         }
     );
 
-    var rowId = "taskRow_" + id;
+    const rowId = "taskRow_" + id;
 
-    var html =
+    const html =
         '<tr id="' + rowId + '">'
         + '<td>' + id + '</td>'
         + '<td>' + name + '</td>'
@@ -80,12 +80,12 @@ function removeTask(id, name) {
     if (!TASKS_ARRAY || TASKS_ARRAY.length <= 0)
         return;
 
-    var task = {
+    const task = {
         id: id,
         name: name
     };
 
-    var matchToDelete = false;
+    let matchToDelete = false;
 
     // Remove from Array.
     for (var i = TASKS_ARRAY.length - 1; i >= 0; i--) {
@@ -100,9 +100,9 @@ function removeTask(id, name) {
         return;
     }
 
-    var rowId = "taskRow_" + id;
+    const rowId = "taskRow_" + id;
 
     // Remove from HTML list.
-    var rowToDelete = $("#" + rowId);
+    const rowToDelete = $("#" + rowId);
     rowToDelete.remove();
 }

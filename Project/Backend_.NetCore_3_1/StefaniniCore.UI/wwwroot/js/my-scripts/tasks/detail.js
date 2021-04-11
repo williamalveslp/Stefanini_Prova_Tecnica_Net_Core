@@ -4,16 +4,16 @@
 
 function save() {
 
-    var taskId = $('#hddTaskId').val();
-    var name = $('#txtName').val();
-    var description = $('#txtDescription').val();
+    const taskId = $('#hddTaskId').val();
+    const name = $('#txtName').val();
+    const description = $('#txtDescription').val();
 
     if (name === null || name === "") {
         alert('Campos "Nome" não informado.');
         return;
     }
 
-    var data = {
+    const data = {
         'Id': taskId,
         'Name': name,
         'Description': description

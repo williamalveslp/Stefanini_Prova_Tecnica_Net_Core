@@ -1,3 +1,12 @@
+USE StefDb;
+
+/*
+DELETE FROM UserSystem
+
+DELETE FROM ProfileType
+
+DELETE FROM Task */
+
 -- ProfileType
 INSERT INTO ProfileType(Name, Is_Active, Date_Created, Date_Updated) VALUES (
 'Administrador', 1, GETDATE(), GETDATE());

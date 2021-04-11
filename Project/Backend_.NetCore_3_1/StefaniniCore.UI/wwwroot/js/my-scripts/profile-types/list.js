@@ -5,17 +5,15 @@
 }
 
 function deleteProfileType(element) {
-
-    var profileTypeId = $(element).attr("entityId");
+    const profileTypeId = $(element).attr("entityId");
 
     if (profileTypeId === null || profileTypeId === "") {
         alert("Identificador não encontrado para enviar.");
         return;
     }
-    var data = {
-        "profileTypeId": profileTypeId
-    };
 
     $("#modalConfirmDelete").modal("hide");
-    AjaxPostGenerics(data, URL_DELETE_PROFILE_TYPE, null, 'DELETE');
+    const url = `${URL_DELETE_PROFILE_TYPE}?profileTypeId=${profileTypeId}`;
+
+    AjaxPostGenerics(null, url, profileTypeId, 'DELETE');
 }

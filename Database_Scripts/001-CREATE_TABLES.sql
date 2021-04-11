@@ -1,10 +1,22 @@
-
-
 CREATE DATABASE StefDb;
 GO
 
 USE StefDb;
 GO
+
+/* 
+DROP TABLE UserSystem
+GO
+
+DROP TABLE ProfileTypeTask
+GO
+
+DROP TABLE Task
+GO
+
+DROP TABLE ProfileType
+GO
+*/
 
 CREATE TABLE Task(
 Id INT PRIMARY KEY IDENTITY(1,1),

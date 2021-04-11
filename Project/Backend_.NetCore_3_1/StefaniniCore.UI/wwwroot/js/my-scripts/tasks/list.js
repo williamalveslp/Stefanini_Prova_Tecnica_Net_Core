@@ -5,17 +5,15 @@
 }
 
 function deleteTask(element) {
-
-    var taskId = $(element).attr("entityId");
+    const taskId = $(element).attr("entityId");
 
     if (taskId === null || taskId === "") {
         alert("Identificador não encontrado para enviar.");
         return;
     }
-    var data = {
-        "taskId": taskId
-    };
 
     $("#modalConfirmDelete").modal("hide");
-    AjaxPostGenerics(data, URL_DELETE_TASK, null, 'DELETE');
+    const url = `${URL_DELETE_TASK}?taskId=${taskId}`;
+
+    AjaxPostGenerics(null, url, taskId, 'DELETE');
 }

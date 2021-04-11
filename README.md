@@ -16,6 +16,7 @@ Aplicações em <b>.Net Core 3.1</b>:
 ## Testes Cobertos
 - Testes de Unidade
 - Testes de Integração
+- Testes de Performance
 
 ## Code Coverage
 ![](/Images_Stack_Templates/About_Code/CodeCoverage.JPG)
@@ -26,6 +27,11 @@ Aplicações em <b>.Net Core 3.1</b>:
 
 ## SonarQube
 ![](/Images_Stack_Templates/About_Code/Sonar_Print.JPG)
+
+## Testes de Performance
+![](/Images_Stack_Templates/About_Code/Performance1.JPG)
+![](/Images_Stack_Templates/About_Code/Performance2.JPG)
+![](/Images_Stack_Templates/About_Code/Performance3.JPG)
 
 ## Instruções
 
